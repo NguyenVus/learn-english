@@ -65,7 +65,7 @@ textarea{width:100%;min-height:200px;resize:vertical;line-height:1.6}
 .list-item:hover{border-color:var(--primary)}
 .done-badge{color:var(--ok);font-weight:700;font-size:.85rem}
 .vi{background:var(--warn-soft);border-left:4px solid var(--warn);padding:8px 12px;border-radius:8px;margin:8px 0;font-size:.93rem}
-.vi::before{content:"≡ƒç╗≡ƒç│ ";}
+.vi::before{content:"🇻🇳 ";}
 body.vi-off .vi{display:none}
 .switch{display:inline-flex;align-items:center;gap:6px;cursor:pointer;font-size:.88rem;font-weight:600;user-select:none}
 .switch input{width:36px;height:20px;appearance:none;background:var(--border);border-radius:999px;position:relative;cursor:pointer;transition:.2s}

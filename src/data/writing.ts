@@ -9,7 +9,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Note",
    "title": "A note to your flatmate",
    "prompt": "You are going out. Write a note to your flatmate. Say where you are going, when you will be back, and ask them to do one thing for you.",
-   "vi": "Viß║┐t ghi ch├║ ngß║»n (30ΓÇô60 tß╗½): bß║ín ─æi ─æ├óu, mß║Ñy giß╗¥ vß╗ü, nhß╗¥ bß║ín c├╣ng ph├▓ng l├ám mß╗Öt viß╗çc.",
+   "vi": "Viết ghi chú ngắn (30–60 từ): bạn đi đâu, mấy giờ về, nhờ bạn cùng phòng làm một việc.",
    "min": 30,
    "max": 60,
    "k": [
@@ -25,7 +25,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Message",
    "title": "A message to a friend",
    "prompt": "Write a message to an English friend. Tell them about your new hobby: what it is, when you do it and why you like it.",
-   "vi": "Viß║┐t tin nhß║»n (30ΓÇô60 tß╗½) kß╗â vß╗ü sß╗ƒ th├¡ch mß╗¢i: l├á g├¼, khi n├áo l├ám, v├¼ sao th├¡ch.",
+   "vi": "Viết tin nhắn (30–60 từ) kể về sở thích mới: là gì, khi nào làm, vì sao thích.",
    "min": 30,
    "max": 60,
    "k": [
@@ -41,7 +41,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Email",
    "title": "An invitation",
    "prompt": "Write an email to a friend. Invite them to your birthday party. Say when and where it is, and what you are going to do.",
-   "vi": "Viß║┐t email mß╗¥i bß║ín dß╗▒ tiß╗çc sinh nhß║¡t: thß╗¥i gian, ─æß╗ïa ─æiß╗âm, hoß║ít ─æß╗Öng.",
+   "vi": "Viết email mời bạn dự tiệc sinh nhật: thời gian, địa điểm, hoạt động.",
    "min": 40,
    "max": 60,
    "k": [
@@ -58,7 +58,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Email",
    "title": "Your last weekend",
    "prompt": "Write an email to your English penfriend about last weekend. Say where you went, who you were with and what you did.",
-   "vi": "Kß╗â vß╗ü cuß╗æi tuß║ºn tr╞░ß╗¢c bß║▒ng th├¼ qu├í khß╗⌐ ─æ╞ín (went, visited, ate, saw...).",
+   "vi": "Kể về cuối tuần trước bằng thì quá khứ đơn (went, visited, ate, saw...).",
    "min": 40,
    "max": 60,
    "k": [
@@ -74,7 +74,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Postcard",
    "title": "A postcard from holiday",
    "prompt": "You are on holiday. Write a postcard to a friend. Describe the place, the weather and one thing you are going to do tomorrow.",
-   "vi": "Viß║┐t b╞░u thiß║┐p: m├┤ tß║ú n╞íi ─æß║┐n, thß╗¥i tiß║┐t v├á mß╗Öt viß╗çc bß║ín sß║╜ l├ám ng├áy mai (going to).",
+   "vi": "Viết bưu thiếp: mô tả nơi đến, thời tiết và một việc bạn sẽ làm ngày mai (going to).",
    "min": 30,
    "max": 60,
    "k": [
@@ -90,7 +90,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Email",
    "title": "Thank-you email",
    "prompt": "A friend gave you a birthday present. Write an email to say thank you. Say what the present was, why you like it and when you will use it.",
-   "vi": "Viß║┐t email cß║úm ╞ín m├│n qu├á (30ΓÇô60 tß╗½): qu├á l├á g├¼, v├¼ sao th├¡ch, khi n├áo sß║╜ d├╣ng.",
+   "vi": "Viết email cảm ơn món quà (30–60 từ): quà là gì, vì sao thích, khi nào sẽ dùng.",
    "min": 30,
    "max": 60,
    "k": [
@@ -106,7 +106,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Description",
    "title": "My town",
    "prompt": "Write a short description of your town for an English website. Say where it is, what there is to do and what you like about it.",
-   "vi": "M├┤ tß║ú thß╗ï trß║Ñn/th├ánh phß╗æ cß╗ºa bß║ín (40ΓÇô60 tß╗½): vß╗ï tr├¡, c├│ g├¼ ─æß╗â l├ám, ─æiß╗üu bß║ín th├¡ch.",
+   "vi": "Mô tả thị trấn/thành phố của bạn (40–60 từ): vị trí, có gì để làm, điều bạn thích.",
    "min": 40,
    "max": 60,
    "k": [
@@ -115,14 +115,14 @@ export const writing: ByLevel<WritingTask[]> = {
     "there are",
     "like"
    ],
-   "model": "I live in Vinh, a city in the north of central Vietnam. It isn't very big, but there are lots of things to do. There is a beautiful lake in the centre and there are many cheap caf├⌐s. I like my town because the people are friendly and the food is delicious."
+   "model": "I live in Vinh, a city in the north of central Vietnam. It isn't very big, but there are lots of things to do. There is a beautiful lake in the centre and there are many cheap cafés. I like my town because the people are friendly and the food is delicious."
   },
   {
    "id": "w-a2-8",
    "type": "Message",
    "title": "Changing plans",
    "prompt": "You can't meet your friend tomorrow. Write a message to say sorry, explain why, and suggest another day.",
-   "vi": "Viß║┐t tin nhß║»n xin lß╗ùi v├¼ kh├┤ng gß║╖p ─æ╞░ß╗úc, giß║úi th├¡ch l├╜ do v├á ─æß╗ü nghß╗ï ng├áy kh├íc.",
+   "vi": "Viết tin nhắn xin lỗi vì không gặp được, giải thích lý do và đề nghị ngày khác.",
    "min": 30,
    "max": 50,
    "k": [
@@ -140,7 +140,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Informal email",
    "title": "Advice to a friend",
    "prompt": "Your English friend Alex wants to visit your country next summer and asks for advice. Write an email: suggest places to visit, what to bring and the best way to travel around.",
-   "vi": "Email th├ón mß║¡t (80ΓÇô120 tß╗½) ─æ╞░a lß╗¥i khuy├¬n: n╞íi n├¬n ─æß║┐n, n├¬n mang g├¼, c├ích di chuyß╗ân. D├╣ng: You should..., Why don't you...?, If I were you...",
+   "vi": "Email thân mật (80–120 từ) đưa lời khuyên: nơi nên đến, nên mang gì, cách di chuyển. Dùng: You should..., Why don't you...?, If I were you...",
    "min": 80,
    "max": 120,
    "k": [
@@ -157,8 +157,8 @@ export const writing: ByLevel<WritingTask[]> = {
    "id": "w-b1-2",
    "type": "Story",
    "title": "A story: The wrong bag",
-   "prompt": "Write a short story that begins with this sentence: ΓÇ£When I opened the bag, I realised it wasn't mine.ΓÇ¥",
-   "vi": "Truyß╗çn ngß║»n (80ΓÇô120 tß╗½): d├╣ng qu├í khß╗⌐ ─æ╞ín, qu├í khß╗⌐ tiß║┐p diß╗àn v├á qu├í khß╗⌐ ho├án th├ánh; c├│ mß╗ƒ ─æß║ºu, diß╗àn biß║┐n, kß║┐t th├║c.",
+   "prompt": "Write a short story that begins with this sentence: “When I opened the bag, I realised it wasn't mine.”",
+   "vi": "Truyện ngắn (80–120 từ): dùng quá khứ đơn, quá khứ tiếp diễn và quá khứ hoàn thành; có mở đầu, diễn biến, kết thúc.",
    "min": 80,
    "max": 120,
    "k": [
@@ -168,14 +168,14 @@ export const writing: ByLevel<WritingTask[]> = {
     "suddenly",
     "finally"
    ],
-   "model": "When I opened the bag, I realised it wasn't mine. Instead of my laptop and books, there was a camera, a map of Paris and a small red notebook.\n\nI had picked up the wrong bag at the caf├⌐ that morning while I was talking on the phone. I felt terrible. Suddenly, I noticed a phone number on the first page of the notebook, so I called it.\n\nA young woman answered. She was a French tourist and she had my bag! She was leaving the city that evening, so we met at the station an hour later.\n\nFinally, we swapped bags and laughed about it. We are still friends today."
+   "model": "When I opened the bag, I realised it wasn't mine. Instead of my laptop and books, there was a camera, a map of Paris and a small red notebook.\n\nI had picked up the wrong bag at the café that morning while I was talking on the phone. I felt terrible. Suddenly, I noticed a phone number on the first page of the notebook, so I called it.\n\nA young woman answered. She was a French tourist and she had my bag! She was leaving the city that evening, so we met at the station an hour later.\n\nFinally, we swapped bags and laughed about it. We are still friends today."
   },
   {
    "id": "w-b1-3",
    "type": "Article",
    "title": "Article: My favourite app",
-   "prompt": "You see this notice on a school website: ΓÇ£Articles wanted! Which app do you use most and why? How has it changed your life?ΓÇ¥ Write your article.",
-   "vi": "B├ái b├ío ngß║»n (80ΓÇô120 tß╗½): c├│ ti├¬u ─æß╗ü, ─æoß║ín mß╗ƒ ─æß║ºu thu h├║t, nß╗Öi dung v├á kß║┐t luß║¡n. C├│ thß╗â ─æß║╖t c├óu hß╗Åi cho ng╞░ß╗¥i ─æß╗ìc.",
+   "prompt": "You see this notice on a school website: “Articles wanted! Which app do you use most and why? How has it changed your life?” Write your article.",
+   "vi": "Bài báo ngắn (80–120 từ): có tiêu đề, đoạn mở đầu thu hút, nội dung và kết luận. Có thể đặt câu hỏi cho người đọc.",
    "min": 80,
    "max": 120,
    "k": [
@@ -191,8 +191,8 @@ export const writing: ByLevel<WritingTask[]> = {
    "id": "w-b1-4",
    "type": "Informal email",
    "title": "Reply about a school trip",
-   "prompt": "Your friend writes: ΓÇ£Our class is going on a trip next month. Should we go to the mountains or to the beach? What do you think?ΓÇ¥ Reply with your opinion and reasons.",
-   "vi": "Trß║ú lß╗¥i email n├¬u ├╜ kiß║┐n v├á l├╜ do (80ΓÇô120 tß╗½). D├╣ng: I think..., because..., Another reason is..., However...",
+   "prompt": "Your friend writes: “Our class is going on a trip next month. Should we go to the mountains or to the beach? What do you think?” Reply with your opinion and reasons.",
+   "vi": "Trả lời email nêu ý kiến và lý do (80–120 từ). Dùng: I think..., because..., Another reason is..., However...",
    "min": 80,
    "max": 120,
    "k": [
@@ -208,8 +208,8 @@ export const writing: ByLevel<WritingTask[]> = {
    "id": "w-b1-5",
    "type": "Story",
    "title": "A story: An unexpected visitor",
-   "prompt": "Write a short story that ends with this sentence: ΓÇ£It was the best surprise I had ever had.ΓÇ¥",
-   "vi": "Viß║┐t truyß╗çn kß║┐t th├║c bß║▒ng c├óu cho sß║╡n. H├úy x├óy dß╗▒ng t├¼nh huß╗æng bß║Ñt ngß╗¥ v├á cß║úm x├║c nh├ón vß║¡t.",
+   "prompt": "Write a short story that ends with this sentence: “It was the best surprise I had ever had.”",
+   "vi": "Viết truyện kết thúc bằng câu cho sẵn. Hãy xây dựng tình huống bất ngờ và cảm xúc nhân vật.",
    "min": 80,
    "max": 120,
    "k": [
@@ -224,9 +224,9 @@ export const writing: ByLevel<WritingTask[]> = {
   {
    "id": "w-b1-6",
    "type": "Review",
-   "title": "Review: a restaurant or caf├⌐",
-   "prompt": "Write a review of a restaurant or caf├⌐ you have been to for a student website. Describe the place, the food and the service, and say whether you recommend it.",
-   "vi": "Review qu├ín ─ân (80ΓÇô120 tß╗½): kh├┤ng gian, ─æß╗ô ─ân, phß╗Ñc vß╗Ñ, gi├í cß║ú, c├│ khuy├¬n ng╞░ß╗¥i kh├íc ─æß║┐n kh├┤ng.",
+   "title": "Review: a restaurant or café",
+   "prompt": "Write a review of a restaurant or café you have been to for a student website. Describe the place, the food and the service, and say whether you recommend it.",
+   "vi": "Review quán ăn (80–120 từ): không gian, đồ ăn, phục vụ, giá cả, có khuyên người khác đến không.",
    "min": 80,
    "max": 120,
    "k": [
@@ -235,14 +235,14 @@ export const writing: ByLevel<WritingTask[]> = {
     "price",
     "recommend"
    ],
-   "model": "The Green Leaf Caf├⌐\n\nThe Green Leaf Caf├⌐ is a small vegetarian caf├⌐ near the city library. It's bright and quiet, so it's a great place to study or meet friends.\n\nThe food is fresh and tasty. I had a mushroom noodle soup and a mango smoothie, and both were excellent. The portions are generous, and the prices are reasonable for students.\n\nThe service was friendly, although it was a bit slow at lunchtime because the caf├⌐ was very busy.\n\nOverall, I would definitely recommend the Green Leaf Caf├⌐, especially if you want a healthy meal in a relaxing place. Try to go before twelve to avoid the queue!"
+   "model": "The Green Leaf Café\n\nThe Green Leaf Café is a small vegetarian café near the city library. It's bright and quiet, so it's a great place to study or meet friends.\n\nThe food is fresh and tasty. I had a mushroom noodle soup and a mango smoothie, and both were excellent. The portions are generous, and the prices are reasonable for students.\n\nThe service was friendly, although it was a bit slow at lunchtime because the café was very busy.\n\nOverall, I would definitely recommend the Green Leaf Café, especially if you want a healthy meal in a relaxing place. Try to go before twelve to avoid the queue!"
   },
   {
    "id": "w-b1-7",
    "type": "Formal email",
    "title": "Applying for a summer job",
    "prompt": "You see an advert for summer staff at an international hotel. Write an email to apply. Say why you are interested, what experience and skills you have, and when you are available.",
-   "vi": "Email xin viß╗çc l├ám th├¬m (80ΓÇô120 tß╗½): giß╗ìng trang trß╗ìng, Dear Sir or Madam, I am writing to apply for..., I look forward to hearing from you.",
+   "vi": "Email xin việc làm thêm (80–120 từ): giọng trang trọng, Dear Sir or Madam, I am writing to apply for..., I look forward to hearing from you.",
    "min": 80,
    "max": 120,
    "k": [
@@ -252,14 +252,14 @@ export const writing: ByLevel<WritingTask[]> = {
     "available",
     "look forward"
    ],
-   "model": "Dear Sir or Madam,\n\nI am writing to apply for the position of summer receptionist which I saw advertised on your website.\n\nI am a second-year tourism student, and I am very interested in working in an international environment. Last summer, I worked part-time in a caf├⌐, where I learned to deal with customers politely and work as part of a team. I speak English and some Korean, and I am confident using computers.\n\nI am available from 1st June to 31st August and I can work weekends.\n\nI look forward to hearing from you.\n\nYours faithfully,\nPham Thi Lan"
+   "model": "Dear Sir or Madam,\n\nI am writing to apply for the position of summer receptionist which I saw advertised on your website.\n\nI am a second-year tourism student, and I am very interested in working in an international environment. Last summer, I worked part-time in a café, where I learned to deal with customers politely and work as part of a team. I speak English and some Korean, and I am confident using computers.\n\nI am available from 1st June to 31st August and I can work weekends.\n\nI look forward to hearing from you.\n\nYours faithfully,\nPham Thi Lan"
   },
   {
    "id": "w-b1-8",
    "type": "Article",
    "title": "Article: The perfect weekend",
-   "prompt": "A magazine for young people asks readers: ΓÇ£Describe your perfect weekend. Where would you go, who would you be with and what would you do?ΓÇ¥ Write your article.",
-   "vi": "B├ái b├ío (80ΓÇô120 tß╗½) d├╣ng c├óu ─æiß╗üu kiß╗çn loß║íi 2 (would) ─æß╗â m├┤ tß║ú cuß╗æi tuß║ºn l├╜ t╞░ß╗ƒng. C├│ ti├¬u ─æß╗ü hß║Ñp dß║½n.",
+   "prompt": "A magazine for young people asks readers: “Describe your perfect weekend. Where would you go, who would you be with and what would you do?” Write your article.",
+   "vi": "Bài báo (80–120 từ) dùng câu điều kiện loại 2 (would) để mô tả cuối tuần lý tưởng. Có tiêu đề hấp dẫn.",
    "min": 80,
    "max": 120,
    "k": [
@@ -276,8 +276,8 @@ export const writing: ByLevel<WritingTask[]> = {
    "id": "w-b2-1",
    "type": "Opinion essay",
    "title": "Essay: Technology in the classroom",
-   "prompt": "ΓÇ£Technology in classrooms does more harm than good.ΓÇ¥ To what extent do you agree? Write an opinion essay giving reasons and examples.",
-   "vi": "B├ái luß║¡n quan ─æiß╗âm (140ΓÇô250 tß╗½): mß╗ƒ b├ái n├¬u quan ─æiß╗âm, 2 ─æoß║ín th├ón b├ái (l├╜ do + v├¡ dß╗Ñ, c├│ phß║ún biß╗çn), kß║┐t luß║¡n. D├╣ng tß╗½ nß╗æi: furthermore, nevertheless, consequently.",
+   "prompt": "“Technology in classrooms does more harm than good.” To what extent do you agree? Write an opinion essay giving reasons and examples.",
+   "vi": "Bài luận quan điểm (140–250 từ): mở bài nêu quan điểm, 2 đoạn thân bài (lý do + ví dụ, có phản biện), kết luận. Dùng từ nối: furthermore, nevertheless, consequently.",
    "min": 140,
    "max": 250,
    "k": [
@@ -295,7 +295,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Formal email",
    "title": "Formal complaint",
    "prompt": "You ordered a laptop online, but it arrived late and the screen was damaged. Write a formal email to the company: describe the problems, explain how this affected you, and say what you would like them to do.",
-   "vi": "Email trang trß╗ìng ph├án n├án: Dear Sir or Madam, I am writing to complain about..., I would be grateful if..., Yours faithfully. Tr├ính viß║┐t tß║»t (I'm ΓåÆ I am).",
+   "vi": "Email trang trọng phàn nàn: Dear Sir or Madam, I am writing to complain about..., I would be grateful if..., Yours faithfully. Tránh viết tắt (I'm → I am).",
    "min": 140,
    "max": 200,
    "k": [
@@ -314,7 +314,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Review",
    "title": "Review: a film or series",
    "prompt": "An international magazine wants reviews of a film or series that made you think. Write a review: describe it briefly, say what you liked and disliked, and whether you would recommend it.",
-   "vi": "B├ái review (140ΓÇô220 tß╗½): ti├¬u ─æß╗ü, giß╗¢i thiß╗çu ngß║»n (kh├┤ng kß╗â hß║┐t cß╗æt truyß╗çn), ╞░u/nh╞░ß╗úc ─æiß╗âm, khuyß║┐n nghß╗ï. D├╣ng t├¡nh tß╗½ ─æa dß║íng: gripping, thought-provoking, predictable.",
+   "vi": "Bài review (140–220 từ): tiêu đề, giới thiệu ngắn (không kể hết cốt truyện), ưu/nhược điểm, khuyến nghị. Dùng tính từ đa dạng: gripping, thought-provoking, predictable.",
    "min": 140,
    "max": 220,
    "k": [
@@ -331,7 +331,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Report",
    "title": "Report: improving the school library",
    "prompt": "Your principal has asked for a report on how the school library could be improved. Describe how students use it now, the main problems, and your recommendations.",
-   "vi": "B├ío c├ío (160ΓÇô250 tß╗½): c├│ ti├¬u ─æß╗ü v├á c├íc mß╗Ñc (Introduction, Current situation, Problems, Recommendations). V─ân phong trang trß╗ìng, d├╣ng c├óu bß╗ï ─æß╗Öng.",
+   "vi": "Báo cáo (160–250 từ): có tiêu đề và các mục (Introduction, Current situation, Problems, Recommendations). Văn phong trang trọng, dùng câu bị động.",
    "min": 160,
    "max": 250,
    "k": [
@@ -349,7 +349,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Informal email",
    "title": "Advice email: choosing a university",
    "prompt": "Your cousin can't decide whether to study at a university in your city or abroad. Write an informal email giving advice, comparing the two options and explaining what you would do in their position.",
-   "vi": "Email th├ón mß║¡t B2: so s├ính hai lß╗▒a chß╗ìn, d├╣ng c├óu ─æiß╗üu kiß╗çn (If I were you...), cß║Ñu tr├║c wish, v├á tß╗½ nß╗æi ─æa dß║íng.",
+   "vi": "Email thân mật B2: so sánh hai lựa chọn, dùng câu điều kiện (If I were you...), cấu trúc wish, và từ nối đa dạng.",
    "min": 140,
    "max": 220,
    "k": [
@@ -359,14 +359,14 @@ export const writing: ByLevel<WritingTask[]> = {
     "on the other hand",
     "wish"
    ],
-   "model": "Hi Duc,\n\nThanks for your message ΓÇô I can see why you're finding this decision so hard!\n\nStudying here definitely has its advantages. You'd be close to the family, your living costs would be much lower, and you could keep your part-time job. On the other hand, you might miss the chance to become more independent.\n\nStudying abroad, by contrast, would push you out of your comfort zone. Your English would improve enormously, and you'd make friends from all over the world. That said, it's expensive, and the first few months can be really lonely. I still wish I had spent a semester abroad when I had the chance.\n\nIf I were you, I'd look into exchange programmes. That way, you could start here and spend a year overseas later, which would give you the best of both worlds.\n\nWhatever you decide, I'm sure you'll make the most of it. Let me know how it goes!\n\nLots of love,\nThu"
+   "model": "Hi Duc,\n\nThanks for your message – I can see why you're finding this decision so hard!\n\nStudying here definitely has its advantages. You'd be close to the family, your living costs would be much lower, and you could keep your part-time job. On the other hand, you might miss the chance to become more independent.\n\nStudying abroad, by contrast, would push you out of your comfort zone. Your English would improve enormously, and you'd make friends from all over the world. That said, it's expensive, and the first few months can be really lonely. I still wish I had spent a semester abroad when I had the chance.\n\nIf I were you, I'd look into exchange programmes. That way, you could start here and spend a year overseas later, which would give you the best of both worlds.\n\nWhatever you decide, I'm sure you'll make the most of it. Let me know how it goes!\n\nLots of love,\nThu"
   },
   {
    "id": "w-b2-6",
    "type": "Opinion essay",
    "title": "Essay: Should tourism be limited?",
-   "prompt": "ΓÇ£Popular tourist destinations should limit the number of visitors.ΓÇ¥ Discuss both sides of this statement and give your own opinion.",
-   "vi": "B├ái luß║¡n thß║úo luß║¡n hai ph├¡a (discussion essay): mß╗ƒ b├ái, ─æoß║ín ß╗ºng hß╗Ö, ─æoß║ín phß║ún ─æß╗æi, kß║┐t luß║¡n vß╗¢i ├╜ kiß║┐n c├í nh├ón.",
+   "prompt": "“Popular tourist destinations should limit the number of visitors.” Discuss both sides of this statement and give your own opinion.",
+   "vi": "Bài luận thảo luận hai phía (discussion essay): mở bài, đoạn ủng hộ, đoạn phản đối, kết luận với ý kiến cá nhân.",
    "min": 160,
    "max": 250,
    "k": [
@@ -383,7 +383,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Proposal",
    "title": "Proposal: a greener campus",
    "prompt": "Your college wants ideas to become more environmentally friendly. Write a proposal describing the current situation and recommending three practical changes.",
-   "vi": "Viß║┐t ─æß╗ü xuß║Ñt (proposal) c├│ ti├¬u ─æß╗ü c├íc mß╗Ñc: Introduction, Current situation, Recommendations, Conclusion. V─ân phong trang trß╗ìng, d├╣ng should / it is recommended that.",
+   "vi": "Viết đề xuất (proposal) có tiêu đề các mục: Introduction, Current situation, Recommendations, Conclusion. Văn phong trang trọng, dùng should / it is recommended that.",
    "min": 160,
    "max": 250,
    "k": [
@@ -400,7 +400,7 @@ export const writing: ByLevel<WritingTask[]> = {
    "type": "Letter to the editor",
    "title": "Letter: More green spaces",
    "prompt": "Your local newspaper has published an article saying that a park in your city will be replaced by a shopping centre. Write a letter to the editor giving your opinion and suggesting alternatives.",
-   "vi": "Th╞░ gß╗¡i t├▓a soß║ín (formal letter): n├¬u l├╜ do viß║┐t, quan ─æiß╗âm c├│ l├╜ do v├á ─æß╗ü xuß║Ñt giß║úi ph├íp thay thß║┐. Kß║┐t th╞░: Yours faithfully.",
+   "vi": "Thư gửi tòa soạn (formal letter): nêu lý do viết, quan điểm có lý do và đề xuất giải pháp thay thế. Kết thư: Yours faithfully.",
    "min": 160,
    "max": 250,
    "k": [

@@ -7,8 +7,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-a2-1",
    "title": "Present simple and present continuous",
-   "ex": "<p><b>Present simple</b> = habits, routines, facts: <i>I <b>work</b> in a bank. She <b>gets up</b> at 7.</i> Add <b>-s/-es</b> with he/she/it. Negative: <i>don't / doesn't + verb</i>.</p><p><b>Present continuous</b> = actions happening now or around now: <i>I <b>am reading</b>. They <b>are staying</b> with friends this week.</i> Form: <i>am/is/are + verb-ing</i>.</p><p>Signal words: <i>always, usually, every day</i> ΓåÆ simple; <i>now, at the moment, today, Look!</i> ΓåÆ continuous. State verbs (<i>like, know, want, need</i>) are usually not continuous.</p>",
-   "vi": "Hiß╗çn tß║íi ─æ╞ín: th├│i quen, sß╗▒ thß║¡t (nhß╗¢ th├¬m -s/-es vß╗¢i he/she/it). Hiß╗çn tß║íi tiß║┐p diß╗àn: viß╗çc ─æang diß╗àn ra l├║c n├│i (am/is/are + V-ing). ─Éß╗Öng tß╗½ chß╗ë trß║íng th├íi nh╞░ like, know, want kh├┤ng chia tiß║┐p diß╗àn: n├│i ΓÇ£I knowΓÇ¥, kh├┤ng n├│i ΓÇ£I am knowingΓÇ¥.",
+   "ex": "<p><b>Present simple</b> = habits, routines, facts: <i>I <b>work</b> in a bank. She <b>gets up</b> at 7.</i> Add <b>-s/-es</b> with he/she/it. Negative: <i>don't / doesn't + verb</i>.</p><p><b>Present continuous</b> = actions happening now or around now: <i>I <b>am reading</b>. They <b>are staying</b> with friends this week.</i> Form: <i>am/is/are + verb-ing</i>.</p><p>Signal words: <i>always, usually, every day</i> → simple; <i>now, at the moment, today, Look!</i> → continuous. State verbs (<i>like, know, want, need</i>) are usually not continuous.</p>",
+   "vi": "Hiện tại đơn: thói quen, sự thật (nhớ thêm -s/-es với he/she/it). Hiện tại tiếp diễn: việc đang diễn ra lúc nói (am/is/are + V-ing). Động từ chỉ trạng thái như like, know, want không chia tiếp diễn: nói “I know”, không nói “I am knowing”.",
    "eg": [
     "My brother plays football every Sunday.",
     "Look! It's raining.",
@@ -53,7 +53,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "knows"
      ],
      "a": 0,
-     "x": "ΓÇ£knowΓÇ¥ is a state verb, so we use the present simple."
+     "x": "“know” is a state verb, so we use the present simple."
     },
     {
      "t": "gap",
@@ -93,7 +93,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "Water ___ at 100┬░C.",
+     "q": "Water ___ at 100°C.",
      "o": [
       "boils",
       "is boiling",
@@ -116,8 +116,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-a2-2",
    "title": "Past simple",
-   "ex": "<p>Use the <b>past simple</b> for finished actions in the past: <i>I <b>visited</b> Hue last year.</i></p><p>Regular verbs add <b>-ed</b>: <i>play ΓåÆ played, study ΓåÆ studied, stop ΓåÆ stopped</i>. Many common verbs are irregular: <i>go ΓåÆ went, have ΓåÆ had, see ΓåÆ saw, buy ΓåÆ bought, eat ΓåÆ ate</i>.</p><p>Negative and questions use <b>did</b> + base verb: <i>I <b>didn't go</b>. <b>Did</b> you <b>see</b> it?</i> (not <s>didn't went</s>). Be: <i>was / were</i>.</p><p>Signal words: <i>yesterday, last week, ago, in 2020</i>.</p>",
-   "vi": "Qu├í khß╗⌐ ─æ╞ín diß╗àn tß║ú h├ánh ─æß╗Öng ─æ├ú kß║┐t th├║c. ─Éß╗Öng tß╗½ c├│ quy tß║»c th├¬m -ed; bß║Ñt quy tß║»c phß║úi hß╗ìc thuß╗Öc (go ΓåÆ went). Sau did/didn't d├╣ng ─æß╗Öng tß╗½ nguy├¬n mß║½u: ΓÇ£I didn't goΓÇ¥, kh├┤ng phß║úi ΓÇ£I didn't wentΓÇ¥.",
+   "ex": "<p>Use the <b>past simple</b> for finished actions in the past: <i>I <b>visited</b> Hue last year.</i></p><p>Regular verbs add <b>-ed</b>: <i>play → played, study → studied, stop → stopped</i>. Many common verbs are irregular: <i>go → went, have → had, see → saw, buy → bought, eat → ate</i>.</p><p>Negative and questions use <b>did</b> + base verb: <i>I <b>didn't go</b>. <b>Did</b> you <b>see</b> it?</i> (not <s>didn't went</s>). Be: <i>was / were</i>.</p><p>Signal words: <i>yesterday, last week, ago, in 2020</i>.</p>",
+   "vi": "Quá khứ đơn diễn tả hành động đã kết thúc. Động từ có quy tắc thêm -ed; bất quy tắc phải học thuộc (go → went). Sau did/didn't dùng động từ nguyên mẫu: “I didn't go”, không phải “I didn't went”.",
    "eg": [
     "We watched a film last night.",
     "She went to Da Nang two years ago.",
@@ -210,11 +210,11 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-a2-3",
    "title": "Future: will and going to",
-   "ex": "<p><b>Going to</b> = plans and intentions decided before speaking: <i>I'm <b>going to</b> visit my grandparents next week.</i> Also predictions based on what we can see: <i>Look at those clouds! It's <b>going to</b> rain.</i></p><p><b>Will</b> = decisions made at the moment of speaking, offers, promises and general predictions: <i>I'm thirsty. ΓÇô I'll get you some water. I think it <b>will</b> be sunny tomorrow.</i></p><p>Negative: <i>won't (= will not)</i>, <i>I'm not going toΓÇª</i></p>",
-   "vi": "ΓÇ£Going toΓÇ¥ cho kß║┐ hoß║ích ─æ├ú ─æß╗ïnh tr╞░ß╗¢c hoß║╖c dß╗▒ ─æo├ín c├│ dß║Ñu hiß╗çu r├╡. ΓÇ£WillΓÇ¥ cho quyß║┐t ─æß╗ïnh ngay l├║c n├│i, lß╗¥i hß╗⌐a, ─æß╗ü nghß╗ï gi├║p ─æß╗í, dß╗▒ ─æo├ín chung (I think... will...).",
+   "ex": "<p><b>Going to</b> = plans and intentions decided before speaking: <i>I'm <b>going to</b> visit my grandparents next week.</i> Also predictions based on what we can see: <i>Look at those clouds! It's <b>going to</b> rain.</i></p><p><b>Will</b> = decisions made at the moment of speaking, offers, promises and general predictions: <i>I'm thirsty. – I'll get you some water. I think it <b>will</b> be sunny tomorrow.</i></p><p>Negative: <i>won't (= will not)</i>, <i>I'm not going to…</i></p>",
+   "vi": "“Going to” cho kế hoạch đã định trước hoặc dự đoán có dấu hiệu rõ. “Will” cho quyết định ngay lúc nói, lời hứa, đề nghị giúp đỡ, dự đoán chung (I think... will...).",
    "eg": [
     "We're going to move house in May.",
-    "The phone's ringing. ΓÇô I'll answer it.",
+    "The phone's ringing. – I'll answer it.",
     "I promise I won't be late.",
     "I think robots will do many jobs in the future."
    ],
@@ -269,7 +269,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "gap",
-     "q": "We ___ (travel) to Hanoi next weekend ΓÇô we've bought the tickets.",
+     "q": "We ___ (travel) to Hanoi next weekend – we've bought the tickets.",
      "a": [
       "are going to travel",
       "'re going to travel"
@@ -318,8 +318,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-a2-4",
    "title": "Comparatives and superlatives",
-   "ex": "<p><b>Short adjectives</b>: add <b>-er / -est</b>: <i>cheap ΓåÆ cheaper ΓåÆ the cheapest; big ΓåÆ bigger ΓåÆ the biggest; easy ΓåÆ easier ΓåÆ the easiest</i>.</p><p><b>Long adjectives</b>: <i>more / the most</i>: <i>expensive ΓåÆ more expensive ΓåÆ the most expensive</i>.</p><p>Irregular: <i>good ΓåÆ better ΓåÆ the best; bad ΓåÆ worse ΓåÆ the worst; far ΓåÆ further ΓåÆ the furthest</i>.</p><p>Use <b>than</b> with comparatives: <i>Hanoi is bigger <b>than</b> Hue.</i> Use <b>the</b> with superlatives. <i>as ΓÇª as</i> = equal: <i>She is as tall as me.</i></p>",
-   "vi": "So s├ính h╞ín: t├¡nh tß╗½ ngß║»n + -er + than; t├¡nh tß╗½ d├ái: more + adj + than. So s├ính nhß║Ñt: the + -est / the most. Kh├┤ng d├╣ng ΓÇ£more betterΓÇ¥ ΓÇô chß╗ë n├│i ΓÇ£betterΓÇ¥.",
+   "ex": "<p><b>Short adjectives</b>: add <b>-er / -est</b>: <i>cheap → cheaper → the cheapest; big → bigger → the biggest; easy → easier → the easiest</i>.</p><p><b>Long adjectives</b>: <i>more / the most</i>: <i>expensive → more expensive → the most expensive</i>.</p><p>Irregular: <i>good → better → the best; bad → worse → the worst; far → further → the furthest</i>.</p><p>Use <b>than</b> with comparatives: <i>Hanoi is bigger <b>than</b> Hue.</i> Use <b>the</b> with superlatives. <i>as … as</i> = equal: <i>She is as tall as me.</i></p>",
+   "vi": "So sánh hơn: tính từ ngắn + -er + than; tính từ dài: more + adj + than. So sánh nhất: the + -est / the most. Không dùng “more better” – chỉ nói “better”.",
    "eg": [
     "My bag is heavier than yours.",
     "This is the most beautiful beach in the area.",
@@ -412,8 +412,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-a2-5",
    "title": "Countable and uncountable nouns",
-   "ex": "<p><b>Countable</b> nouns have singular and plural: <i>an apple, two apples</i>. <b>Uncountable</b> nouns have no plural and no <i>a/an</i>: <i>water, rice, money, information, advice, homework, furniture</i>.</p><p><i>some</i> (positive) / <i>any</i> (negatives and questions) ΓÇô with both types. <i>many / a few</i> + countable; <i>much / a little</i> + uncountable; <i>a lot of</i> + both.</p><p><i>How many apples? How much milk?</i> Use units for uncountable: <i>a bottle of water, a piece of advice, a cup of tea</i>.</p>",
-   "vi": "Danh tß╗½ kh├┤ng ─æß║┐m ─æ╞░ß╗úc (water, rice, information, advice, homework...) kh├┤ng c├│ sß╗æ nhiß╗üu v├á kh├┤ng ─æi vß╗¢i a/an. many/a few + ─æß║┐m ─æ╞░ß╗úc; much/a little + kh├┤ng ─æß║┐m ─æ╞░ß╗úc. Lß╗ùi hay gß║╖p: ΓÇ£informationsΓÇ¥, ΓÇ£an adviceΓÇ¥.",
+   "ex": "<p><b>Countable</b> nouns have singular and plural: <i>an apple, two apples</i>. <b>Uncountable</b> nouns have no plural and no <i>a/an</i>: <i>water, rice, money, information, advice, homework, furniture</i>.</p><p><i>some</i> (positive) / <i>any</i> (negatives and questions) – with both types. <i>many / a few</i> + countable; <i>much / a little</i> + uncountable; <i>a lot of</i> + both.</p><p><i>How many apples? How much milk?</i> Use units for uncountable: <i>a bottle of water, a piece of advice, a cup of tea</i>.</p>",
+   "vi": "Danh từ không đếm được (water, rice, information, advice, homework...) không có số nhiều và không đi với a/an. many/a few + đếm được; much/a little + không đếm được. Lỗi hay gặp: “informations”, “an advice”.",
    "eg": [
     "There are some eggs in the fridge.",
     "We don't have much time.",
@@ -511,8 +511,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-a2-6",
    "title": "can, must, have to",
-   "ex": "<p><b>can / can't</b> = ability or permission: <i>I <b>can</b> swim. <b>Can</b> I open the window?</i></p><p><b>must</b> = strong obligation, often from the speaker or rules: <i>You <b>must</b> wear a seatbelt.</i> <b>mustn't</b> = it is not allowed: <i>You <b>mustn't</b> smoke here.</i></p><p><b>have to</b> = obligation from outside (rules, situation): <i>I <b>have to</b> wear a uniform at school.</i> <b>don't have to</b> = it is not necessary: <i>You <b>don't have to</b> come ΓÇô it's optional.</i></p><p>After modal verbs use the base verb without <i>to</i>: <s>can to swim</s> ΓåÆ <i>can swim</i>.</p>",
-   "vi": "can: khß║ú n─âng/xin ph├⌐p. must: bß║»t buß╗Öc (mß║ính). mustn't: cß║Ñm. have to: bß║»t buß╗Öc do ho├án cß║únh/quy ─æß╗ïnh. don't have to: kh├┤ng cß║ºn thiß║┐t (KH├üC vß╗¢i mustn't). Sau can/must kh├┤ng c├│ ΓÇ£toΓÇ¥.",
+   "ex": "<p><b>can / can't</b> = ability or permission: <i>I <b>can</b> swim. <b>Can</b> I open the window?</i></p><p><b>must</b> = strong obligation, often from the speaker or rules: <i>You <b>must</b> wear a seatbelt.</i> <b>mustn't</b> = it is not allowed: <i>You <b>mustn't</b> smoke here.</i></p><p><b>have to</b> = obligation from outside (rules, situation): <i>I <b>have to</b> wear a uniform at school.</i> <b>don't have to</b> = it is not necessary: <i>You <b>don't have to</b> come – it's optional.</i></p><p>After modal verbs use the base verb without <i>to</i>: <s>can to swim</s> → <i>can swim</i>.</p>",
+   "vi": "can: khả năng/xin phép. must: bắt buộc (mạnh). mustn't: cấm. have to: bắt buộc do hoàn cảnh/quy định. don't have to: không cần thiết (KHÁC với mustn't). Sau can/must không có “to”.",
    "eg": [
     "She can speak three languages.",
     "You mustn't use your phone in the exam.",
@@ -580,7 +580,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "gap",
-     "q": "She ___ work on Saturdays ΓÇô she has a day off. (not / have to)",
+     "q": "She ___ work on Saturdays – she has a day off. (not / have to)",
      "a": [
       "doesn't have to",
       "does not have to"
@@ -622,7 +622,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
    "id": "g-a2-7",
    "title": "Prepositions of time and place",
    "ex": "<p><b>Time</b>: <b>at</b> + clock times and short expressions (<i>at 7 o'clock, at night, at the weekend</i>); <b>on</b> + days and dates (<i>on Monday, on 5th May, on my birthday</i>); <b>in</b> + months, years, seasons, parts of the day (<i>in July, in 2025, in summer, in the morning</i>).</p><p><b>Place</b>: <b>in</b> = inside an area (<i>in the kitchen, in Hanoi</i>); <b>on</b> = on a surface or line (<i>on the table, on the wall, on the second floor</i>); <b>at</b> = a point or place for an activity (<i>at the bus stop, at school, at home</i>). Also: <i>next to, between, opposite, behind, under, in front of</i>.</p>",
-   "vi": "Thß╗¥i gian: at + giß╗¥; on + ng├áy/thß╗⌐; in + th├íng/n─âm/m├╣a/buß╗òi. N╞íi chß╗æn: in (b├¬n trong), on (tr├¬n bß╗ü mß║╖t, tß║ºng), at (mß╗Öt ─æiß╗âm cß╗Ñ thß╗â: at school, at home).",
+   "vi": "Thời gian: at + giờ; on + ngày/thứ; in + tháng/năm/mùa/buổi. Nơi chốn: in (bên trong), on (trên bề mặt, tầng), at (một điểm cụ thể: at school, at home).",
    "eg": [
     "The meeting is at 3 p.m. on Friday.",
     "I was born in 2008.",
@@ -692,7 +692,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "The bank is ___ the post office and the caf├⌐.",
+     "q": "The bank is ___ the post office and the café.",
      "o": [
       "between",
       "opposite of",
@@ -721,7 +721,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
    "id": "g-a2-8",
    "title": "Articles: a, an, the",
    "ex": "<p><b>a / an</b> = one thing, mentioned for the first time, or a job: <i>I saw <b>a</b> film. She's <b>an</b> engineer.</i> Use <b>an</b> before a vowel <b>sound</b>: <i>an apple, an hour</i> (but <i>a university</i>).</p><p><b>the</b> = something already mentioned, or the only one: <i>The film was great. <b>The</b> sun is hot.</i> Also with superlatives (<i>the best</i>), some places (<i>the cinema, the bank</i>) and instruments (<i>play the piano</i>).</p><p><b>No article</b> with plural or uncountable nouns in general, meals, sports and most cities/countries: <i>I like <b>cats</b>. We have <b>lunch</b> at 12. She plays <b>tennis</b>. I live in <b>Hanoi</b>.</i></p>",
-   "vi": "a/an: mß╗Öt vß║¡t ch╞░a x├íc ─æß╗ïnh, nghß╗ü nghiß╗çp (an tr╞░ß╗¢c nguy├¬n ├óm theo c├ích ─æß╗ìc: an hour, a university). the: vß║¡t ─æ├ú biß║┐t, duy nhß║Ñt, so s├ính nhß║Ñt. Kh├┤ng d├╣ng mß║ío tß╗½ khi n├│i chung chung vß╗¢i danh tß╗½ sß╗æ nhiß╗üu/kh├┤ng ─æß║┐m ─æ╞░ß╗úc, bß╗»a ─ân, m├┤n thß╗â thao.",
+   "vi": "a/an: một vật chưa xác định, nghề nghiệp (an trước nguyên âm theo cách đọc: an hour, a university). the: vật đã biết, duy nhất, so sánh nhất. Không dùng mạo từ khi nói chung chung với danh từ số nhiều/không đếm được, bữa ăn, môn thể thao.",
    "eg": [
     "I've got a dog. The dog is called Milo.",
     "She's an architect.",
@@ -770,7 +770,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "o": [
       "the",
       "a",
-      "ΓÇö"
+      "—"
      ],
      "a": 2
     },
@@ -780,7 +780,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "o": [
       "a",
       "an",
-      "ΓÇö"
+      "—"
      ],
      "a": 0
     },
@@ -795,7 +795,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "o": [
       "a",
       "the",
-      "ΓÇö"
+      "—"
      ],
      "a": 2
     },
@@ -824,8 +824,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-a2-9",
    "title": "Adverbs of frequency and present habits",
-   "ex": "<p>Adverbs of frequency say <b>how often</b>: <i>always (100%) ΓåÆ usually ΓåÆ often ΓåÆ sometimes ΓåÆ rarely ΓåÆ never (0%)</i>.</p><p>Position: <b>before</b> the main verb (<i>I <b>often</b> walk to school</i>) but <b>after</b> the verb <i>be</i> (<i>She is <b>always</b> late</i>).</p><p>Questions: <i>How often do youΓÇª?</i> Answers with expressions: <i>every day, once a week, twice a month, three times a year</i> (usually at the end of the sentence).</p>",
-   "vi": "Trß║íng tß╗½ tß║ºn suß║Ñt (always, usually, often, sometimes, rarely, never) ─æß╗⌐ng tr╞░ß╗¢c ─æß╗Öng tß╗½ th╞░ß╗¥ng nh╞░ng sau ─æß╗Öng tß╗½ to be. How often...? trß║ú lß╗¥i bß║▒ng once/twice/three times a week...",
+   "ex": "<p>Adverbs of frequency say <b>how often</b>: <i>always (100%) → usually → often → sometimes → rarely → never (0%)</i>.</p><p>Position: <b>before</b> the main verb (<i>I <b>often</b> walk to school</i>) but <b>after</b> the verb <i>be</i> (<i>She is <b>always</b> late</i>).</p><p>Questions: <i>How often do you…?</i> Answers with expressions: <i>every day, once a week, twice a month, three times a year</i> (usually at the end of the sentence).</p>",
+   "vi": "Trạng từ tần suất (always, usually, often, sometimes, rarely, never) đứng trước động từ thường nhưng sau động từ to be. How often...? trả lời bằng once/twice/three times a week...",
    "eg": [
     "I usually get up at six.",
     "He is never late.",
@@ -855,7 +855,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "gap",
-     "q": "How ___ do you play football? ΓÇô Twice a week.",
+     "q": "How ___ do you play football? – Twice a week.",
      "a": "often"
     },
     {
@@ -926,7 +926,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
    "id": "g-b1-1",
    "title": "Present perfect vs past simple",
    "ex": "<p><b>Present perfect</b> (<i>have/has + past participle</i>) connects the past with now: experiences (<i>I've <b>been</b> to Japan.</i>), unfinished time (<i>I've <b>lived</b> here <b>for</b> five years / <b>since</b> 2020.</i>), recent results (<i>I've <b>lost</b> my keys.</i>). Common words: <i>ever, never, already, yet, just, for, since</i>.</p><p><b>Past simple</b> = finished time, often with a time expression: <i>I <b>went</b> to Japan <b>in 2019</b>.</i> Don't use the present perfect with <i>yesterday, last year, ago</i>.</p><p><b>for</b> + a period (<i>for three weeks</i>); <b>since</b> + a starting point (<i>since Monday</i>).</p>",
-   "vi": "Hiß╗çn tß║íi ho├án th├ánh: kinh nghiß╗çm, viß╗çc k├⌐o d├ái ─æß║┐n nay, kß║┐t quß║ú c├▓n li├¬n quan hiß╗çn tß║íi. Qu├í khß╗⌐ ─æ╞ín: thß╗¥i ─æiß╗âm ─æ├ú kß║┐t th├║c r├╡ r├áng (yesterday, last year, ago). for + khoß║úng thß╗¥i gian; since + mß╗æc thß╗¥i gian. Lß╗ùi hay gß║╖p: ΓÇ£I have seen him yesterdayΓÇ¥.",
+   "vi": "Hiện tại hoàn thành: kinh nghiệm, việc kéo dài đến nay, kết quả còn liên quan hiện tại. Quá khứ đơn: thời điểm đã kết thúc rõ ràng (yesterday, last year, ago). for + khoảng thời gian; since + mốc thời gian. Lỗi hay gặp: “I have seen him yesterday”.",
    "eg": [
     "Have you ever eaten durian?",
     "She has worked here since 2021.",
@@ -1020,7 +1020,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
    "id": "g-b1-2",
    "title": "Past continuous",
    "ex": "<p>Form: <i>was/were + verb-ing</i>. Use it for an action <b>in progress</b> at a time in the past: <i>At 8 p.m. I <b>was watching</b> TV.</i></p><p>Often used with the past simple: the long action (continuous) is interrupted by a short action (simple): <i>I <b>was walking</b> home <b>when</b> it <b>started</b> to rain.</i> <i>While</i> + continuous: <i><b>While</b> she <b>was cooking</b>, the phone rang.</i></p><p>Two actions at the same time: <i>He was reading while I was studying.</i></p>",
-   "vi": "Qu├í khß╗⌐ tiß║┐p diß╗àn (was/were + V-ing): h├ánh ─æß╗Öng ─æang diß╗àn ra tß║íi mß╗Öt thß╗¥i ─æiß╗âm trong qu├í khß╗⌐. Kß║┐t hß╗úp vß╗¢i qu├í khß╗⌐ ─æ╞ín: h├ánh ─æß╗Öng d├ái (tiß║┐p diß╗àn) bß╗ï h├ánh ─æß╗Öng ngß║»n (qu├í khß╗⌐ ─æ╞ín) chen v├áo. when + qu├í khß╗⌐ ─æ╞ín, while + qu├í khß╗⌐ tiß║┐p diß╗àn.",
+   "vi": "Quá khứ tiếp diễn (was/were + V-ing): hành động đang diễn ra tại một thời điểm trong quá khứ. Kết hợp với quá khứ đơn: hành động dài (tiếp diễn) bị hành động ngắn (quá khứ đơn) chen vào. when + quá khứ đơn, while + quá khứ tiếp diễn.",
    "eg": [
     "I was sleeping when you called.",
     "What were you doing at 10 o'clock?",
@@ -1121,8 +1121,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b1-3",
    "title": "First and second conditionals",
-   "ex": "<p><b>First conditional</b> = real or likely future situations: <i>If + present simple, will + verb</i>. <i>If it <b>rains</b>, we <b>will stay</b> at home.</i></p><p><b>Second conditional</b> = unreal, imaginary or unlikely situations (now/future): <i>If + past simple, would + verb</i>. <i>If I <b>had</b> more money, I <b>would travel</b> around the world.</i> With <i>be</i>, we often use <i>were</i> for all persons: <i>If I <b>were</b> you, I'd apologise.</i></p><p><i>unless</i> = if ΓÇª not: <i>You'll miss the bus unless you hurry.</i></p>",
-   "vi": "─Éiß╗üu kiß╗çn loß║íi 1 (c├│ thß╗â xß║úy ra): If + hiß╗çn tß║íi ─æ╞ín, will + V. Loß║íi 2 (kh├┤ng c├│ thß║¡t ß╗ƒ hiß╗çn tß║íi/kh├│ xß║úy ra): If + qu├í khß╗⌐ ─æ╞ín, would + V. Kh├┤ng d├╣ng ΓÇ£willΓÇ¥ sau ΓÇ£ifΓÇ¥ trong mß╗çnh ─æß╗ü ─æiß╗üu kiß╗çn: ΓÇ£If it will rainΓÇ¥ l├á sai.",
+   "ex": "<p><b>First conditional</b> = real or likely future situations: <i>If + present simple, will + verb</i>. <i>If it <b>rains</b>, we <b>will stay</b> at home.</i></p><p><b>Second conditional</b> = unreal, imaginary or unlikely situations (now/future): <i>If + past simple, would + verb</i>. <i>If I <b>had</b> more money, I <b>would travel</b> around the world.</i> With <i>be</i>, we often use <i>were</i> for all persons: <i>If I <b>were</b> you, I'd apologise.</i></p><p><i>unless</i> = if … not: <i>You'll miss the bus unless you hurry.</i></p>",
+   "vi": "Điều kiện loại 1 (có thể xảy ra): If + hiện tại đơn, will + V. Loại 2 (không có thật ở hiện tại/khó xảy ra): If + quá khứ đơn, would + V. Không dùng “will” sau “if” trong mệnh đề điều kiện: “If it will rain” là sai.",
    "eg": [
     "If you study hard, you'll pass.",
     "If I won the lottery, I'd buy a house.",
@@ -1224,7 +1224,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
    "id": "g-b1-4",
    "title": "Passive voice (basic)",
    "ex": "<p>Use the <b>passive</b> when the action is more important than who does it, or when we don't know who does it. Form: <i>be + past participle</i>.</p><p>Present simple: <i>English <b>is spoken</b> in many countries.</i> Past simple: <i>The bridge <b>was built</b> in 1902.</i> Present perfect: <i>My bike <b>has been stolen</b>!</i> Future: <i>The results <b>will be announced</b> tomorrow.</i></p><p>Use <b>by</b> to say who did it (only if important): <i>The book was written <b>by</b> a teacher.</i></p>",
-   "vi": "C├óu bß╗ï ─æß╗Öng: be + V3/ed. D├╣ng khi h├ánh ─æß╗Öng quan trß╗ìng h╞ín ng╞░ß╗¥i l├ám. Chia ΓÇ£beΓÇ¥ theo th├¼: is/are (hiß╗çn tß║íi), was/were (qu├í khß╗⌐), has been (hiß╗çn tß║íi ho├án th├ánh), will be (t╞░╞íng lai). by + ng╞░ß╗¥i thß╗▒c hiß╗çn (nß║┐u cß║ºn).",
+   "vi": "Câu bị động: be + V3/ed. Dùng khi hành động quan trọng hơn người làm. Chia “be” theo thì: is/are (hiện tại), was/were (quá khứ), has been (hiện tại hoàn thành), will be (tương lai). by + người thực hiện (nếu cần).",
    "eg": [
     "Coffee is grown in the Central Highlands.",
     "The window was broken last night.",
@@ -1274,7 +1274,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "ΓÇ£Romeo and JulietΓÇ¥ was written ___ Shakespeare.",
+     "q": "“Romeo and Juliet” was written ___ Shakespeare.",
      "o": [
       "from",
       "by",
@@ -1284,7 +1284,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "Choose the passive: ΓÇ£Someone cleans the office every day.ΓÇ¥",
+     "q": "Choose the passive: “Someone cleans the office every day.”",
      "o": [
       "The office cleans every day.",
       "The office is cleaned every day.",
@@ -1323,11 +1323,11 @@ export const grammar: ByLevel<GrammarLesson[]> = {
    "id": "g-b1-5",
    "title": "Relative clauses",
    "ex": "<p>Relative clauses give more information about a noun. <b>who</b> = people, <b>which</b> = things, <b>that</b> = people or things (defining clauses), <b>where</b> = places, <b>whose</b> = possession.</p><p><b>Defining</b> (necessary information, no commas): <i>The woman <b>who lives next door</b> is a doctor.</i></p><p><b>Non-defining</b> (extra information, with commas, no <i>that</i>): <i>My brother, <b>who lives in Hue</b>, is a teacher.</i></p><p>You can leave out <i>who/which/that</i> when it is the object: <i>The book (that) I bought is great.</i></p>",
-   "vi": "Mß╗çnh ─æß╗ü quan hß╗ç: who (ng╞░ß╗¥i), which (vß║¡t), that (ng╞░ß╗¥i/vß║¡t, chß╗ë trong mß╗çnh ─æß╗ü x├íc ─æß╗ïnh), where (n╞íi chß╗æn), whose (sß╗ƒ hß╗»u). Mß╗çnh ─æß╗ü kh├┤ng x├íc ─æß╗ïnh c├│ dß║Ñu phß║⌐y v├á kh├┤ng d├╣ng ΓÇ£thatΓÇ¥.",
+   "vi": "Mệnh đề quan hệ: who (người), which (vật), that (người/vật, chỉ trong mệnh đề xác định), where (nơi chốn), whose (sở hữu). Mệnh đề không xác định có dấu phẩy và không dùng “that”.",
    "eg": [
     "That's the man who helped me.",
     "The phone which I bought last week is broken.",
-    "This is the caf├⌐ where we first met.",
+    "This is the café where we first met.",
     "I have a friend whose father is a pilot."
    ],
    "q": [
@@ -1427,8 +1427,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b1-6",
    "title": "used to",
-   "ex": "<p><b>used to + verb</b> = past habits or states that are not true now: <i>I <b>used to</b> play the piano, but I stopped.</i> <i>There <b>used to</b> be a cinema here.</i></p><p>Negative: <i>didn't use to</i>. Question: <i>Did you use toΓÇª?</i> (no <i>-d</i> after did).</p><p>Don't confuse with <b>be used to + -ing</b> = be familiar with: <i>I'm used to getting up early.</i></p>",
-   "vi": "used to + V: th├│i quen/trß║íng th├íi trong qu├í khß╗⌐ nay kh├┤ng c├▓n. Phß╗º ─æß╗ïnh/nghi vß║Ñn: didn't use to / Did you use to (kh├┤ng c├│ -d). Kh├íc vß╗¢i ΓÇ£be used to + V-ingΓÇ¥ (─æ├ú quen vß╗¢i).",
+   "ex": "<p><b>used to + verb</b> = past habits or states that are not true now: <i>I <b>used to</b> play the piano, but I stopped.</i> <i>There <b>used to</b> be a cinema here.</i></p><p>Negative: <i>didn't use to</i>. Question: <i>Did you use to…?</i> (no <i>-d</i> after did).</p><p>Don't confuse with <b>be used to + -ing</b> = be familiar with: <i>I'm used to getting up early.</i></p>",
+   "vi": "used to + V: thói quen/trạng thái trong quá khứ nay không còn. Phủ định/nghi vấn: didn't use to / Did you use to (không có -d). Khác với “be used to + V-ing” (đã quen với).",
    "eg": [
     "I used to live in the countryside.",
     "She didn't use to like vegetables.",
@@ -1530,7 +1530,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
    "id": "g-b1-7",
    "title": "Gerunds and infinitives (basic)",
    "ex": "<p>Some verbs are followed by <b>-ing</b> (gerund): <i>enjoy, finish, mind, avoid, suggest, keep, practise</i>: <i>I enjoy <b>reading</b>.</i></p><p>Some verbs are followed by <b>to + verb</b> (infinitive): <i>want, decide, hope, plan, agree, promise, need, would like</i>: <i>She decided <b>to leave</b>.</i></p><p>After prepositions use <b>-ing</b>: <i>I'm good at <b>drawing</b>. Thanks for <b>helping</b>.</i> As a subject, use -ing: <i><b>Swimming</b> is good exercise.</i> After adjectives, often to + verb: <i>It's easy <b>to learn</b>.</i></p>",
-   "vi": "─Éß╗Öng tß╗½ + V-ing: enjoy, finish, mind, avoid, suggest, keep. ─Éß╗Öng tß╗½ + to V: want, decide, hope, plan, agree, promise, need. Sau giß╗¢i tß╗½ lu├┤n d├╣ng V-ing: interested in learning, good at cooking.",
+   "vi": "Động từ + V-ing: enjoy, finish, mind, avoid, suggest, keep. Động từ + to V: want, decide, hope, plan, agree, promise, need. Sau giới từ luôn dùng V-ing: interested in learning, good at cooking.",
    "eg": [
     "I've finished doing my homework.",
     "We hope to see you soon.",
@@ -1629,7 +1629,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
    "id": "g-b1-8",
    "title": "Modal verbs: should, might, may, could",
    "ex": "<p><b>should / shouldn't</b> = advice: <i>You <b>should</b> see a doctor. You <b>shouldn't</b> work so late.</i> (<i>ought to</i> is similar but more formal.)</p><p><b>might / may / could</b> = possibility: <i>It <b>might</b> rain later. She <b>may</b> be at the library. We <b>could</b> go to the beach if it's sunny.</i> Negative possibility: <i>might not / may not</i> (not <s>couldn't</s> for possibility).</p><p><b>could</b> also = past ability and polite requests: <i>I <b>could</b> swim when I was five. <b>Could</b> you help me?</i></p><p>After all modals: base verb without <i>to</i>.</p>",
-   "vi": "should: lß╗¥i khuy├¬n. might/may/could: khß║ú n─âng (c├│ thß╗â). might not/may not: c├│ thß╗â kh├┤ng. could c├▓n d├╣ng cho khß║ú n─âng trong qu├í khß╗⌐ v├á lß╗¥i ─æß╗ü nghß╗ï lß╗ïch sß╗▒. Sau modal l├á ─æß╗Öng tß╗½ nguy├¬n mß║½u kh├┤ng ΓÇ£toΓÇ¥.",
+   "vi": "should: lời khuyên. might/may/could: khả năng (có thể). might not/may not: có thể không. could còn dùng cho khả năng trong quá khứ và lời đề nghị lịch sự. Sau modal là động từ nguyên mẫu không “to”.",
    "eg": [
     "You should drink more water.",
     "I might go out tonight, but I'm not sure.",
@@ -1712,7 +1712,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "What's the best advice? ΓÇ£I have a terrible toothache.ΓÇ¥",
+     "q": "What's the best advice? “I have a terrible toothache.”",
      "o": [
       "You might see a dentist.",
       "You should see a dentist.",
@@ -1735,7 +1735,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
    "id": "g-b1-9",
    "title": "Future forms: present continuous, going to, will, present simple",
    "ex": "<p><b>Present continuous</b> = fixed arrangements (often with a time and place): <i>I'm <b>meeting</b> Tom at six.</i></p><p><b>Be going to</b> = plans and intentions: <i>I'm <b>going to</b> learn Korean next year.</i></p><p><b>Will</b> = predictions, instant decisions, promises: <i>I think it <b>will</b> be difficult. I'<b>ll</b> call you later.</i></p><p><b>Present simple</b> = timetables and schedules: <i>The train <b>leaves</b> at 8.15. The course <b>starts</b> on Monday.</i></p><p>After <i>when, as soon as, before, after, until</i> about the future, use the <b>present simple</b>: <i>I'll call you <b>when</b> I <b>arrive</b>.</i></p>",
-   "vi": "T╞░╞íng lai: hiß╗çn tß║íi tiß║┐p diß╗àn (lß╗ïch hß║╣n ─æ├ú sß║»p xß║┐p), be going to (dß╗▒ ─æß╗ïnh), will (dß╗▒ ─æo├ín, quyß║┐t ─æß╗ïnh tß╗⌐c thß╗¥i, lß╗¥i hß╗⌐a), hiß╗çn tß║íi ─æ╞ín (lß╗ïch tr├¼nh, thß╗¥i gian biß╗âu). Sau when/as soon as... d├╣ng hiß╗çn tß║íi ─æ╞ín.",
+   "vi": "Tương lai: hiện tại tiếp diễn (lịch hẹn đã sắp xếp), be going to (dự định), will (dự đoán, quyết định tức thời, lời hứa), hiện tại đơn (lịch trình, thời gian biểu). Sau when/as soon as... dùng hiện tại đơn.",
    "eg": [
     "We're flying to Da Nang on Friday.",
     "The film starts at 7.30.",
@@ -1838,12 +1838,12 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b2-1",
    "title": "Review of all tenses",
-   "ex": "<p><b>Simple</b> forms describe complete actions or facts; <b>continuous</b> forms describe actions in progress; <b>perfect</b> forms look back from a point in time.</p><ul><li>Present perfect continuous: duration up to now ΓÇô <i>I've <b>been waiting</b> for an hour.</i></li><li>Past perfect: an action before another past action ΓÇô <i>When I arrived, the film <b>had</b> already <b>started</b>.</i></li><li>Past perfect continuous: duration before a past moment ΓÇô <i>She was tired because she <b>had been working</b> all day.</i></li><li>Future continuous: in progress at a future time ΓÇô <i>This time tomorrow I'<b>ll be flying</b> to Paris.</i></li><li>Future perfect: completed before a future time ΓÇô <i>By 2030, I <b>will have finished</b> my degree.</i></li></ul>",
-   "vi": "├ön tß║¡p 12 th├¼: ch├║ ├╜ th├¼ ho├án th├ánh tiß║┐p diß╗àn (nhß║Ñn mß║ính qu├í tr├¼nh), qu├í khß╗⌐ ho├án th├ánh (viß╗çc xß║úy ra tr╞░ß╗¢c mß╗Öt viß╗çc kh├íc trong qu├í khß╗⌐), t╞░╞íng lai tiß║┐p diß╗àn v├á t╞░╞íng lai ho├án th├ánh (by + mß╗æc thß╗¥i gian).",
+   "ex": "<p><b>Simple</b> forms describe complete actions or facts; <b>continuous</b> forms describe actions in progress; <b>perfect</b> forms look back from a point in time.</p><ul><li>Present perfect continuous: duration up to now – <i>I've <b>been waiting</b> for an hour.</i></li><li>Past perfect: an action before another past action – <i>When I arrived, the film <b>had</b> already <b>started</b>.</i></li><li>Past perfect continuous: duration before a past moment – <i>She was tired because she <b>had been working</b> all day.</i></li><li>Future continuous: in progress at a future time – <i>This time tomorrow I'<b>ll be flying</b> to Paris.</i></li><li>Future perfect: completed before a future time – <i>By 2030, I <b>will have finished</b> my degree.</i></li></ul>",
+   "vi": "Ôn tập 12 thì: chú ý thì hoàn thành tiếp diễn (nhấn mạnh quá trình), quá khứ hoàn thành (việc xảy ra trước một việc khác trong quá khứ), tương lai tiếp diễn và tương lai hoàn thành (by + mốc thời gian).",
    "eg": [
     "I've been learning English since I was ten.",
     "By the time we got there, everyone had left.",
-    "Don't call at eight ΓÇô I'll be having dinner.",
+    "Don't call at eight – I'll be having dinner.",
     "She will have retired by next summer."
    ],
    "q": [
@@ -1897,7 +1897,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "gap",
-     "q": "Water ___ (freeze) at 0┬░C.",
+     "q": "Water ___ (freeze) at 0°C.",
      "a": "freezes"
     },
     {
@@ -1940,8 +1940,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b2-2",
    "title": "Third and mixed conditionals",
-   "ex": "<p><b>Third conditional</b> = imaginary past (it didn't happen): <i>If + past perfect, would have + past participle</i>. <i>If I <b>had studied</b>, I <b>would have passed</b>.</i></p><p><b>Mixed conditional</b> (past ΓåÆ present): <i>If + past perfect, would + verb</i>. <i>If I <b>had taken</b> that job, I <b>would be</b> rich now.</i></p><p>(present ΓåÆ past): <i>If + past simple, would have + past participle</i>. <i>If I <b>were</b> more organised, I <b>wouldn't have missed</b> the deadline.</i></p><p>Variations: <i>could have / might have</i>; inversion in formal style: <i><b>Had</b> I known, I would have helped.</i></p>",
-   "vi": "─Éiß╗üu kiß╗çn loß║íi 3: giß║ú ─æß╗ïnh tr├íi vß╗¢i qu├í khß╗⌐ (If + had V3, would have V3). Hß╗ùn hß╗úp: ─æiß╗üu kiß╗çn qu├í khß╗⌐ ΓÇô kß║┐t quß║ú hiß╗çn tß║íi (If + had V3, would + V) hoß║╖c ng╞░ß╗úc lß║íi. ─Éß║úo ngß╗» trang trß╗ìng: Had I known...",
+   "ex": "<p><b>Third conditional</b> = imaginary past (it didn't happen): <i>If + past perfect, would have + past participle</i>. <i>If I <b>had studied</b>, I <b>would have passed</b>.</i></p><p><b>Mixed conditional</b> (past → present): <i>If + past perfect, would + verb</i>. <i>If I <b>had taken</b> that job, I <b>would be</b> rich now.</i></p><p>(present → past): <i>If + past simple, would have + past participle</i>. <i>If I <b>were</b> more organised, I <b>wouldn't have missed</b> the deadline.</i></p><p>Variations: <i>could have / might have</i>; inversion in formal style: <i><b>Had</b> I known, I would have helped.</i></p>",
+   "vi": "Điều kiện loại 3: giả định trái với quá khứ (If + had V3, would have V3). Hỗn hợp: điều kiện quá khứ – kết quả hiện tại (If + had V3, would + V) hoặc ngược lại. Đảo ngữ trang trọng: Had I known...",
    "eg": [
     "If we had left earlier, we wouldn't have missed the flight.",
     "If she hadn't helped me, I'd still be lost.",
@@ -2046,8 +2046,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b2-3",
    "title": "Advanced passive",
-   "ex": "<p><b>Passive with modals</b>: <i>The work <b>must be finished</b> by Friday. It <b>should have been done</b> earlier.</i></p><p><b>Impersonal passive</b> (formal reporting): <i><b>It is said that</b> the castle is haunted.</i> / <i>The castle <b>is said to be</b> haunted.</i> Also: <i>It is believed / thought / reported / expected thatΓÇª</i>; past reference: <i>He <b>is thought to have left</b> the country.</i></p><p><b>Causative</b>: <i>have/get something done</i> = arrange for someone to do it: <i>I <b>had my hair cut</b>. We're <b>getting the car repaired</b>.</i></p><p>Passive -ing and infinitive: <i>I hate <b>being interrupted</b>. She wants <b>to be promoted</b>.</i></p>",
-   "vi": "Bß╗ï ─æß╗Öng n├óng cao: vß╗¢i ─æß╗Öng tß╗½ khuyß║┐t thiß║┐u (must be done, should have been done), bß╗ï ─æß╗Öng kh├ích quan (It is said that... / He is said to be...), thß╗â sai khiß║┐n (have/get something done), bß╗ï ─æß╗Öng vß╗¢i V-ing v├á to V.",
+   "ex": "<p><b>Passive with modals</b>: <i>The work <b>must be finished</b> by Friday. It <b>should have been done</b> earlier.</i></p><p><b>Impersonal passive</b> (formal reporting): <i><b>It is said that</b> the castle is haunted.</i> / <i>The castle <b>is said to be</b> haunted.</i> Also: <i>It is believed / thought / reported / expected that…</i>; past reference: <i>He <b>is thought to have left</b> the country.</i></p><p><b>Causative</b>: <i>have/get something done</i> = arrange for someone to do it: <i>I <b>had my hair cut</b>. We're <b>getting the car repaired</b>.</i></p><p>Passive -ing and infinitive: <i>I hate <b>being interrupted</b>. She wants <b>to be promoted</b>.</i></p>",
+   "vi": "Bị động nâng cao: với động từ khuyết thiếu (must be done, should have been done), bị động khách quan (It is said that... / He is said to be...), thể sai khiến (have/get something done), bị động với V-ing và to V.",
    "eg": [
     "The building is believed to be 500 years old.",
     "It has been reported that prices will rise.",
@@ -2145,8 +2145,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b2-4",
    "title": "Reported speech",
-   "ex": "<p>When the reporting verb is in the past, tenses usually move back: <i>ΓÇ£I <b>am</b> tired.ΓÇ¥ ΓåÆ She said (that) she <b>was</b> tired.</i> present simple ΓåÆ past simple; present continuous ΓåÆ past continuous; present perfect / past simple ΓåÆ past perfect; will ΓåÆ would; can ΓåÆ could.</p><p>Time and place words change: <i>now ΓåÆ then, today ΓåÆ that day, tomorrow ΓåÆ the next day, yesterday ΓåÆ the day before, here ΓåÆ there</i>.</p><p>Questions: <i>ΓÇ£Where do you live?ΓÇ¥ ΓåÆ He asked me <b>where I lived</b>.</i> (normal word order); yes/no: <i>He asked <b>if/whether</b> I was ready.</i> Commands: <i>She told me <b>to sit down</b> / <b>not to worry</b>.</i> Other verbs: <i>suggest, advise, warn, deny, admit, promise</i>.</p>",
-   "vi": "C├óu t╞░ß╗¥ng thuß║¡t: l├╣i th├¼ (am ΓåÆ was, will ΓåÆ would, have done ΓåÆ had done), ─æß╗òi trß║íng tß╗½ thß╗¥i gian/n╞íi chß╗æn. C├óu hß╗Åi t╞░ß╗¥ng thuß║¡t kh├┤ng ─æß║úo ngß╗»: He asked where I lived. Mß╗çnh lß╗çnh: tell/ask + someone + (not) to V.",
+   "ex": "<p>When the reporting verb is in the past, tenses usually move back: <i>“I <b>am</b> tired.” → She said (that) she <b>was</b> tired.</i> present simple → past simple; present continuous → past continuous; present perfect / past simple → past perfect; will → would; can → could.</p><p>Time and place words change: <i>now → then, today → that day, tomorrow → the next day, yesterday → the day before, here → there</i>.</p><p>Questions: <i>“Where do you live?” → He asked me <b>where I lived</b>.</i> (normal word order); yes/no: <i>He asked <b>if/whether</b> I was ready.</i> Commands: <i>She told me <b>to sit down</b> / <b>not to worry</b>.</i> Other verbs: <i>suggest, advise, warn, deny, admit, promise</i>.</p>",
+   "vi": "Câu tường thuật: lùi thì (am → was, will → would, have done → had done), đổi trạng từ thời gian/nơi chốn. Câu hỏi tường thuật không đảo ngữ: He asked where I lived. Mệnh lệnh: tell/ask + someone + (not) to V.",
    "eg": [
     "He said he would call me the next day.",
     "She asked whether I had finished.",
@@ -2156,7 +2156,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
    "q": [
     {
      "t": "mc",
-     "q": "ΓÇ£I'm busy.ΓÇ¥ ΓåÆ She said she ___ busy.",
+     "q": "“I'm busy.” → She said she ___ busy.",
      "o": [
       "is",
       "was",
@@ -2166,7 +2166,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "ΓÇ£I'll help you.ΓÇ¥ ΓåÆ He said he ___ help me.",
+     "q": "“I'll help you.” → He said he ___ help me.",
      "o": [
       "will",
       "would",
@@ -2176,12 +2176,12 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "gap",
-     "q": "ΓÇ£Where do you work?ΓÇ¥ ΓåÆ She asked me where I ___.",
+     "q": "“Where do you work?” → She asked me where I ___.",
      "a": "worked"
     },
     {
      "t": "mc",
-     "q": "ΓÇ£Don't be late.ΓÇ¥ ΓåÆ He told us ___ late.",
+     "q": "“Don't be late.” → He told us ___ late.",
      "o": [
       "not be",
       "not to be",
@@ -2191,7 +2191,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "ΓÇ£I saw him yesterday.ΓÇ¥ ΓåÆ She said she had seen him ___.",
+     "q": "“I saw him yesterday.” → She said she had seen him ___.",
      "o": [
       "yesterday",
       "the day before",
@@ -2201,7 +2201,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "gap",
-     "q": "ΓÇ£Are you ready?ΓÇ¥ ΓåÆ He asked ___ I was ready.",
+     "q": "“Are you ready?” → He asked ___ I was ready.",
      "a": [
       "if",
       "whether"
@@ -2209,7 +2209,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "ΓÇ£I have lost my keys.ΓÇ¥ ΓåÆ He said he ___ his keys.",
+     "q": "“I have lost my keys.” → He said he ___ his keys.",
      "o": [
       "has lost",
       "had lost",
@@ -2219,7 +2219,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "ΓÇ£You should see a doctor.ΓÇ¥ ΓåÆ She advised me ___ a doctor.",
+     "q": "“You should see a doctor.” → She advised me ___ a doctor.",
      "o": [
       "seeing",
       "to see",
@@ -2229,7 +2229,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "gap",
-     "q": "ΓÇ£I didn't take the money.ΓÇ¥ ΓåÆ He denied ___ the money.",
+     "q": "“I didn't take the money.” → He denied ___ the money.",
      "a": "taking"
     },
     {
@@ -2247,12 +2247,12 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b2-5",
    "title": "Modal verbs for deduction",
-   "ex": "<p>We use modals to say how sure we are.</p><p><b>Present</b>: <i>must</i> (almost certain it's true), <i>might / may / could</i> (possible), <i>can't</i> (almost certain it's not true): <i>She's not answering. She <b>must be</b> busy. That <b>can't be</b> Tom ΓÇô he's in Paris.</i></p><p><b>Past</b>: modal + <b>have + past participle</b>: <i>The streets are wet. It <b>must have rained</b>. He <b>might have missed</b> the bus. She <b>can't have seen</b> us.</i></p><p>Note: for negative deduction, use <b>can't</b>, not <i>mustn't</i>.</p>",
-   "vi": "Suy ─æo├ín: must (chß║»c chß║»n l├á ─æ├║ng), might/may/could (c├│ thß╗â), can't (chß║»c chß║»n kh├┤ng ─æ├║ng). Qu├í khß╗⌐: must/might/can't + have + V3. Kh├┤ng d├╣ng ΓÇ£mustn'tΓÇ¥ ─æß╗â suy ─æo├ín phß╗º ─æß╗ïnh.",
+   "ex": "<p>We use modals to say how sure we are.</p><p><b>Present</b>: <i>must</i> (almost certain it's true), <i>might / may / could</i> (possible), <i>can't</i> (almost certain it's not true): <i>She's not answering. She <b>must be</b> busy. That <b>can't be</b> Tom – he's in Paris.</i></p><p><b>Past</b>: modal + <b>have + past participle</b>: <i>The streets are wet. It <b>must have rained</b>. He <b>might have missed</b> the bus. She <b>can't have seen</b> us.</i></p><p>Note: for negative deduction, use <b>can't</b>, not <i>mustn't</i>.</p>",
+   "vi": "Suy đoán: must (chắc chắn là đúng), might/may/could (có thể), can't (chắc chắn không đúng). Quá khứ: must/might/can't + have + V3. Không dùng “mustn't” để suy đoán phủ định.",
    "eg": [
     "You must be hungry after that long walk.",
     "He might be at the library.",
-    "They can't have finished already ΓÇô they only started ten minutes ago.",
+    "They can't have finished already – they only started ten minutes ago.",
     "She must have forgotten our meeting."
    ],
    "q": [
@@ -2297,7 +2297,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "She ___ the email ΓÇô she replied immediately.",
+     "q": "She ___ the email – she replied immediately.",
      "o": [
       "can't have read",
       "must have read",
@@ -2315,7 +2315,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "mc",
-     "q": "Where's Linh? ΓÇô She ___ be in the library, but I'm not sure.",
+     "q": "Where's Linh? – She ___ be in the library, but I'm not sure.",
      "o": [
       "must",
       "might",
@@ -2335,7 +2335,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     },
     {
      "t": "gap",
-     "q": "You ___ be Anna's sister ΓÇô you look exactly like her! (almost certain)",
+     "q": "You ___ be Anna's sister – you look exactly like her! (almost certain)",
      "a": "must"
     },
     {
@@ -2353,8 +2353,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b2-6",
    "title": "wish / if only",
-   "ex": "<p><b>wish / if only + past simple</b> = regret about the present: <i>I <b>wish</b> I <b>had</b> more free time. If only I <b>were</b> taller.</i></p><p><b>wish / if only + past perfect</b> = regret about the past: <i>I <b>wish</b> I <b>hadn't said</b> that. If only we <b>had left</b> earlier!</i></p><p><b>wish + would</b> = annoyance or desire for someone else to change: <i>I <b>wish</b> you <b>would stop</b> talking.</i> (Not used about yourself: <s>I wish I wouldΓÇª</s>)</p><p><i>wish + could</i> = ability: <i>I wish I <b>could</b> play the guitar.</i></p>",
-   "vi": "wish/if only + qu├í khß╗⌐ ─æ╞ín: ╞░ß╗¢c ─æiß╗üu tr├íi hiß╗çn tß║íi. + qu├í khß╗⌐ ho├án th├ánh: hß╗æi tiß║┐c vß╗ü qu├í khß╗⌐. + would: mong ng╞░ß╗¥i kh├íc thay ─æß╗òi h├ánh vi (th╞░ß╗¥ng mang ├╜ ph├án n├án). + could: ╞░ß╗¢c c├│ khß║ú n─âng.",
+   "ex": "<p><b>wish / if only + past simple</b> = regret about the present: <i>I <b>wish</b> I <b>had</b> more free time. If only I <b>were</b> taller.</i></p><p><b>wish / if only + past perfect</b> = regret about the past: <i>I <b>wish</b> I <b>hadn't said</b> that. If only we <b>had left</b> earlier!</i></p><p><b>wish + would</b> = annoyance or desire for someone else to change: <i>I <b>wish</b> you <b>would stop</b> talking.</i> (Not used about yourself: <s>I wish I would…</s>)</p><p><i>wish + could</i> = ability: <i>I wish I <b>could</b> play the guitar.</i></p>",
+   "vi": "wish/if only + quá khứ đơn: ước điều trái hiện tại. + quá khứ hoàn thành: hối tiếc về quá khứ. + would: mong người khác thay đổi hành vi (thường mang ý phàn nàn). + could: ước có khả năng.",
    "eg": [
     "I wish I lived closer to the sea.",
     "If only I had studied harder for the exam.",
@@ -2455,8 +2455,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b2-7",
    "title": "Gerunds vs infinitives (advanced)",
-   "ex": "<p>Some verbs change meaning with -ing or to + verb:</p><ul><li><b>remember / forget</b> + -ing = memory of a past action; + to = an action you need to do: <i>I remember <b>locking</b> the door. Remember <b>to lock</b> the door.</i></li><li><b>stop</b> + -ing = end an activity; + to = stop in order to do something: <i>He stopped <b>smoking</b>. He stopped <b>to smoke</b>.</i></li><li><b>try</b> + -ing = experiment; + to = make an effort: <i>Try <b>restarting</b> it. I tried <b>to open</b> it, but it was stuck.</i></li><li><b>regret</b> + -ing = sorry about the past; + to = formal bad news: <i>I regret <b>telling</b> him. We regret <b>to inform</b> youΓÇª</i></li><li><b>mean</b> + -ing = involve; + to = intend.</li></ul><p>Perfect and passive forms: <i>He denied <b>having taken</b> it. She expects <b>to be chosen</b>.</i></p>",
-   "vi": "Mß╗Öt sß╗æ ─æß╗Öng tß╗½ ─æß╗òi ngh─⌐a: remember/forget + V-ing (nhß╗¢/qu├¬n ─æ├ú l├ám) vs + to V (nhß╗¢/qu├¬n phß║úi l├ám); stop + V-ing (ngß╗½ng hß║│n) vs + to V (dß╗½ng lß║íi ─æß╗â l├ám); try + V-ing (thß╗¡) vs + to V (cß╗æ gß║»ng); regret + V-ing (hß╗æi hß║¡n ─æ├ú l├ám) vs + to V (lß║Ñy l├ám tiß║┐c phß║úi b├ío).",
+   "ex": "<p>Some verbs change meaning with -ing or to + verb:</p><ul><li><b>remember / forget</b> + -ing = memory of a past action; + to = an action you need to do: <i>I remember <b>locking</b> the door. Remember <b>to lock</b> the door.</i></li><li><b>stop</b> + -ing = end an activity; + to = stop in order to do something: <i>He stopped <b>smoking</b>. He stopped <b>to smoke</b>.</i></li><li><b>try</b> + -ing = experiment; + to = make an effort: <i>Try <b>restarting</b> it. I tried <b>to open</b> it, but it was stuck.</i></li><li><b>regret</b> + -ing = sorry about the past; + to = formal bad news: <i>I regret <b>telling</b> him. We regret <b>to inform</b> you…</i></li><li><b>mean</b> + -ing = involve; + to = intend.</li></ul><p>Perfect and passive forms: <i>He denied <b>having taken</b> it. She expects <b>to be chosen</b>.</i></p>",
+   "vi": "Một số động từ đổi nghĩa: remember/forget + V-ing (nhớ/quên đã làm) vs + to V (nhớ/quên phải làm); stop + V-ing (ngừng hẳn) vs + to V (dừng lại để làm); try + V-ing (thử) vs + to V (cố gắng); regret + V-ing (hối hận đã làm) vs + to V (lấy làm tiếc phải báo).",
    "eg": [
     "I'll never forget meeting her for the first time.",
     "Don't forget to call your mother.",
@@ -2554,8 +2554,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b2-8",
    "title": "Inversion for emphasis",
-   "ex": "<p>In formal or emphatic English, we can put a negative or limiting adverb at the start of the sentence and then <b>invert</b> the subject and auxiliary (like a question).</p><ul><li><i><b>Never have I seen</b> such a beautiful view.</i></li><li><i><b>Rarely / Seldom do</b> we get the chance to travel.</i></li><li><i><b>Not only did</b> she win, <b>but</b> she also broke the record.</i></li><li><i><b>No sooner had</b> I arrived <b>than</b> it started to rain. / <b>Hardly had</b> I arrived <b>when</b>ΓÇª</i></li><li><i><b>Under no circumstances should</b> you open this door.</i></li><li><i><b>Only after</b> the meeting <b>did</b> I understand.</i></li><li><i><b>Little did</b> he know thatΓÇª</i></li></ul><p>Without an auxiliary, add <b>do/does/did</b>.</p>",
-   "vi": "─Éß║úo ngß╗» ─æß╗â nhß║Ñn mß║ính (v─ân phong trang trß╗ìng): Never/Rarely/Seldom/Not only/No sooner/Hardly/Under no circumstances/Only after/Little + trß╗ú ─æß╗Öng tß╗½ + chß╗º ngß╗» + ─æß╗Öng tß╗½. Nß║┐u kh├┤ng c├│ trß╗ú ─æß╗Öng tß╗½ th├¼ th├¬m do/does/did.",
+   "ex": "<p>In formal or emphatic English, we can put a negative or limiting adverb at the start of the sentence and then <b>invert</b> the subject and auxiliary (like a question).</p><ul><li><i><b>Never have I seen</b> such a beautiful view.</i></li><li><i><b>Rarely / Seldom do</b> we get the chance to travel.</i></li><li><i><b>Not only did</b> she win, <b>but</b> she also broke the record.</i></li><li><i><b>No sooner had</b> I arrived <b>than</b> it started to rain. / <b>Hardly had</b> I arrived <b>when</b>…</i></li><li><i><b>Under no circumstances should</b> you open this door.</i></li><li><i><b>Only after</b> the meeting <b>did</b> I understand.</i></li><li><i><b>Little did</b> he know that…</i></li></ul><p>Without an auxiliary, add <b>do/does/did</b>.</p>",
+   "vi": "Đảo ngữ để nhấn mạnh (văn phong trang trọng): Never/Rarely/Seldom/Not only/No sooner/Hardly/Under no circumstances/Only after/Little + trợ động từ + chủ ngữ + động từ. Nếu không có trợ động từ thì thêm do/does/did.",
    "eg": [
     "Never have I felt so nervous.",
     "Not only is the hotel cheap, but it's also beautiful.",
@@ -2653,8 +2653,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
   {
    "id": "g-b2-9",
    "title": "Linking words and discourse markers",
-   "ex": "<p><b>Contrast</b>: <i>although / even though + clause</i>; <i>despite / in spite of + noun or -ing</i>; <i>however / nevertheless</i> (new sentence, with a comma); <i>whereas / while</i> (comparing two facts).</p><p><b>Addition</b>: <i>moreover, furthermore, in addition, what is more</i>.</p><p><b>Cause and result</b>: <i>because of / due to / owing to + noun</i>; <i>therefore, consequently, as a result</i>; <i>so ΓÇª that / such ΓÇª that</i>.</p><p><b>Purpose</b>: <i>so that + clause; in order to / so as to + verb</i>.</p><p>Example: <i><b>Despite</b> the rain, we went out. <b>Although</b> it was raining, we went out. It was raining. <b>However</b>, we went out.</i></p>",
-   "vi": "Tß╗½ nß╗æi n├óng cao: t╞░╞íng phß║ún (although + mß╗çnh ─æß╗ü, despite + danh tß╗½/V-ing, however ─æß╗⌐ng ─æß║ºu c├óu), bß╗ò sung (moreover, furthermore), nguy├¬n nh├ón-kß║┐t quß║ú (due to + danh tß╗½, therefore, as a result), mß╗Ñc ─æ├¡ch (so that + mß╗çnh ─æß╗ü, in order to + V).",
+   "ex": "<p><b>Contrast</b>: <i>although / even though + clause</i>; <i>despite / in spite of + noun or -ing</i>; <i>however / nevertheless</i> (new sentence, with a comma); <i>whereas / while</i> (comparing two facts).</p><p><b>Addition</b>: <i>moreover, furthermore, in addition, what is more</i>.</p><p><b>Cause and result</b>: <i>because of / due to / owing to + noun</i>; <i>therefore, consequently, as a result</i>; <i>so … that / such … that</i>.</p><p><b>Purpose</b>: <i>so that + clause; in order to / so as to + verb</i>.</p><p>Example: <i><b>Despite</b> the rain, we went out. <b>Although</b> it was raining, we went out. It was raining. <b>However</b>, we went out.</i></p>",
+   "vi": "Từ nối nâng cao: tương phản (although + mệnh đề, despite + danh từ/V-ing, however đứng đầu câu), bổ sung (moreover, furthermore), nguyên nhân-kết quả (due to + danh từ, therefore, as a result), mục đích (so that + mệnh đề, in order to + V).",
    "eg": [
     "Despite feeling ill, she went to work.",
     "The project was expensive. Nevertheless, it was a success.",

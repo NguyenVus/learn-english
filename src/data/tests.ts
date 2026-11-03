@@ -127,7 +127,7 @@ export const placement: Question[] = [
  {
   "lv": "A2",
   "t": "mc",
-  "q": "Choose the word that means ΓÇ£not expensiveΓÇ¥.",
+  "q": "Choose the word that means “not expensive”.",
   "o": [
    "cheap",
    "busy",
@@ -211,7 +211,7 @@ export const placement: Question[] = [
  {
   "lv": "B1",
   "t": "mc",
-  "ctx": "Hi Sam, I'm afraid I can't make it to the cinema tonight. My boss has asked me to finish a report, so I'll be at the office until late. How about Saturday instead? ΓÇô Jo",
+  "ctx": "Hi Sam, I'm afraid I can't make it to the cinema tonight. My boss has asked me to finish a report, so I'll be at the office until late. How about Saturday instead? – Jo",
   "q": "Why is Jo writing?",
   "o": [
    "To invite Sam to the office",
@@ -224,7 +224,7 @@ export const placement: Question[] = [
   "lv": "B1",
   "t": "mc",
   "ctx": "Many people think that bats are blind, but this is not true. Most bats can see quite well, although they also use sound to find their way in the dark.",
-  "q": "According to the text, most batsΓÇª",
+  "q": "According to the text, most bats…",
   "o": [
    "cannot see at all",
    "can see and also use sound",
@@ -259,8 +259,8 @@ export const placement: Question[] = [
  {
   "lv": "A2",
   "t": "mc",
-  "say": "Excuse me, what time does the next bus to the city centre leave? ΓÇô It leaves at half past nine.",
-  "q": "≡ƒÄº Listen. When does the bus leave?",
+  "say": "Excuse me, what time does the next bus to the city centre leave? – It leaves at half past nine.",
+  "q": "🎧 Listen. When does the bus leave?",
   "o": [
    "9.00",
    "9.30",
@@ -272,7 +272,7 @@ export const placement: Question[] = [
   "lv": "B1",
   "t": "mc",
   "say": "I was going to cycle to work today, but my bike had a flat tyre, so I ended up taking a taxi, which cost me a fortune.",
-  "q": "≡ƒÄº Listen. How did the speaker get to work?",
+  "q": "🎧 Listen. How did the speaker get to work?",
   "o": [
    "By bike",
    "By taxi",
@@ -284,7 +284,7 @@ export const placement: Question[] = [
   "lv": "B1",
   "t": "mc",
   "say": "The library will close early on Friday because of staff training. It will open again at the usual time on Saturday morning.",
-  "q": "≡ƒÄº Listen. Why will the library close early?",
+  "q": "🎧 Listen. Why will the library close early?",
   "o": [
    "For cleaning",
    "Because of staff training",
@@ -296,7 +296,7 @@ export const placement: Question[] = [
   "lv": "B2",
   "t": "mc",
   "say": "Although the new policy was intended to reduce traffic, early figures suggest that congestion has simply shifted to neighbouring districts rather than disappearing.",
-  "q": "≡ƒÄº Listen. What happened after the new policy?",
+  "q": "🎧 Listen. What happened after the new policy?",
   "o": [
    "Traffic disappeared completely.",
    "Traffic moved to nearby areas.",
@@ -330,7 +330,7 @@ export const stageWriting: ByLevel<WritingTaskBase> = {
   ]
  },
  "B2": {
-  "prompt": "ΓÇ£Young people today have more opportunities than their parents did.ΓÇ¥ Write a short opinion essay saying whether you agree, with reasons and examples.",
+  "prompt": "“Young people today have more opportunities than their parents did.” Write a short opinion essay saying whether you agree, with reasons and examples.",
   "min": 140,
   "max": 200,
   "k": [

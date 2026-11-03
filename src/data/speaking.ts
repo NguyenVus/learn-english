@@ -8,7 +8,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-a2-1",
    "title": "Introduce yourself",
    "prompt": "Introduce yourself. Talk about your name, age, where you live, your family and your hobbies.",
-   "vi": "Giß╗¢i thiß╗çu bß║ún th├ón: t├¬n, tuß╗òi, n╞íi sß╗æng, gia ─æ├¼nh v├á sß╗ƒ th├¡ch. N├│i c├óu ngß║»n, r├╡ r├áng.",
+   "vi": "Giới thiệu bản thân: tên, tuổi, nơi sống, gia đình và sở thích. Nói câu ngắn, rõ ràng.",
    "qs": [
     "What's your name and how old are you?",
     "Where do you live?",
@@ -31,7 +31,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-a2-2",
    "title": "Describe your day",
    "prompt": "Describe a normal day in your life, from the morning to the evening.",
-   "vi": "M├┤ tß║ú mß╗Öt ng├áy b├¼nh th╞░ß╗¥ng. D├╣ng th├¼ hiß╗çn tß║íi ─æ╞ín v├á c├íc tß╗½ nß╗æi: first, then, after that.",
+   "vi": "Mô tả một ngày bình thường. Dùng thì hiện tại đơn và các từ nối: first, then, after that.",
    "qs": [
     "What time do you get up?",
     "What do you do in the morning?",
@@ -54,7 +54,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-a2-3",
    "title": "Answer personal questions",
    "prompt": "Answer these questions. Give two or three sentences for each one.",
-   "vi": "Trß║ú lß╗¥i c├óu hß╗Åi c├í nh├ón, mß╗ùi c├óu 2ΓÇô3 c├óu, nhß╗¢ ─æ╞░a ra l├╜ do vß╗¢i because.",
+   "vi": "Trả lời câu hỏi cá nhân, mỗi câu 2–3 câu, nhớ đưa ra lý do với because.",
    "qs": [
     "What is your favourite food? Why?",
     "What do you like about your town?",
@@ -76,7 +76,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-a2-4",
    "title": "Talk about last weekend",
    "prompt": "Tell me about what you did last weekend.",
-   "vi": "Kß╗â vß╗ü cuß╗æi tuß║ºn tr╞░ß╗¢c. D├╣ng th├¼ qu├í khß╗⌐ ─æ╞ín: went, had, saw, played...",
+   "vi": "Kể về cuối tuần trước. Dùng thì quá khứ đơn: went, had, saw, played...",
    "qs": [
     "Where did you go?",
     "Who were you with?",
@@ -98,7 +98,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-a2-5",
    "title": "Your next holiday",
    "prompt": "Talk about your plans for your next holiday.",
-   "vi": "N├│i vß╗ü kß║┐ hoß║ích kß╗│ nghß╗ë. D├╣ng be going to v├á would like to.",
+   "vi": "Nói về kế hoạch kỳ nghỉ. Dùng be going to và would like to.",
    "qs": [
     "Where are you going to go?",
     "Who are you going to travel with?",
@@ -119,7 +119,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-a2-6",
    "title": "Describe your home",
    "prompt": "Describe your home. Talk about the rooms, your favourite room and what you do there.",
-   "vi": "M├┤ tß║ú nh├á bß║ín: c├│ nhß╗»ng ph├▓ng n├áo, ph├▓ng bß║ín th├¡ch nhß║Ñt v├á bß║ín l├ám g├¼ ß╗ƒ ─æ├│. D├╣ng There is / There are.",
+   "vi": "Mô tả nhà bạn: có những phòng nào, phòng bạn thích nhất và bạn làm gì ở đó. Dùng There is / There are.",
    "qs": [
     "Do you live in a house or a flat?",
     "How many rooms are there?",
@@ -142,7 +142,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-a2-7",
    "title": "Your favourite food",
    "prompt": "Talk about your favourite food or dish.",
-   "vi": "N├│i vß╗ü m├│n ─ân y├¬u th├¡ch: l├á m├│n g├¼, c├│ nguy├¬n liß╗çu g├¼, ─ân khi n├áo, v├¼ sao th├¡ch.",
+   "vi": "Nói về món ăn yêu thích: là món gì, có nguyên liệu gì, ăn khi nào, vì sao thích.",
    "qs": [
     "What is your favourite dish?",
     "What is in it?",
@@ -164,7 +164,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-a2-8",
    "title": "Describe a friend",
    "prompt": "Describe a good friend. Talk about what they look like, their personality and what you do together.",
-   "vi": "M├┤ tß║ú bß║ín th├ón: ngoß║íi h├¼nh (He/She has...), t├¡nh c├ích (He/She is...), c├íc hoß║ít ─æß╗Öng l├ám c├╣ng nhau.",
+   "vi": "Mô tả bạn thân: ngoại hình (He/She has...), tính cách (He/She is...), các hoạt động làm cùng nhau.",
    "qs": [
     "Who is your friend and how did you meet?",
     "What does he or she look like?",
@@ -189,7 +189,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b1-1",
    "title": "A memorable experience",
    "prompt": "Describe an experience you will never forget.",
-   "vi": "Kß╗â mß╗Öt trß║úi nghiß╗çm ─æ├íng nhß╗¢: khi n├áo, ß╗ƒ ─æ├óu, chuyß╗çn g├¼ xß║úy ra, v├¼ sao ─æ├íng nhß╗¢. D├╣ng qu├í khß╗⌐ ─æ╞ín v├á qu├í khß╗⌐ tiß║┐p diß╗àn.",
+   "vi": "Kể một trải nghiệm đáng nhớ: khi nào, ở đâu, chuyện gì xảy ra, vì sao đáng nhớ. Dùng quá khứ đơn và quá khứ tiếp diễn.",
    "qs": [
     "When and where did it happen?",
     "Who were you with?",
@@ -213,7 +213,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b1-2",
    "title": "Plans and ambitions",
    "prompt": "Talk about your plans for the next year and your ambitions for the future.",
-   "vi": "N├│i vß╗ü kß║┐ hoß║ích v├á mß╗Ñc ti├¬u. D├╣ng be going to, hope to, plan to v├á c├óu ─æiß╗üu kiß╗çn loß║íi 1.",
+   "vi": "Nói về kế hoạch và mục tiêu. Dùng be going to, hope to, plan to và câu điều kiện loại 1.",
    "qs": [
     "What are your plans for the next year?",
     "What would you like to achieve in five years?",
@@ -235,8 +235,8 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b1-3",
    "title": "Describe a picture: a city park",
    "prompt": "Describe the picture. Say what you can see, what the people are doing and how they might feel.",
-   "vi": "M├┤ tß║ú tranh: vß╗ï tr├¡ (on the left, in the background), h├ánh ─æß╗Öng (th├¼ hiß╗çn tß║íi tiß║┐p diß╗àn), suy ─æo├ín (It looks like..., They seem...).",
-   "pic": "≡ƒî│ ΓÿÇ∩╕Å ≡ƒî│\n≡ƒº║≡ƒæ¿ΓÇì≡ƒæ⌐ΓÇì≡ƒæº   ≡ƒÅâΓÇìΓÖÇ∩╕Å≡ƒÉò\n≡ƒÜ▓≡ƒºÆ   ≡ƒìª≡ƒæ╡",
+   "vi": "Mô tả tranh: vị trí (on the left, in the background), hành động (thì hiện tại tiếp diễn), suy đoán (It looks like..., They seem...).",
+   "pic": "🌳 ☀️ 🌳\n🧺👨‍👩‍👧   🏃‍♀️🐕\n🚲🧒   🍦👵",
    "caption": "A sunny afternoon in a city park: a family is having a picnic, a woman is running with her dog, a child is riding a bike and an old woman is buying an ice cream.",
    "qs": [
     "What can you see in the picture?",
@@ -261,7 +261,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b1-4",
    "title": "Give your opinion: school uniforms",
    "prompt": "Should students wear school uniforms? Give your opinion with reasons.",
-   "vi": "N├¬u ├╜ kiß║┐n c├│ l├╜ do: In my opinion..., One reason is..., Some people think... but...",
+   "vi": "Nêu ý kiến có lý do: In my opinion..., One reason is..., Some people think... but...",
    "qs": [
     "Do you think students should wear uniforms?",
     "Give two reasons for your opinion.",
@@ -284,8 +284,8 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b1-5",
    "title": "Describe a picture: a family kitchen",
    "prompt": "Describe the picture and say what you think is happening.",
-   "vi": "M├┤ tß║ú tranh v├á ─æo├ín xem chuyß╗çn g├¼ ─æang diß╗àn ra. D├╣ng might/may/probably ─æß╗â suy ─æo├ín.",
-   "pic": "≡ƒì│≡ƒÑù≡ƒæ⌐ΓÇì≡ƒì│\n≡ƒæª≡ƒô▒   ≡ƒæº≡ƒôÜ\n≡ƒÉê   ≡ƒòû",
+   "vi": "Mô tả tranh và đoán xem chuyện gì đang diễn ra. Dùng might/may/probably để suy đoán.",
+   "pic": "🍳🥗👩‍🍳\n👦📱   👧📚\n🐈   🕖",
    "caption": "A family kitchen in the evening: a mother is cooking dinner, a boy is looking at his phone, a girl is doing her homework at the table and a cat is sleeping on a chair.",
    "qs": [
     "What can you see?",
@@ -309,7 +309,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b1-6",
    "title": "A problem you solved",
    "prompt": "Talk about a problem you had and how you solved it.",
-   "vi": "Kß╗â vß╗ü mß╗Öt vß║Ñn ─æß╗ü bß║ín tß╗½ng gß║╖p v├á c├ích giß║úi quyß║┐t. D├╣ng qu├í khß╗⌐ ─æ╞ín, qu├í khß╗⌐ tiß║┐p diß╗àn v├á c├íc tß╗½: so, because, in the end.",
+   "vi": "Kể về một vấn đề bạn từng gặp và cách giải quyết. Dùng quá khứ đơn, quá khứ tiếp diễn và các từ: so, because, in the end.",
    "qs": [
     "What was the problem?",
     "How did you feel?",
@@ -332,7 +332,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b1-7",
    "title": "Technology in your life",
    "prompt": "How has technology changed your daily life? Give examples.",
-   "vi": "C├┤ng nghß╗ç ─æ├ú thay ─æß╗òi cuß╗Öc sß╗æng hß║▒ng ng├áy cß╗ºa bß║ín thß║┐ n├áo? D├╣ng th├¼ hiß╗çn tß║íi ho├án th├ánh v├á used to.",
+   "vi": "Công nghệ đã thay đổi cuộc sống hằng ngày của bạn thế nào? Dùng thì hiện tại hoàn thành và used to.",
    "qs": [
     "Which devices or apps do you use most?",
     "How has technology changed the way you study or work?",
@@ -355,7 +355,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b1-8",
    "title": "Compare two ways to travel",
    "prompt": "Compare travelling by train and travelling by plane. Which do you prefer and why?",
-   "vi": "So s├ính ─æi t├áu v├á ─æi m├íy bay: tß╗æc ─æß╗Ö, gi├í, sß╗▒ thoß║úi m├íi, m├┤i tr╞░ß╗¥ng. D├╣ng so s├ính h╞ín v├á whereas.",
+   "vi": "So sánh đi tàu và đi máy bay: tốc độ, giá, sự thoải mái, môi trường. Dùng so sánh hơn và whereas.",
    "qs": [
     "What are the advantages of the train?",
     "What are the advantages of the plane?",
@@ -380,7 +380,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b2-1",
    "title": "Compare: city life vs country life",
    "prompt": "Compare living in a big city with living in the countryside. Which would you choose and why?",
-   "vi": "So s├ính hai lß╗▒a chß╗ìn: d├╣ng whereas, while, on the other hand, compared with. Kß║┐t th├║c bß║▒ng lß╗▒a chß╗ìn cß╗ºa bß║ín v├á l├╜ do.",
+   "vi": "So sánh hai lựa chọn: dùng whereas, while, on the other hand, compared with. Kết thúc bằng lựa chọn của bạn và lý do.",
    "qs": [
     "What are the advantages of city life?",
     "What are the advantages of country life?",
@@ -404,7 +404,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b2-2",
    "title": "Defend your opinion: social media and teenagers",
    "prompt": "Some people say social media does more harm than good for teenagers. Do you agree? Defend your opinion with reasons and examples.",
-   "vi": "Bß║úo vß╗ç quan ─æiß╗âm: n├¬u r├╡ ├╜ kiß║┐n, 2ΓÇô3 l├╜ do k├¿m v├¡ dß╗Ñ, phß║ún b├íc ├╜ kiß║┐n tr├íi chiß╗üu (While it is true that..., I would argue that...).",
+   "vi": "Bảo vệ quan điểm: nêu rõ ý kiến, 2–3 lý do kèm ví dụ, phản bác ý kiến trái chiều (While it is true that..., I would argue that...).",
    "qs": [
     "What is your position?",
     "What are your main reasons?",
@@ -428,7 +428,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b2-3",
    "title": "Pros and cons: working from home",
    "prompt": "Discuss the advantages and disadvantages of working or studying from home.",
-   "vi": "Thß║úo luß║¡n ╞░u v├á nh╞░ß╗úc ─æiß╗âm, d├╣ng tß╗½ nß╗æi n├óng cao: furthermore, nevertheless, as a result. ─É╞░a ra kß║┐t luß║¡n c├ón bß║▒ng.",
+   "vi": "Thảo luận ưu và nhược điểm, dùng từ nối nâng cao: furthermore, nevertheless, as a result. Đưa ra kết luận cân bằng.",
    "qs": [
     "What are the main benefits?",
     "What problems can it cause?",
@@ -452,8 +452,8 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b2-4",
    "title": "Compare two pictures: holidays",
    "prompt": "Compare these two holiday pictures. Which kind of holiday is better for relaxing, and which is better for learning?",
-   "vi": "So s├ính hai tranh: ─æiß╗âm giß╗æng v├á kh├íc, suy ─æo├ín cß║úm x├║c (They must be..., It might be...), rß╗ôi n├¬u ├╜ kiß║┐n.",
-   "pic": "≡ƒÅû∩╕Å≡ƒì╣≡ƒÿÄ     |     ≡ƒÅ¢∩╕Å≡ƒù║∩╕Å≡ƒô╕\nBeach resort     |     City sightseeing",
+   "vi": "So sánh hai tranh: điểm giống và khác, suy đoán cảm xúc (They must be..., It might be...), rồi nêu ý kiến.",
+   "pic": "🏖️🍹😎     |     🏛️🗺️📸\nBeach resort     |     City sightseeing",
    "caption": "Picture A: people relaxing on a beach with drinks. Picture B: tourists with a map and cameras visiting historic buildings in a busy city.",
    "qs": [
     "What do the two pictures have in common?",
@@ -478,7 +478,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b2-5",
    "title": "Discuss: should university be free?",
    "prompt": "Should university education be free for everyone? Discuss the arguments on both sides and give your own opinion.",
-   "vi": "Thß║úo luß║¡n hai ph├¡a cß╗ºa vß║Ñn ─æß╗ü x├ú hß╗Öi; d├╣ng c├óu ─æiß╗üu kiß╗çn loß║íi 2/3 v├á cß║Ñu tr├║c nhß║Ñn mß║ính (What matters most is...).",
+   "vi": "Thảo luận hai phía của vấn đề xã hội; dùng câu điều kiện loại 2/3 và cấu trúc nhấn mạnh (What matters most is...).",
    "qs": [
     "What are the arguments for free university?",
     "What are the arguments against?",
@@ -501,7 +501,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b2-6",
    "title": "Discuss: AI and the future of work",
    "prompt": "How will artificial intelligence change the world of work in the next twenty years? Discuss opportunities and risks.",
-   "vi": "Thß║úo luß║¡n vß╗ü AI v├á viß╗çc l├ám: c╞í hß╗Öi, rß╗ºi ro, giß║úi ph├íp. D├╣ng t╞░╞íng lai tiß║┐p diß╗àn/ho├án th├ánh v├á tß╗½ nß╗æi n├óng cao.",
+   "vi": "Thảo luận về AI và việc làm: cơ hội, rủi ro, giải pháp. Dùng tương lai tiếp diễn/hoàn thành và từ nối nâng cao.",
    "qs": [
     "Which jobs might change the most?",
     "What opportunities could AI create?",
@@ -524,7 +524,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b2-7",
    "title": "Defend your opinion: tourism",
    "prompt": "Some people believe that popular tourist destinations should limit the number of visitors. Do you agree? Defend your view.",
-   "vi": "Bß║úo vß╗ç quan ─æiß╗âm vß╗ü viß╗çc giß╗¢i hß║ín kh├ích du lß╗ïch. ─É╞░a v├¡ dß╗Ñ cß╗Ñ thß╗â v├á phß║ún biß╗çn ├╜ kiß║┐n tr├íi chiß╗üu.",
+   "vi": "Bảo vệ quan điểm về việc giới hạn khách du lịch. Đưa ví dụ cụ thể và phản biện ý kiến trái chiều.",
    "qs": [
     "What is your position?",
     "What problems does overtourism cause?",
@@ -547,7 +547,7 @@ export const speaking: ByLevel<SpeakingTask[]> = {
    "id": "s-b2-8",
    "title": "Describe a change you would make",
    "prompt": "If you could change one thing about the education system in your country, what would it be and why?",
-   "vi": "Nß║┐u ─æ╞░ß╗úc thay ─æß╗òi mß╗Öt ─æiß╗üu trong gi├ío dß╗Ñc, bß║ín sß║╜ thay ─æß╗òi g├¼ v├á v├¼ sao? D├╣ng c├óu ─æiß╗üu kiß╗çn loß║íi 2 v├á wish.",
+   "vi": "Nếu được thay đổi một điều trong giáo dục, bạn sẽ thay đổi gì và vì sao? Dùng câu điều kiện loại 2 và wish.",
    "qs": [
     "What would you change?",
     "Why is this change necessary?",
@@ -684,11 +684,11 @@ export const pron: PronunciationSet[] = [
  {
   "id": "p-final",
   "title": "Final consonants",
-  "icon": "≡ƒöÜ",
+  "icon": "🔚",
   "tip": "Pronounce the last sound of each word clearly: cat /t/, bag /g/, five /v/, rice /s/.",
-  "vi": "Ng╞░ß╗¥i Viß╗çt hay nuß╗æt ├óm cuß╗æi. H├úy bß║¡t r├╡ ├óm cuß╗æi /t/, /d/, /k/, /s/, /v/... V├¡ dß╗Ñ: ΓÇ£likeΓÇ¥ kh├íc ΓÇ£lightΓÇ¥, ΓÇ£riceΓÇ¥ kh├íc ΓÇ£ryeΓÇ¥.",
+  "vi": "Người Việt hay nuốt âm cuối. Hãy bật rõ âm cuối /t/, /d/, /k/, /s/, /v/... Ví dụ: “like” khác “light”, “rice” khác “rye”.",
   "items": [
-   "cat ┬╖ bag ┬╖ five ┬╖ rice ┬╖ desk",
+   "cat · bag · five · rice · desk",
    "I like that black cat.",
    "She bought a big red bag.",
    "Give me five minutes, please.",
@@ -698,11 +698,11 @@ export const pron: PronunciationSet[] = [
  {
   "id": "p-ends",
   "title": "Endings: -s and -ed",
-  "icon": "Γ₧ò",
-  "tip": "-s: /s/ (books), /z/ (dogs), /╔¬z/ (buses). -ed: /t/ (walked), /d/ (played), /╔¬d/ (wanted).",
-  "vi": "─Éß╗½ng bß╗Å ─æu├┤i -s v├á -ed. ΓÇ£He walksΓÇ¥ kh├íc ΓÇ£he walkΓÇ¥. ─Éu├┤i -ed sau t/d ─æß╗ìc l├á /╔¬d/: wanted, needed.",
+  "icon": "➕",
+  "tip": "-s: /s/ (books), /z/ (dogs), /ɪz/ (buses). -ed: /t/ (walked), /d/ (played), /ɪd/ (wanted).",
+  "vi": "Đừng bỏ đuôi -s và -ed. “He walks” khác “he walk”. Đuôi -ed sau t/d đọc là /ɪd/: wanted, needed.",
   "items": [
-   "books ┬╖ dogs ┬╖ buses ┬╖ walked ┬╖ played ┬╖ wanted",
+   "books · dogs · buses · walked · played · wanted",
    "She walks to school and plays the piano.",
    "I washed the dishes and watched a film.",
    "He wanted to visit his friends.",
@@ -711,12 +711,12 @@ export const pron: PronunciationSet[] = [
  },
  {
   "id": "p-th",
-  "title": "/╬╕/ and /├░/ (th)",
-  "icon": "≡ƒæà",
-  "tip": "Put your tongue between your teeth. /╬╕/ is voiceless (think, three), /├░/ is voiced (this, mother).",
-  "vi": "├ém ΓÇ£thΓÇ¥ kh├┤ng phß║úi /t/ hay /d/ hay /s/. ─Éß║╖t l╞░ß╗íi giß╗»a hai h├ám r─âng rß╗ôi thß╗òi h╞íi: think Γëá sink, they Γëá day.",
+  "title": "/θ/ and /ð/ (th)",
+  "icon": "👅",
+  "tip": "Put your tongue between your teeth. /θ/ is voiceless (think, three), /ð/ is voiced (this, mother).",
+  "vi": "Âm “th” không phải /t/ hay /d/ hay /s/. Đặt lưỡi giữa hai hàm răng rồi thổi hơi: think ≠ sink, they ≠ day.",
   "items": [
-   "think ┬╖ three ┬╖ thank ┬╖ this ┬╖ that ┬╖ mother",
+   "think · three · thank · this · that · mother",
    "I think there are three things.",
    "Thank you for this lovely birthday.",
    "My mother and father live together.",
@@ -725,12 +725,12 @@ export const pron: PronunciationSet[] = [
  },
  {
   "id": "p-sh",
-  "title": "/╩â/ and /s/",
-  "icon": "≡ƒñ½",
-  "tip": "/s/: teeth close, air through the front (see). /╩â/: lips rounded forward (she).",
-  "vi": "Ph├ón biß╗çt /s/ v├á /╩â/: see Γëá she, sip Γëá ship, sea Γëá she. Vß╗¢i /╩â/ h├úy chu m├┤i ra tr╞░ß╗¢c.",
+  "title": "/ʃ/ and /s/",
+  "icon": "🤫",
+  "tip": "/s/: teeth close, air through the front (see). /ʃ/: lips rounded forward (she).",
+  "vi": "Phân biệt /s/ và /ʃ/: see ≠ she, sip ≠ ship, sea ≠ she. Với /ʃ/ hãy chu môi ra trước.",
   "items": [
-   "see ┬╖ she ┬╖ sip ┬╖ ship ┬╖ sell ┬╖ shell",
+   "see · she · sip · ship · sell · shell",
    "She sells shells by the sea.",
    "Please wash the dishes in the sink.",
    "The ship is in the station.",
@@ -740,29 +740,29 @@ export const pron: PronunciationSet[] = [
  {
   "id": "p-stress",
   "title": "Word stress",
-  "icon": "≡ƒÄ»",
+  "icon": "🎯",
   "tip": "English words have one strong syllable. Say it louder and longer: PHOtograph, phoTOgraphy, photoGRAPHic.",
-  "vi": "Tiß║┐ng Anh c├│ trß╗ìng ├óm. ├ém tiß║┐t in hoa ─æß╗ìc to v├á d├ái h╞ín. ─Éß╗ìc sai trß╗ìng ├óm khiß║┐n ng╞░ß╗¥i nghe kh├│ hiß╗âu d├╣ ph├ít ├óm ─æ├║ng tß╗½ng ├óm.",
+  "vi": "Tiếng Anh có trọng âm. Âm tiết in hoa đọc to và dài hơn. Đọc sai trọng âm khiến người nghe khó hiểu dù phát âm đúng từng âm.",
   "items": [
    {
     "t": "photograph photography photographic",
-    "s": "PHO-to-graph ┬╖ pho-TO-gra-phy ┬╖ pho-to-GRAPH-ic"
+    "s": "PHO-to-graph · pho-TO-gra-phy · pho-to-GRAPH-ic"
    },
    {
     "t": "important interesting comfortable",
-    "s": "im-POR-tant ┬╖ IN-te-rest-ing ┬╖ COM-for-ta-ble"
+    "s": "im-POR-tant · IN-te-rest-ing · COM-for-ta-ble"
    },
    {
     "t": "economy economic environment",
-    "s": "e-CO-no-my ┬╖ e-co-NO-mic ┬╖ en-VI-ron-ment"
+    "s": "e-CO-no-my · e-co-NO-mic · en-VI-ron-ment"
    },
    {
     "t": "The vegetables are comfortable and interesting.",
-    "s": "VEG-e-ta-bles ┬╖ COM-for-ta-ble ┬╖ IN-te-rest-ing"
+    "s": "VEG-e-ta-bles · COM-for-ta-ble · IN-te-rest-ing"
    },
    {
     "t": "I need information about the university.",
-    "s": "in-for-MA-tion ┬╖ u-ni-VER-si-ty"
+    "s": "in-for-MA-tion · u-ni-VER-si-ty"
    }
   ]
  }

@@ -175,7 +175,7 @@ export const listening: ByLevel<ListeningItem[]> = {
   },
   {
    "id": "l-a2-3",
-   "title": "At the Caf├⌐",
+   "title": "At the Café",
    "type": "Dialogue",
    "speakers": {
     "A": "Waiter",
@@ -252,9 +252,9 @@ export const listening: ByLevel<ListeningItem[]> = {
      "t": "mc",
      "q": "How much does she pay?",
      "o": [
-      "┬ú4.50",
-      "┬ú6.50",
-      "┬ú6.00"
+      "£4.50",
+      "£6.50",
+      "£6.00"
      ],
      "a": 1
     },
@@ -263,7 +263,7 @@ export const listening: ByLevel<ListeningItem[]> = {
      "q": "Where does she eat?",
      "o": [
       "At home",
-      "In the caf├⌐",
+      "In the café",
       "In the park"
      ],
      "a": 1
@@ -516,7 +516,7 @@ export const listening: ByLevel<ListeningItem[]> = {
      "t": "mc",
      "q": "What is next to the post office?",
      "o": [
-      "A caf├⌐",
+      "A café",
       "A big bookshop",
       "A bank"
      ],
@@ -761,7 +761,7 @@ export const listening: ByLevel<ListeningItem[]> = {
     ],
     [
      "B",
-     "Yes, please. ΓÇª Hmm, it's a bit small. Do you have a large?"
+     "Yes, please. … Hmm, it's a bit small. Do you have a large?"
     ],
     [
      "A",
@@ -1093,7 +1093,7 @@ export const listening: ByLevel<ListeningItem[]> = {
     },
     {
      "t": "mc",
-     "q": "Two-step verification needsΓÇª",
+     "q": "Two-step verification needs…",
      "o": [
       "a password and a code sent to your phone",
       "two different passwords",
@@ -1505,7 +1505,7 @@ export const listening: ByLevel<ListeningItem[]> = {
     ],
     [
      "A",
-     "The museum caf├⌐ is next to the main entrance, and the gift shop is on the ground floor. Photography is allowed in all galleries, but please do not use flash. Enjoy your visit!"
+     "The museum café is next to the main entrance, and the gift shop is on the ground floor. Photography is allowed in all galleries, but please do not use flash. Enjoy your visit!"
     ]
    ],
    "q": [
@@ -1545,7 +1545,7 @@ export const listening: ByLevel<ListeningItem[]> = {
      "o": [
       "Take photos",
       "Use flash",
-      "Visit the caf├⌐"
+      "Visit the café"
      ],
      "a": 1
     }
@@ -1628,9 +1628,9 @@ export const listening: ByLevel<ListeningItem[]> = {
      "t": "mc",
      "q": "How much does Tom pay for insurance?",
      "o": [
-      "About ┬ú10 a month",
-      "About ┬ú20 a month",
-      "About ┬ú50 a month"
+      "About £10 a month",
+      "About £20 a month",
+      "About £50 a month"
      ],
      "a": 1
     },
@@ -1756,7 +1756,7 @@ export const listening: ByLevel<ListeningItem[]> = {
     ],
     [
      "A",
-     "This shift has consequences that go far beyond individual workers. Business districts that were once crowded from Monday to Friday now see far fewer people, particularly on Mondays and Fridays. Caf├⌐s and sandwich shops that depended on office workers have struggled, and some have closed. At the same time, suburbs and smaller towns have experienced a revival, as people spend more time, and money, closer to home."
+     "This shift has consequences that go far beyond individual workers. Business districts that were once crowded from Monday to Friday now see far fewer people, particularly on Mondays and Fridays. Cafés and sandwich shops that depended on office workers have struggled, and some have closed. At the same time, suburbs and smaller towns have experienced a revival, as people spend more time, and money, closer to home."
     ],
     [
      "A",
@@ -1950,7 +1950,7 @@ export const listening: ByLevel<ListeningItem[]> = {
     },
     {
      "t": "mc",
-     "q": "Retrieval practice meansΓÇª",
+     "q": "Retrieval practice means…",
      "o": [
       "testing yourself",
       "reading again",
@@ -1960,7 +1960,7 @@ export const listening: ByLevel<ListeningItem[]> = {
     },
     {
      "t": "mc",
-     "q": "Spacing meansΓÇª",
+     "q": "Spacing means…",
      "o": [
       "studying everything at once",
       "spreading study over time",
@@ -1970,7 +1970,7 @@ export const listening: ByLevel<ListeningItem[]> = {
     },
     {
      "t": "mc",
-     "q": "Interleaving meansΓÇª",
+     "q": "Interleaving means…",
      "o": [
       "mixing different types of problems",
       "studying with friends",
@@ -2045,7 +2045,7 @@ export const listening: ByLevel<ListeningItem[]> = {
     },
     {
      "t": "mc",
-     "q": "Students who stay up all night before an examΓÇª",
+     "q": "Students who stay up all night before an exam…",
      "o": [
       "perform better",
       "perform worse",
@@ -2057,9 +2057,9 @@ export const listening: ByLevel<ListeningItem[]> = {
      "t": "mc",
      "q": "How much sleep do most adults need?",
      "o": [
-      "5ΓÇô6 hours",
-      "7ΓÇô9 hours",
-      "10ΓÇô12 hours"
+      "5–6 hours",
+      "7–9 hours",
+      "10–12 hours"
      ],
      "a": 1
     },
@@ -2197,7 +2197,7 @@ export const listening: ByLevel<ListeningItem[]> = {
    "q": [
     {
      "t": "mc",
-     "q": "According to recent research, procrastination is mainly aboutΓÇª",
+     "q": "According to recent research, procrastination is mainly about…",
      "o": [
       "laziness",
       "poor time management",
