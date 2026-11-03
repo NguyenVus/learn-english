@@ -1,0 +1,18 @@
+{
+  "name": "englishpath",
+  "private": true,
+  "version": "2.0.0",
+  "description": "EnglishPath – A2 → B1 → B2 English learning website for Vietnamese learners (TypeScript, no framework)",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.3",
+    "vite": "^8.3.5",
+    "vite-plugin-singlefile": "^2.3.4"
+  }
+}
