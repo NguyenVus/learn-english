@@ -32,7 +32,7 @@ await send("Page.navigate", { url: page }); await sleep(1500);
 const routes = ["home", "dashboard", "roadmap", "reading/A2", "reading/A2/r-a2-1", "reading/B2/r-b2-1", "reading/B2/r-b2-15", "listening/B1", "listening/B2/l-b2-1",
   "speaking/A2", "speaking/pron/p-th", "speaking/B1/s-b1-3", "writing/B2", "writing/B2/w-b2-7", "writing/saved", "guides", "guides/gd-read-tfng", "guides/gd-write-report",
   "grammar/B1", "grammar/B2/g-b2-8", "vocabulary/review", "vocabulary/mywords", "vocabulary/toeic", "vocabulary/toeic/1", "vocabulary/banks/B2", "vocabulary/phrasal", "vocabulary/mistakes",
-  "tests", "tests/unit/A2-U3", "tests/stage/B1", "tests/mock/mock-a2-1", "tests/mock/mock-a2-3", "tests/mock/mock-b1-1", "tests/mock/mock-b1-3", "tests/mock/mock-b2-1", "tests/mock/mock-b2-4", "placement", "mistakes"];
+  "tests", "tests/unit/A2-U3", "tests/stage/B1", "tests/mock/mock-a2-1", "tests/mock/mock-a2-3", "tests/mock/mock-b1-1", "tests/mock/mock-b1-3", "tests/mock/mock-b2-1", "tests/mock/mock-b2-4", "tests/mock/toeic-full-1", "tests/mock/ielts-full-1", "tests/mock/toeic-2hours-full-1", "placement", "mistakes"];
 for (const r of routes) {
   const before = errors.length;
   await evaluate(`location.hash = "#/${r}"`); await sleep(200);
@@ -78,6 +78,17 @@ const result = await evaluate(`(async () => {
     out.plan = E.state().plan.items.length + " plan items";
     location.hash = "#/tests"; ${wait}
     out.badges = Object.keys(E.state().badges).join(",");
+    location.hash = "#/mistakes"; ${wait}
+    const redoBtn = [...document.querySelectorAll("button")].find(b => b.textContent.includes("Làm lại câu"));
+    if (redoBtn) {
+      redoBtn.click(); ${wait}
+      out.mistakeSingleHash = location.hash;
+      const backBtn = [...document.querySelectorAll("button")].find(b => b.textContent.includes("Quay lại danh sách"));
+      if (backBtn) {
+        backBtn.click(); ${wait}
+        out.mistakeBackHash = location.hash;
+      }
+    }
     out.saved = !!localStorage.getItem("englishpath_v1");
   } catch (err) {
     out.err = err.stack || String(err);
