@@ -1,5 +1,5 @@
 /* Learner state, saved in localStorage */
-import type { AppState, VocabCard } from "../types";
+import type { AppState, Question, ScoreSkill, VocabCard } from "../types";
 import { DAY, todayKey } from "./util";
 
 export const STORE_KEY = "englishpath_v1";
@@ -12,7 +12,7 @@ export function defaultState(): AppState {
     done: {}, scores: [], vocab: {}, writings: [], speakings: [],
     streak: { count: 0, best: 0, last: null }, days: {}, weeklyGoal: 150,
     settings: { theme: dark ? "dark" : "light", accent: "US", rate: 1, vi: { A2: true, B1: true, B2: false } },
-    plan: null, badges: {}, selfChecks: {}
+    plan: null, badges: {}, selfChecks: {}, errorBank: {}, mockTests: {}
   };
 }
 
@@ -58,3 +58,35 @@ export function touchStreak(): void {
 }
 export const dueCards = (): VocabCard[] => Object.values(S.vocab).filter(c => c.due <= Date.now()).sort((a, b) => a.due - b.due);
 export const learnedCount = (): number => Object.values(S.vocab).filter(c => c.box >= 3).length;
+
+/* ---------- Mistake Bank (Error Notebook) ---------- */
+export function recordMistake(item: { id: string; q: Question; source?: string; lessonId?: string; title?: string; skill?: ScoreSkill | "grammar" }): void {
+  S.errorBank ??= {};
+  const prev = S.errorBank[item.id];
+  S.errorBank[item.id] = {
+    id: item.id,
+    q: item.q,
+    source: item.source || prev?.source,
+    lessonId: item.lessonId || prev?.lessonId,
+    title: item.title || prev?.title,
+    skill: item.skill || prev?.skill,
+    added: prev?.added || Date.now(),
+    wrongCount: (prev?.wrongCount || 0) + 1,
+    lastSeen: Date.now()
+  };
+  save();
+}
+
+export function resolveMistake(id: string): boolean {
+  if (!S.errorBank || !S.errorBank[id]) return false;
+  delete S.errorBank[id];
+  save();
+  return true;
+}
+
+export function clearMistakes(): void {
+  S.errorBank = {};
+  save();
+}
+
+export const mistakesCount = (): number => Object.keys(S.errorBank || {}).length;

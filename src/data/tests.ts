@@ -14,7 +14,8 @@ export const placement: Question[] = [
    "going",
    "is go"
   ],
-  "a": 1
+  "a": 1,
+  "x": "Chủ ngữ 'She' là ngôi thứ 3 số ít, diễn tả thói quen hàng ngày ('every day') → dùng thì Hiện tại đơn: 'goes' (thêm -es vào go). Các phương án: 'go' sai vì thiếu -es; 'is go' sai ngữ pháp; 'going' phải có to be."
  },
  {
   "lv": "A2",
@@ -26,7 +27,8 @@ export const placement: Question[] = [
    "any",
    "a"
   ],
-  "a": 2
+  "a": 2,
+  "x": "Dùng 'any' trong câu phủ định ('isn't') với danh từ không đếm được ('milk'). 'some' chỉ dùng trong câu khẳng định/lời mời; 'many' chỉ dùng cho danh từ đếm được số nhiều; 'a' chỉ dùng cho danh từ đếm được số ít."
  },
  {
   "lv": "A2",
@@ -38,7 +40,8 @@ export const placement: Question[] = [
    "saw",
    "seeing"
   ],
-  "a": 2
+  "a": 2,
+  "x": "Dấu hiệu 'last night' (tối qua) chỉ thời điểm xác định đã kết thúc trong quá khứ → chia thì Quá khứ đơn: 'saw' (dạng V2 của see). Không dùng thì Hiện tại hoàn thành 'have seen' khi có mốc thời gian quá khứ rõ ràng."
  },
  {
   "lv": "A2",
@@ -50,7 +53,8 @@ export const placement: Question[] = [
    "best",
    "most good"
   ],
-  "a": 2
+  "a": 2,
+  "x": "Sau mạo từ 'the' trong cấu trúc so sánh nhất của tính từ bất quy tắc 'good' → dùng 'best' (the best). 'better' là so sánh hơn (better than); 'most good' sai ngữ pháp."
  },
  {
   "lv": "B1",
@@ -62,7 +66,8 @@ export const placement: Question[] = [
    "have lived",
    "am living"
   ],
-  "a": 2
+  "a": 2,
+  "x": "Dấu hiệu 'since 2019' (từ năm 2019 đến nay) chỉ hành động bắt đầu trong quá khứ và vẫn tiếp diễn ở hiện tại → chia thì Hiện tại hoàn thành: 'have lived'. 'lived' là quá khứ đơn (đã kết thúc); 'live' là hiện tại đơn."
  },
  {
   "lv": "B1",
@@ -74,7 +79,8 @@ export const placement: Question[] = [
    "will stay",
    "stayed"
   ],
-  "a": 2
+  "a": 2,
+  "x": "Câu điều kiện loại 1 (sự việc có thể xảy ra ở tương lai): Mệnh đề If dùng Hiện tại đơn ('If it rains'), mệnh đề chính dùng 'will + V nguyên mẫu' → 'will stay'. 'would stay' chỉ dùng cho điều kiện loại 2."
  },
  {
   "lv": "B1",
@@ -86,7 +92,8 @@ export const placement: Question[] = [
    "has built",
    "is building"
   ],
-  "a": 1
+  "a": 1,
+  "x": "Chủ ngữ 'The museum' (viện bảo tàng) là vật chịu tác động (được xây dựng) + mốc thời gian quá khứ 'in 1890' → dùng câu bị động thì Quá khứ đơn: 'was built' (was/were + V3/ed)."
  },
  {
   "lv": "B2",
@@ -98,7 +105,8 @@ export const placement: Question[] = [
    "have studied",
    "would study"
   ],
-  "a": 1
+  "a": 1,
+  "x": "Mệnh đề chính dùng 'would have passed' là dấu hiệu của Câu điều kiện loại 3 (giả định trái ngược với quá khứ) → Mệnh đề If chia ở Quá khứ hoàn thành: 'had studied' (had + V3/ed)."
  },
  {
   "lv": "B2",
@@ -110,7 +118,8 @@ export const placement: Question[] = [
    "do I live",
    "I live"
   ],
-  "a": 1
+  "a": 1,
+  "x": "Câu tường thuật gián tiếp dạng câu hỏi Wh-: trật tự từ chuyển về dạng khẳng định (S + V) và lùi thì: 'where I lived'. Không đảo trợ động từ 'did/do' lên trước chủ ngữ."
  },
  {
   "lv": "B2",
@@ -122,7 +131,8 @@ export const placement: Question[] = [
    "must have",
    "should"
   ],
-  "a": 0
+  "a": 0,
+  "x": "Dự đoán có căn cứ chắc chắn ở hiện tại ('anh ấy không nghe máy, chắc hẳn là đã ngủ rồi') → dùng 'must be' + tính từ (must be asleep). 'can't be' = chắc chắn không thể; 'must have' cần có V3 đi kèm."
  },
  {
   "lv": "A2",
@@ -134,7 +144,8 @@ export const placement: Question[] = [
    "heavy",
    "quiet"
   ],
-  "a": 0
+  "a": 0,
+  "x": "“cheap” nghĩa là rẻ (not expensive). Các từ khác: 'busy' = bận rộn; 'heavy' = nặng; 'quiet' = yên tĩnh."
  },
  {
   "lv": "A2",
@@ -146,7 +157,8 @@ export const placement: Question[] = [
    "receipt",
    "luggage"
   ],
-  "a": 1
+  "a": 1,
+  "x": "“ticket” nghĩa là vé (train ticket: vé tàu hoả). Các từ khác: 'passport' = hộ chiếu; 'receipt' = biên lai/hoá đơn; 'luggage' = hành lý."
  },
  {
   "lv": "B1",
@@ -158,7 +170,8 @@ export const placement: Question[] = [
    "to seeing",
    "see"
   ],
-  "a": 2
+  "a": 2,
+  "x": "Cấu trúc cố định: 'look forward to + V-ing' (rất mong đợi điều gì) → 'to seeing'. Người học thường nhầm lẫn chọn 'to see' vì thói quen to + V nguyên mẫu."
  },
  {
   "lv": "B1",
@@ -170,7 +183,8 @@ export const placement: Question[] = [
    "confident",
    "relieved"
   ],
-  "a": 0
+  "a": 0,
+  "x": "Tính từ đuôi '-ed' dùng miêu tả cảm xúc con người: 'embarrassed' (cảm thấy xấu hổ, ngượng ngùng). Tính từ đuôi '-ing' ('embarrassing') dùng mô tả bản chất của sự việc."
  },
  {
   "lv": "B2",
@@ -182,7 +196,8 @@ export const placement: Question[] = [
    "outrun",
    "overlook"
   ],
-  "a": 0
+  "a": 0,
+  "x": "Động từ 'outweigh' nghĩa là vượt trội hơn, nhiều sức nặng/giá trị hơn (benefits outweigh risks: lợi ích lớn hơn rủi ro). 'overcome' = vượt qua khó khăn; 'overlook' = bỏ sót/bỏ qua."
  },
  {
   "lv": "B2",
@@ -194,7 +209,8 @@ export const placement: Question[] = [
    "outbreak",
    "break-in"
   ],
-  "a": 1
+  "a": 1,
+  "x": "Cụm danh từ 'make a breakthrough' nghĩa là tạo ra bước đột phá quan trọng. 'breakdown' = sự cố/suy sụp; 'outbreak' = sự bùng phát dịch bệnh; 'break-in' = vụ đột nhập trái phép."
  },
  {
   "lv": "A2",
@@ -206,7 +222,8 @@ export const placement: Question[] = [
    "Young children need an adult with them.",
    "Children can't swim here."
   ],
-  "a": 1
+  "a": 1,
+  "x": "Thông báo ghi rõ: 'Children under 8 must swim with an adult' (trẻ dưới 8 tuổi phải đi cùng người lớn) → tương ứng với 'Young children need an adult with them'. Phương án 'The pool opens on Mondays' sai vì bài ghi 'closed on Mondays'."
  },
  {
   "lv": "B1",
@@ -218,7 +235,8 @@ export const placement: Question[] = [
    "To change their plans",
    "To ask for help with a report"
   ],
-  "a": 1
+  "a": 1,
+  "x": "Jo viết báo tối nay không đi xem phim được vì phải ở lại văn phòng làm báo cáo, và đề xuất dời sang thứ Bảy ('How about Saturday instead?') → mục đích là 'To change their plans' (đổi kế hoạch)."
  },
  {
   "lv": "B1",
@@ -230,7 +248,8 @@ export const placement: Question[] = [
    "can see and also use sound",
    "only use their eyes"
   ],
-  "a": 1
+  "a": 1,
+  "x": "Bài đọc: 'Most bats can see quite well, although they also use sound...' (Hầu hết dơi nhìn khá tốt, mặc dù chúng cũng dùng âm thanh) → 'can see and also use sound'. Phương án 'cannot see at all' sai vì bài khẳng định 'this is not true'."
  },
  {
   "lv": "B2",
@@ -242,7 +261,8 @@ export const placement: Question[] = [
    "It reduces spontaneous interactions that create new ideas.",
    "It makes corridors busier."
   ],
-  "a": 1
+  "a": 1,
+  "x": "Bài đọc: 'critics contend that it erodes the informal exchanges that often spark innovation' (những người chỉ trích cho rằng làm việc từ xa làm giảm các cuộc trò chuyện tự phát - vốn khơi nguồn sáng tạo) → tương đương 'It reduces spontaneous interactions that create new ideas'."
  },
  {
   "lv": "B2",
@@ -254,7 +274,8 @@ export const placement: Question[] = [
    "The project was cancelled forever.",
    "The council has a very large budget."
   ],
-  "a": 0
+  "a": 0,
+  "x": "Từ 'ostensibly' mang nghĩa 'bề ngoài tuyên bố là vậy nhưng thực tế có thể khác' + 'speculation that political pressure played a larger role' → Tác giả ngụ ý lý do chính thức chưa chắc là lý do thực sự ('The official reason may not be the real reason')."
  },
  {
   "lv": "A2",
@@ -266,7 +287,8 @@ export const placement: Question[] = [
    "9.30",
    "9.45"
   ],
-  "a": 1
+  "a": 1,
+  "x": "Đoạn nghe: 'It leaves at half past nine' → 'half past nine' là 9 giờ 30 phút (9.30)."
  },
  {
   "lv": "B1",
@@ -278,7 +300,8 @@ export const placement: Question[] = [
    "By taxi",
    "By bus"
   ],
-  "a": 1
+  "a": 1,
+  "x": "Người nói dự định đạp xe nhưng xe thủng lốp ('had a flat tyre'), cuối cùng đã đi taxi ('ended up taking a taxi') → phương tiện thực tế là 'By taxi'. Đừng để bị lừa bởi từ 'cycle' ở đầu câu."
  },
  {
   "lv": "B1",
@@ -290,7 +313,8 @@ export const placement: Question[] = [
    "Because of staff training",
    "Because it's a holiday"
   ],
-  "a": 1
+  "a": 1,
+  "x": "Đoạn nghe: 'The library will close early on Friday because of staff training' (Thư viện đóng cửa sớm vào thứ Sáu vì đào tạo nhân viên) → 'Because of staff training'."
  },
  {
   "lv": "B2",
@@ -302,7 +326,8 @@ export const placement: Question[] = [
    "Traffic moved to nearby areas.",
    "Traffic increased everywhere."
   ],
-  "a": 1
+  "a": 1,
+  "x": "Đoạn nghe: 'congestion has simply shifted to neighbouring districts rather than disappearing' (ùn tắc chỉ dịch chuyển sang các khu vực lân cận thay vì biến mất) → 'Traffic moved to nearby areas'. 'Shifted to neighbouring districts' đồng nghĩa với 'moved to nearby areas'."
  }
 ];
 

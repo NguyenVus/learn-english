@@ -14,8 +14,9 @@ export type ScoreSkill = Skill | "grammar" | "vocab" | "tests";
      say  – text read aloud with a play button (mini listening)
      x    – hand-written explanation shown after checking
      lv   – difficulty (placement test weighting)
-     _g   – id of the grammar lesson the question belongs to (set at start-up) */
-interface QuestionBase { ctx?: string; say?: string; x?: string; lv?: Level; _g?: string }
+     _g   – id of the grammar lesson the question belongs to (set at start-up)
+     id   – stable unique identifier across the app */
+interface QuestionBase { id?: string; ctx?: string; say?: string; x?: string; lv?: Level; _g?: string; title?: string }
 export interface MCQuestion extends QuestionBase { t: "mc"; q: string; o: string[]; a: number }
 export interface TFQuestion extends QuestionBase { t: "tf"; q: string; a: boolean }
 export interface TFNGQuestion extends QuestionBase { t: "tfng"; q: string; a: "T" | "F" | "NG" }
@@ -26,7 +27,11 @@ export interface GapTextQuestion extends QuestionBase { t: "gaptext"; text: stri
 export interface MatchQuestion extends QuestionBase { t: "match"; q: string; p: [string, string][] }
 /** Matching headings: a = index of the right heading for each paragraph */
 export interface HeadingQuestion extends QuestionBase { t: "head"; q: string; h: string[]; a: number[] }
-export type Question = MCQuestion | TFQuestion | TFNGQuestion | GapQuestion | GapTextQuestion | MatchQuestion | HeadingQuestion;
+/** Sentence transformation: rewrite orig sentence using key word into q (marked with ___) */
+export interface RewriteQuestion extends QuestionBase { t: "rewrite"; orig: string; key?: string; q: string; a: string | string[] }
+/** Error identification: find the underlined incorrect part (0..parts.length-1) */
+export interface ErrorQuestion extends QuestionBase { t: "error"; q: string; parts: string[]; a: number; corr?: string }
+export type Question = MCQuestion | TFQuestion | TFNGQuestion | GapQuestion | GapTextQuestion | MatchQuestion | HeadingQuestion | RewriteQuestion | ErrorQuestion;
 export type QuestionType = Question["t"];
 
 /* ---------------- Content ---------------- */
@@ -91,12 +96,34 @@ export interface PlanItem { kind: PlanKind; id?: string; title: string; min: num
 export interface Plan { date: string; level: Level; weakest: Skill; items: PlanItem[]; done: number[] }
 export interface Placement { result: string; score?: number; date: number; skipped?: boolean }
 export interface Settings { theme: "light" | "dark"; accent: "US" | "UK"; rate: number; vi: ByLevel<boolean>; voiceName?: string }
+export interface ErrorItem {
+  id: string;
+  q: Question;
+  source?: string;
+  lessonId?: string;
+  title?: string;
+  skill?: ScoreSkill | "grammar";
+  added: number;
+  wrongCount: number;
+  lastSeen: number;
+}
+
+export interface MockTest {
+  id: string;
+  level: Level;
+  title: string;
+  desc: string;
+  timeLimit: number; // in minutes
+  questions: Question[];
+}
+
 export interface AppState {
   version: number; created: number;
   level: Level; subLevel: string | null; placement: Placement | null;
   unlocked: ByLevel<boolean>;
   stageTests: Partial<Record<Level, StageTestRecord>>;
   unitTests: Record<string, number>;
+  mockTests: Record<string, number>;
   done: Record<string, DoneEntry>;
   scores: ScoreEntry[];
   vocab: Record<string, VocabCard>;
@@ -110,4 +137,5 @@ export interface AppState {
   plan: Plan | null;
   badges: Record<string, number>;
   selfChecks: Record<string, number[]>;
+  errorBank: Record<string, ErrorItem>;
 }

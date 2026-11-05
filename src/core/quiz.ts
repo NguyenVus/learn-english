@@ -1,9 +1,10 @@
 /* Quiz engine: renders any list of questions, scores them and explains every answer */
-import type { Question } from "../types";
+import type { Question, ScoreSkill } from "../types";
 import { findItem } from "../data";
 import { h, put, viBox, type Child } from "./dom";
 import { norm, pct, shuffle } from "./util";
 import { say } from "./speech";
+import { S, recordMistake, resolveMistake } from "./state";
 
 export interface QuizOptions {
   onDone?: (pct: number, results: QuizResult[]) => void;
@@ -14,6 +15,9 @@ export interface QuizOptions {
   listening?: boolean;
   /** grammar lesson currently open (don't link back to it) */
   lessonId?: string;
+  title?: string;
+  skill?: ScoreSkill | "grammar";
+  isReview?: boolean;
 }
 export interface QuizResult { q: Question; got: number; total: number }
 export type QuizElement = HTMLDivElement & { _check: () => number };
@@ -30,6 +34,16 @@ export function answerOk(input: string, ans: string | string[]): boolean {
   return list.some(a => norm(a) === v);
 }
 const firstAnswer = (a: string | string[]) => (Array.isArray(a) ? a[0] : String(a).split("|")[0]);
+
+export function questionId(q: Question): string {
+  if (q.id) return q.id;
+  const anyQ = q as unknown as Record<string, unknown>;
+  const text = typeof anyQ.q === "string" ? anyQ.q : typeof anyQ.text === "string" ? anyQ.text : typeof anyQ.orig === "string" ? anyQ.orig : "";
+  const str = q.t + ":" + text;
+  let hash = 0;
+  for (let i = 0; i < str.length; i++) hash = ((hash << 5) - hash + str.charCodeAt(i)) | 0;
+  return "q_" + (hash >>> 0).toString(36);
+}
 
 export function quiz(questions: Question[], opts: QuizOptions = {}): QuizElement {
   const wrap = h("div", { class: "quiz" }) as QuizElement;
@@ -85,6 +99,50 @@ export function quiz(questions: Question[], opts: QuizOptions = {}): QuizElement
         setFb(item.ok, wrongs.length ? "Answers: " + wrongs.join(", ") : "✓ All correct.");
         return c;
       } };
+    } else if (q.t === "rewrite") {
+      box.append(
+        h("div", { class: "ctx small", style: "margin-bottom:8px" },
+          h("div", {}, h("b", {}, "Original sentence: "), q.orig),
+          q.key ? h("div", { style: "margin-top:4px" }, h("b", {}, "Keyword: "), h("span", { class: "chip", style: "color:var(--primary);font-weight:700" }, q.key)) : null
+        )
+      );
+      const parts = q.q.split(/_{3,}/);
+      const inp = h("input", { type: "text", class: "gapin", style: "width:240px", autocomplete: "off", spellcheck: "false", placeholder: "write missing words..." });
+      box.append(h("div", { class: "qt" }, num, parts[0], inp, parts.slice(1).join("___")));
+      item = { total: 1, exEl, check() {
+        const ok = answerOk(inp.value, q.a);
+        inp.classList.toggle("correct", ok);
+        inp.classList.toggle("wrong", !ok);
+        item.ok = ok; item.user = inp.value; item.correctText = firstAnswer(q.a);
+        setFb(ok, ok ? "✓ Correct." : "✗ Missing words: " + item.correctText + ".");
+        return ok ? 1 : 0;
+      } };
+    } else if (q.t === "error") {
+      box.append(h("div", { class: "qt" }, num + q.q));
+      const sentenceRow = h("div", { class: "ctx", style: "line-height:2.2;font-size:1rem" });
+      const labels = q.parts.map((p, i) => {
+        const char = String.fromCharCode(65 + i);
+        return h("label", { class: "opt", style: "display:inline-flex;align-items:center;margin:3px 6px;padding:3px 10px;cursor:pointer" },
+          h("input", { type: "radio", name, value: i, style: "margin-right:6px" }),
+          h("b", {}, `(${char}) `), " ", p
+        );
+      });
+      put(sentenceRow, labels);
+      box.append(sentenceRow);
+      item = { total: 1, exEl, check() {
+        const sel = labels.findIndex(l => l.querySelector("input")!.checked);
+        labels.forEach((l, i) => {
+          l.classList.toggle("correct", i === q.a);
+          l.classList.toggle("wrong", i === sel && sel !== q.a);
+        });
+        const ok = sel === q.a;
+        item.ok = ok;
+        item.user = sel >= 0 ? `(${String.fromCharCode(65 + sel)}) ${q.parts[sel]}` : null;
+        item.correctText = `(${String.fromCharCode(65 + q.a)}) ${q.parts[q.a]}`;
+        const corrHint = q.corr ? ` → sửa thành “${q.corr}”` : "";
+        setFb(ok, ok ? "✓ Correct." : `✗ Error: ${item.correctText}${corrHint}.`);
+        return ok ? 1 : 0;
+      } };
     } else {
       box.append(h("div", { class: "qt" }, num + q.q));
       const rights = q.t === "match" ? shuffle(q.p.map(p => p[1])) : q.h;
@@ -120,14 +178,35 @@ export function quiz(questions: Question[], opts: QuizOptions = {}): QuizElement
       item.exEl.innerHTML = "";
       try { item.exEl.append(h("details", { class: "explain", open: !item.ok }, h("summary", {}, item.ok ? "💡 Explanation" : "💡 Why? See the explanation"), explainQ(q, item, opts))); }
       catch (e) { console.warn(e); }
+
+      const qId = questionId(q);
+      if (!item.ok || g < item.total) {
+        recordMistake({
+          id: qId,
+          q,
+          source: q.ctx || q.say || opts.source,
+          lessonId: q._g || opts.lessonId,
+          title: q.title || opts.title || (q._g ? findItem("grammar", q._g)?.title : undefined),
+          skill: opts.skill
+        });
+      } else {
+        if (opts.isReview || S.errorBank?.[qId]) {
+          resolveMistake(qId);
+        }
+      }
     });
     const p = pct(got, total); checked = true;
     const wrongN = items.filter(x => !x.item.ok).length;
     scoreBox.innerHTML = "";
-    scoreBox.append(h("div", { class: "score-box notice " + (p >= 70 ? "ok" : p >= 50 ? "warn" : "bad") },
-      `Score: ${got}/${total} (${p}%) ` + (p >= 90 ? "🌟 Excellent!" : p >= 70 ? "👍 Well done!" : p >= 50 ? "🙂 Not bad – review the mistakes." : "💪 Keep practising."),
-      wrongN ? h("div", { class: "small", style: "font-weight:500;margin-top:6px" }, `${wrongN} question(s) to review. Explanations are open under each wrong answer. `,
-        h("button", { class: "btn sm", onclick: () => items.find(x => !x.item.ok)?.item.exEl.scrollIntoView({ behavior: "smooth", block: "center" }) }, "Go to first mistake")) : null));
+    if (opts.isReview && wrongN === 0) {
+      scoreBox.append(h("div", { class: "score-box notice ok" },
+        "🎉 Xuất sắc! Bạn đã sửa đúng tất cả các câu hỏi này và gỡ thành công khỏi Sổ tay lỗi sai."));
+    } else {
+      scoreBox.append(h("div", { class: "score-box notice " + (p >= 70 ? "ok" : p >= 50 ? "warn" : "bad") },
+        `Score: ${got}/${total} (${p}%) ` + (p >= 90 ? "🌟 Excellent!" : p >= 70 ? "👍 Well done!" : p >= 50 ? "🙂 Not bad – review the mistakes." : "💪 Keep practising."),
+        wrongN ? h("div", { class: "small", style: "font-weight:500;margin-top:6px" }, `${wrongN} question(s) to review. Explanations are open under each wrong answer. `,
+          h("button", { class: "btn sm", onclick: () => items.find(x => !x.item.ok)?.item.exEl.scrollIntoView({ behavior: "smooth", block: "center" }) }, "Go to first mistake")) : null));
+    }
     opts.onDone?.(p, results);
     return p;
   };
@@ -240,6 +319,19 @@ function explainQ(q: Question, item: Item, opts: QuizOptions): HTMLElement {
         ev ? h("div", { class: "small muted" }, (isListening ? "🎧 " : "📍 ") + "“", exHighlight(ev.sentence, new Set(exWords(ans).map(exStem))), "”") : null);
     });
     vi.push("Mỗi chỗ trống có câu gốc trong bài nghe/bài đọc (từ cần điền được tô màu). Nghe lại đoạn đó để kiểm tra.");
+  } else if (q.t === "rewrite") {
+    const alts = Array.isArray(q.a) ? q.a : String(q.a).split("|");
+    const u = String(item.user || "").trim();
+    if (!item.ok) add(h("span", { class: "fb bad" }, u ? "Your answer: " + u : "No answer given."));
+    add(h("b", {}, "Original sentence: "), q.orig);
+    if (q.key) add(h("b", {}, "Keyword used: "), q.key);
+    add(h("b", {}, "Complete rewritten sentence: "), fill(q.q, alts[0]));
+    vi.push("Viết lại câu giữ nguyên nghĩa: chú ý đúng thì, cấu trúc ngữ pháp và từ khoá bắt buộc.");
+  } else if (q.t === "error") {
+    if (!item.ok) add(h("span", { class: "fb bad" }, item.user == null ? "You didn't choose an answer." : "You chose: " + item.user));
+    add(h("b", {}, "Incorrect part: "), item.correctText);
+    if (q.corr) add(h("b", {}, "Correction: "), q.corr);
+    vi.push("Tìm lỗi sai: đối chiếu kỹ sự hoà hợp chủ ngữ - vị ngữ, thì, giới từ hoặc dạng từ.");
   } else if (q.t === "match") {
     (item.details || []).forEach(d => {
       const ev = src ? findEvidence(src, d.left + " " + d.correct, d.left) : null;
@@ -258,7 +350,10 @@ function explainQ(q: Question, item: Item, opts: QuizOptions): HTMLElement {
     if (unused.length) add(h("span", { class: "small muted" }, "Extra headings (not used): " + unused.join(" · ")));
     vi.push("Tiêu đề đúng phải tóm tắt ý chính của cả đoạn – thường thể hiện ở câu đầu (câu chủ đề). Tiêu đề thừa thường chỉ khớp một chi tiết.");
   }
-  if (q.x) add("💡 ", q.x);
+  if (q.x) {
+    add(h("div", { class: "notice ok small", style: "margin:8px 0;border-left:4px solid var(--primary);font-weight:500;line-height:1.6" },
+      h("b", {}, "💡 Giải thích chi tiết: "), q.x));
+  }
 
   // Grammar questions: quote the most relevant rule from the lesson
   const lesson = findItem("grammar", q._g);
@@ -268,8 +363,12 @@ function explainQ(q: Question, item: Item, opts: QuizOptions): HTMLElement {
     const qText = "q" in q ? q.q : "";
     const rule = findEvidence(ruleText, qText + " " + correct);
     if (rule) add(h("b", {}, "📘 Rule: "), "“", exHighlight(rule.sentence, rule.keys), "”");
-    if (opts.lessonId !== lesson.id) { add(h("b", {}, "📘 Grammar – " + lesson.title + ". "), h("a", { href: `#/grammar/${lesson.level}/${lesson.id}` }, "Review the lesson →")); vi.push(lesson.vi); }
-    else if (!item.ok) vi.push("Xem lại phần giải thích ở đầu bài học này.");
+    if (opts.lessonId !== lesson.id) {
+      add(h("b", {}, "📘 Grammar – " + lesson.title + ". "), h("a", { href: `#/grammar/${lesson.level}/${lesson.id}` }, "Review the lesson →"));
+      vi.push(lesson.vi);
+    } else if (!item.ok && !q.x) {
+      vi.push(`Ghi nhớ: ${lesson.vi}`);
+    }
   }
   if (vi.length) put(out, viBox(vi.join(" ")));
   return out;

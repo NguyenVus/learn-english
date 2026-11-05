@@ -24,7 +24,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "works",
       "is work"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Chủ ngữ ngôi thứ 3 số ít 'My sister' diễn tả sự thật/công việc ổn định → Hiện tại đơn thêm -s: 'works'. 'work' sai vì thiếu -s; 'is work' sai ngữ pháp."
     },
     {
      "t": "mc",
@@ -34,7 +35,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "is sleeping",
       "sleep"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dấu hiệu 'Be quiet!' (Hãy im lặng nào!) báo hiệu hành động đang diễn ra ngay lúc nói → chia Hiện tại tiếp diễn: 'is sleeping'."
     },
     {
      "t": "gap",
@@ -42,7 +44,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "doesn't like",
       "does not like"
-     ]
+     ],
+     "x": "Câu phủ định thì Hiện tại đơn với chủ ngữ ngôi thứ 3 số ít 'He' → mượn trợ động từ 'doesn't' + V nguyên thể: 'doesn't like'."
     },
     {
      "t": "mc",
@@ -53,7 +56,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "knows"
      ],
      "a": 0,
-     "x": "“know” is a state verb, so we use the present simple."
+     "x": "'know' là động từ chỉ trạng thái (state verb), không chia ở thì tiếp diễn → dùng Hiện tại đơn: 'know'. Không dùng 'am knowing'."
     },
     {
      "t": "gap",
@@ -61,7 +64,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "are playing",
       "'re playing"
-     ]
+     ],
+     "x": "Dấu hiệu 'Look!' (Nhìn kìa!) báo hiệu hành động đang diễn ra trước mắt → Hiện tại tiếp diễn: 'are playing'."
     },
     {
      "t": "mc",
@@ -71,7 +75,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "have",
       "has"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trạng từ tần suất 'usually' (thường xuyên) chỉ thói quen + chủ ngữ số nhiều 'We' → Hiện tại đơn động từ nguyên mẫu: 'have'."
     },
     {
      "t": "mc",
@@ -81,7 +86,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Does",
       "Is"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Câu hỏi thì Hiện tại đơn với chủ ngữ ngôi thứ 3 số ít 'she' → dùng trợ động từ 'Does': 'Does she speak...?'."
     },
     {
      "t": "gap",
@@ -89,7 +95,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "am staying",
       "'m staying"
-     ]
+     ],
+     "x": "Dấu hiệu 'This week' (tuần này) diễn tả tình huống tạm thời diễn ra trong thời gian ngắn → chia Hiện tại tiếp diễn: 'am staying'."
     },
     {
      "t": "mc",
@@ -99,7 +106,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "is boiling",
       "boil"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Chân lý, sự thật khoa học hiển nhiên + danh từ không đếm được 'Water' → chia Hiện tại đơn thêm -s: 'boils'."
     },
     {
      "t": "mc",
@@ -109,7 +117,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "are",
       "is"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dấu hiệu 'now' và động từ 'doing' dạng V-ing trong câu hỏi tiếp diễn với 'you' → dùng to be 'are': 'What are you doing now?'."
     }
    ]
   },
@@ -128,7 +137,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     {
      "t": "gap",
      "q": "Yesterday I ___ (go) to the cinema.",
-     "a": "went"
+     "a": "went",
+     "x": "Dấu hiệu 'Yesterday' (hôm qua) chỉ thời điểm đã kết thúc trong quá khứ → chia thì Quá khứ đơn: 'went' (V2 của go)."
     },
     {
      "t": "mc",
@@ -138,7 +148,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "losed",
       "lost"
      ],
-     "a": 2
+     "a": 2,
+     "x": "Dấu hiệu 'last night' (tối qua) → Quá khứ đơn dạng bất quy tắc: 'lost' (V2 của lose)."
     },
     {
      "t": "mc",
@@ -148,12 +159,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "caught",
       "catched"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Trong câu phủ định quá khứ đơn, sau trợ động từ 'didn't' luôn dùng động từ nguyên thể không chia: 'didn't catch'."
     },
     {
      "t": "gap",
      "q": "___ you enjoy the party?",
-     "a": "did"
+     "a": "did",
+     "x": "Câu hỏi thì Quá khứ đơn với động từ thường → đảo trợ động từ 'Did' lên đầu câu: 'Did you enjoy...?'."
     },
     {
      "t": "mc",
@@ -163,12 +176,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "were",
       "did"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dấu hiệu 'last Sunday' (Chủ nhật tuần trước) với chủ ngữ số nhiều 'They' → dùng to be quá khứ 'were'."
     },
     {
      "t": "gap",
      "q": "He ___ (study) English for two hours.",
-     "a": "studied"
+     "a": "studied",
+     "x": "Động từ 'study' kết thúc bằng phụ âm + y → đổi y thành i rồi thêm -ed: 'studied'."
     },
     {
      "t": "mc",
@@ -178,7 +193,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "bought",
       "buyed"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dấu hiệu 'last month' (tháng trước) → Quá khứ đơn dạng bất quy tắc: 'bought' (V2 của buy)."
     },
     {
      "t": "mc",
@@ -188,12 +204,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "do",
       "were"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Câu hỏi có từ để hỏi trong quá khứ đơn: Wh- + did + S + V nguyên thể → 'Where did you go...?'."
     },
     {
      "t": "gap",
      "q": "The train ___ (stop) at every station.",
-     "a": "stopped"
+     "a": "stopped",
+     "x": "Động từ 'stop' có 1 nguyên âm đứng giữa 2 phụ âm → gấp đôi phụ âm cuối trước khi thêm -ed: 'stopped'."
     },
     {
      "t": "mc",
@@ -203,7 +221,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "I didn't see him.",
       "I not saw him."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Sau 'didn't' dùng động từ nguyên thể: 'I didn't see him'. Các câu 'didn't saw' hay 'didn't seen' là lỗi sai phổ biến."
     }
    ]
   },
@@ -227,7 +246,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "am going to",
       "going to"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Có quyết định hoặc dự định từ trước ('I've decided') → dùng 'be going to': 'am going to study'."
     },
     {
      "t": "mc",
@@ -237,7 +257,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "'m going to",
       "am"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Quyết định ngay tại thời điểm nói (thấy lạnh nên đóng cửa) → dùng 'will' ('ll): 'I'll close the window'."
     },
     {
      "t": "mc",
@@ -247,7 +268,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "is going to",
       "goes to"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dự đoán có bằng chứng cụ thể trước mắt ('Look at that car!') → dùng 'be going to': 'is going to crash'."
     },
     {
      "t": "gap",
@@ -255,7 +277,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "won't",
       "will not"
-     ]
+     ],
+     "x": "Lời hứa (promise) trong tương lai → dùng 'won't' (will not): 'I promise I won't tell anyone'."
     },
     {
      "t": "mc",
@@ -265,7 +288,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "is going",
       "going to"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Dự đoán mang tính ý kiến cá nhân sau 'I think' → dùng 'will': 'I think she will win'."
     },
     {
      "t": "gap",
@@ -273,7 +297,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "are going to travel",
       "'re going to travel"
-     ]
+     ],
+     "x": "Kế hoạch chắc chắn đã có sự chuẩn bị ('we've bought the tickets') → dùng 'are going to travel'."
     },
     {
      "t": "mc",
@@ -283,7 +308,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Are",
       "Going to"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Lời yêu cầu nhờ giúp đỡ lịch sự → dùng 'Will you help me...?'"
     },
     {
      "t": "mc",
@@ -293,7 +319,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "are you going to",
       "you will"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Hỏi về kế hoạch, dự định của người khác trong ngày hôm nay → dùng 'are you going to do'."
     },
     {
      "t": "gap",
@@ -301,7 +328,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "will call",
       "'ll call"
-     ]
+     ],
+     "x": "Lời hứa hoặc hành động đưa ra khi nói ('Don't worry') → dùng 'will call' ('ll call)."
     },
     {
      "t": "mc",
@@ -311,7 +339,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "I'm going to buy a car.",
       "I'm going buy a car."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Cấu trúc đúng của be going to: S + be + going to + V nguyên thể → 'I'm going to buy a car'."
     }
    ]
   },
@@ -330,7 +359,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
     {
      "t": "gap",
      "q": "A plane is ___ (fast) than a train.",
-     "a": "faster"
+     "a": "faster",
+     "x": "Tính từ ngắn 'fast' có 'than' phía sau → thêm đuôi -er: 'faster than'."
     },
     {
      "t": "mc",
@@ -340,7 +370,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "cheaper",
       "cheapest"
      ],
-     "a": 1
+     "a": 1,
+     "x": "So sánh hơn của tính từ ngắn 'cheap' (rẻ) → 'cheaper than'."
     },
     {
      "t": "mc",
@@ -350,12 +381,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "more intelligent",
       "intelligentest"
      ],
-     "a": 0
+     "a": 0,
+     "x": "So sánh nhất của tính từ dài 'intelligent' đi sau 'the' → 'the most intelligent'."
     },
     {
      "t": "gap",
      "q": "My cooking is bad, but yours is ___!",
-     "a": "worse"
+     "a": "worse",
+     "x": "So sánh hơn bất quy tắc của 'bad' (tệ) → 'worse' (tệ hơn)."
     },
     {
      "t": "mc",
@@ -365,7 +398,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "hottest",
       "most hot"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Tính từ ngắn 'hot' gấp đôi phụ âm cuối trong so sánh nhất → 'the hottest'."
     },
     {
      "t": "mc",
@@ -375,12 +409,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "My phone is better than yours.",
       "My phone is gooder than yours."
      ],
-     "a": 1
+     "a": 1,
+     "x": "So sánh hơn của tính từ bất quy tắc 'good' là 'better than'. Không nói 'more better' hay 'gooder'."
     },
     {
      "t": "gap",
      "q": "English is ___ (easy) than Chinese for me.",
-     "a": "easier"
+     "a": "easier",
+     "x": "Tính từ 2 âm tiết tận cùng bằng -y 'easy' → đổi y thành i rồi thêm -er: 'easier than'."
     },
     {
      "t": "mc",
@@ -390,7 +426,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "as",
       "like"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Cấu trúc so sánh bằng: as + adj + as → 'as tall as'."
     },
     {
      "t": "mc",
@@ -400,12 +437,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "biggest",
       "most big"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Tính từ ngắn 'big' gấp đôi chữ g trong so sánh nhất → 'the biggest'."
     },
     {
      "t": "gap",
      "q": "This film is ___ (interesting) than the book.",
-     "a": "more interesting"
+     "a": "more interesting",
+     "x": "Tính từ dài 'interesting' trong so sánh hơn đi cùng 'than' → 'more interesting than'."
     }
    ]
   },
@@ -429,7 +468,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "much",
       "a few"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'sugar' (đường) là danh từ không đếm được → dùng 'How much'. 'How many' chỉ dùng cho danh từ đếm được số nhiều."
     },
     {
      "t": "mc",
@@ -439,7 +479,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "much",
       "a little"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Câu phủ định ('aren't') với danh từ đếm được số nhiều 'chairs' → dùng 'any'."
     },
     {
      "t": "mc",
@@ -449,12 +490,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "advice",
       "an advice"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'advice' (lời khuyên) là danh từ không đếm được trong tiếng Anh, không thêm -s và không dùng 'an advice' → 'some advice'."
     },
     {
      "t": "gap",
      "q": "How ___ students are in your class?",
-     "a": "many"
+     "a": "many",
+     "x": "'students' là danh từ đếm được số nhiều → hỏi số lượng dùng 'How many'."
     },
     {
      "t": "mc",
@@ -464,7 +507,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "some",
       "many"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'information' (thông tin) là danh từ không đếm được, dùng 'some information', không dùng 'an information' hay 'informations'."
     },
     {
      "t": "mc",
@@ -474,12 +518,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "a little",
       "much"
      ],
-     "a": 0
+     "a": 0,
+     "x": "'friends' là danh từ đếm được số nhiều, mang nghĩa có một vài người bạn → dùng 'a few friends'. 'a little' dùng cho không đếm được."
     },
     {
      "t": "gap",
      "q": "Would you like a ___ of tea?",
-     "a": "cup"
+     "a": "cup",
+     "x": "Từ chỉ đơn vị đo lường/chứa đựng cho trà: 'a cup of tea' (một tách trà)."
     },
     {
      "t": "mc",
@@ -489,7 +535,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "a lot of",
       "a"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'homework' là danh từ không đếm được, dùng 'a lot of homework'. Không dùng 'many homeworks'."
     },
     {
      "t": "mc",
@@ -499,12 +546,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "The furniture is new.",
       "A furniture is new."
      ],
-     "a": 1
+     "a": 1,
+     "x": "'furniture' (đồ nội thất) là danh từ không đếm được luôn đi với động từ số ít: 'The furniture is new'."
     },
     {
      "t": "gap",
      "q": "There's only a ___ milk left. Let's buy some more.",
-     "a": "little"
+     "a": "little",
+     "x": "'milk' là danh từ không đếm được, còn lại một ít → dùng 'a little milk'."
     }
    ]
   },
@@ -528,7 +577,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "don't have to",
       "can"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Diễn tả sự cấm đoán nguy hiểm → dùng 'mustn't' (không được phép chạm vào)."
     },
     {
      "t": "mc",
@@ -538,7 +588,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "don't have to",
       "can't to"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Chủ nhật không có nghĩa vụ phải đi làm (không bắt buộc) → dùng 'don't have to'."
     },
     {
      "t": "mc",
@@ -548,7 +599,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Can",
       "Have"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Hỏi xin phép lịch sự thân mật → dùng 'Can I use...?'"
     },
     {
      "t": "gap",
@@ -556,7 +608,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "have to",
       "must"
-     ]
+     ],
+     "x": "Quy định bắt buộc của trường học (luật lệ/nội quy bên ngoài) → dùng 'have to' hoặc 'must'."
     },
     {
      "t": "mc",
@@ -566,7 +619,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "mustn't",
       "doesn't have"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Diễn tả không có khả năng làm gì ở hiện tại → dùng 'can't'."
     },
     {
      "t": "mc",
@@ -576,7 +630,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "I can play the piano.",
       "I can playing the piano."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Sau động từ khuyết thiếu 'can' dùng động từ nguyên thể không 'to': 'I can play the piano'."
     },
     {
      "t": "gap",
@@ -584,7 +639,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "doesn't have to",
       "does not have to"
-     ]
+     ],
+     "x": "Ngôi thứ 3 số ít 'She' khi không bắt buộc phải làm gì → 'doesn't have to work'."
     },
     {
      "t": "mc",
@@ -594,7 +650,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "can",
       "don't have to"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Quy định luật pháp (đủ 18 tuổi mới được lái ô tô) → dùng 'have to be 18'."
     },
     {
      "t": "mc",
@@ -604,7 +661,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "have to",
       "has to"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trong câu hỏi với trợ động từ 'Does', cụm bắt buộc đưa về nguyên thể 'have to': 'Does he have to...?'"
     },
     {
      "t": "gap",
@@ -614,7 +672,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "must not",
       "can't",
       "cannot"
-     ]
+     ],
+     "x": "Lệnh cấm hút thuốc trên máy bay → dùng 'mustn't' (hoặc cannot / can't)."
     }
    ]
   },
@@ -638,7 +697,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "on",
       "at"
      ],
-     "a": 2
+     "a": 2,
+     "x": "Giới từ chỉ giờ giấc chính xác → dùng 'at': 'at 8 o'clock'."
     },
     {
      "t": "mc",
@@ -648,7 +708,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "on",
       "at"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Giới từ đứng trước tháng trong năm → dùng 'in': 'in June'."
     },
     {
      "t": "mc",
@@ -658,12 +719,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "on",
       "at"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Giới từ đứng trước các thứ trong tuần → dùng 'on': 'on Tuesdays'."
     },
     {
      "t": "gap",
      "q": "I usually study ___ the evening.",
-     "a": "in"
+     "a": "in",
+     "x": "Giới từ chỉ các buổi trong ngày (in the morning/afternoon/evening) → dùng 'in'."
     },
     {
      "t": "mc",
@@ -673,7 +736,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "on",
       "at"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Tranh treo trên bề mặt bức tường → dùng giới từ 'on': 'on the wall'."
     },
     {
      "t": "mc",
@@ -683,12 +747,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "on",
       "at"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Giới từ chỉ nơi chốn trong thành phố/quốc gia lớn → dùng 'in': 'in Ho Chi Minh City'."
     },
     {
      "t": "gap",
      "q": "I'll wait for you ___ the bus stop.",
-     "a": "at"
+     "a": "at",
+     "x": "Địa điểm trạm dừng xe buýt cụ thể → dùng giới từ 'at': 'at the bus stop'."
     },
     {
      "t": "mc",
@@ -698,12 +764,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "opposite of",
       "next"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Vị trí nằm ở giữa 2 đối tượng (the post office and the café) → dùng 'between'."
     },
     {
      "t": "gap",
      "q": "What do you do ___ the weekend? (UK)",
-     "a": "at"
+     "a": "at",
+     "x": "Tiếng Anh - Anh dùng 'at the weekend' để chỉ dịp cuối tuần (Anh - Mỹ dùng 'on the weekend')."
     },
     {
      "t": "mc",
@@ -713,7 +781,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "on",
       "at"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Số tầng của toà nhà dùng giới từ 'on': 'on the third floor'."
     }
    ]
   },
@@ -737,7 +806,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "an",
       "the"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Nghề nghiệp số ít lần đầu nhắc đến bắt đầu bằng phụ âm → dùng 'a': 'a doctor'."
     },
     {
      "t": "mc",
@@ -747,7 +817,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "an",
       "the"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'hour' có chữ 'h' câm, phát âm bắt đầu bằng nguyên âm /aʊər/ → dùng 'an': 'an hour'."
     },
     {
      "t": "mc",
@@ -757,12 +828,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "an",
       "the"
      ],
-     "a": 2
+     "a": 2,
+     "x": "Cánh cửa phòng cả người nói và nghe đều biết rõ trong ngữ cảnh → dùng 'the door'."
     },
     {
      "t": "gap",
      "q": "She plays ___ guitar in a band.",
-     "a": "the"
+     "a": "the",
+     "x": "Nhạc cụ khi chơi (play) luôn đi kèm mạo từ 'the': 'play the guitar'."
     },
     {
      "t": "mc",
@@ -772,7 +845,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "a",
       "—"
      ],
-     "a": 2
+     "a": 2,
+     "x": "Danh từ không đếm được nói chung (âm nhạc nói chung) → không dùng mạo từ (—)."
     },
     {
      "t": "mc",
@@ -782,12 +856,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "an",
       "—"
      ],
-     "a": 0
+     "a": 0,
+     "x": "'university' phát âm bắt đầu bằng bán nguyên âm /j/ (phụ âm) → dùng 'a': 'a university'."
     },
     {
      "t": "gap",
      "q": "This is ___ best pizza in town.",
-     "a": "the"
+     "a": "the",
+     "x": "Trước dạng so sánh nhất luôn có mạo từ 'the': 'the best pizza'."
     },
     {
      "t": "mc",
@@ -797,7 +873,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "the",
       "—"
      ],
-     "a": 2
+     "a": 2,
+     "x": "Tên các bữa ăn nói chung (breakfast, lunch, dinner) không dùng mạo từ → (—)."
     },
     {
      "t": "mc",
@@ -807,7 +884,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "an",
       "the"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'umbrella' phát âm bắt đầu bằng nguyên âm /ʌ/ → dùng mạo từ 'an': 'an umbrella'."
     },
     {
      "t": "mc",
@@ -817,7 +895,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "I like football.",
       "I like a football."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Các môn thể thao nói chung (football, tennis...) không dùng mạo từ: 'I like football'."
     }
    ]
   },
@@ -841,7 +920,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "I always go to bed late.",
       "Always I go to bed late."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trạng từ tần suất đứng trước động từ thường: 'I always go to bed late'."
     },
     {
      "t": "mc",
@@ -851,12 +931,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "is often",
       "often"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trạng từ tần suất đứng SAU động từ to be: 'She is often tired'."
     },
     {
      "t": "gap",
      "q": "How ___ do you play football? – Twice a week.",
-     "a": "often"
+     "a": "often",
+     "x": "Hỏi về mức độ thường xuyên làm gì → dùng 'How often'."
     },
     {
      "t": "mc",
@@ -866,7 +948,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "never",
       "usually"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Người ăn chay không bao giờ ăn thịt → dùng trạng từ chỉ tần suất 0%: 'never'."
     },
     {
      "t": "mc",
@@ -876,12 +959,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "a month once",
       "once month"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Cụm trạng từ chỉ tần suất cụ thể đứng cuối câu: 'once a month' (mỗi tháng một lần)."
     },
     {
      "t": "gap",
      "q": "I go to the gym three ___ a week.",
-     "a": "times"
+     "a": "times",
+     "x": "Ba lần một tuần diễn đạt bằng: 'three times a week'."
     },
     {
      "t": "mc",
@@ -891,7 +976,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "are sometimes",
       "sometime"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Trạng từ tần suất 'sometimes' đứng trước động từ thường 'watch'."
     },
     {
      "t": "mc",
@@ -901,7 +987,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "rarely",
       "often"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'rarely' (hiếm khi) tương đương khoảng 10% tần suất."
     },
     {
      "t": "mc",
@@ -911,12 +998,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "He usually is at home.",
       "Usually he at home."
      ],
-     "a": 0
+     "a": 0,
+     "x": "Trạng từ tần suất đứng sau động từ to be: 'He is usually at home'."
     },
     {
      "t": "gap",
      "q": "My brother is ___ (100%) hungry after school.",
-     "a": "always"
+     "a": "always",
+     "x": "Tần suất 100% (luôn luôn) là 'always': 'is always hungry'."
     }
    ]
   }
@@ -942,7 +1031,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "went",
       "was"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Trải nghiệm tính đến hiện tại không có mốc thời gian cụ thể ('three times') → dùng Hiện tại hoàn thành: 'have been'."
     },
     {
      "t": "mc",
@@ -952,17 +1042,20 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "lost",
       "have lost"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Có mốc thời gian quá khứ xác định 'yesterday' → dùng Quá khứ đơn: 'lost'. Không dùng 'has lost'."
     },
     {
      "t": "gap",
      "q": "We've known each other ___ 2015.",
-     "a": "since"
+     "a": "since",
+     "x": "Mốc thời gian bắt đầu hành động trong quá khứ ('2015') → dùng 'since 2015'."
     },
     {
      "t": "gap",
      "q": "They have lived in this house ___ ten years.",
-     "a": "for"
+     "a": "for",
+     "x": "Khoảng thời gian kéo dài ('ten years') → dùng 'for ten years'."
     },
     {
      "t": "mc",
@@ -972,7 +1065,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Have",
       "Were"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Câu hỏi trải nghiệm từ trước tới nay ('ever') → đảo trợ động từ 'Have you ever tried...?'."
     },
     {
      "t": "mc",
@@ -982,12 +1076,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "met",
       "meet"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dấu hiệu 'two days ago' (2 ngày trước) là thời điểm quá khứ xác định → Quá khứ đơn: 'met'."
     },
     {
      "t": "gap",
      "q": "Have you finished your homework ___? (question about now)",
-     "a": "yet"
+     "a": "yet",
+     "x": "Trong câu hỏi và câu phủ định thì Hiện tại hoàn thành, dùng 'yet' ở cuối câu để hỏi sự việc đã xong chưa."
     },
     {
      "t": "mc",
@@ -997,7 +1093,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "yet",
       "ever"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Hành động vừa mới xảy ra tức thì ('taking off his coat') → dùng 'has just arrived'."
     },
     {
      "t": "mc",
@@ -1007,12 +1104,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "I saw her last night.",
       "I have saw her last night."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Có thời điểm quá khứ 'last night' thì bắt buộc dùng Quá khứ đơn: 'I saw her last night'."
     },
     {
      "t": "gap",
      "q": "How long ___ you worked here? (present perfect)",
-     "a": "have"
+     "a": "have",
+     "x": "Câu hỏi thì Hiện tại hoàn thành với 'you': 'How long have you worked here?'."
     }
    ]
   },
@@ -1036,7 +1135,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "was having",
       "have"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Hành động đang diễn ra trong quá khứ ('was having a shower') thì có hành động ngắn khác cắt ngang ('doorbell rang')."
     },
     {
      "t": "mc",
@@ -1046,12 +1146,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "was seeing",
       "sees"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Hành động ngắn xen vào ('saw an accident') khi hành động dài đang diễn ra ('While she was driving')."
     },
     {
      "t": "gap",
      "q": "At 9 p.m. yesterday, we ___ (watch) a film.",
-     "a": "were watching"
+     "a": "were watching",
+     "x": "Tại một thời điểm xác định trong quá khứ ('At 9 p.m. yesterday') → chia Quá khứ tiếp diễn: 'were watching'."
     },
     {
      "t": "mc",
@@ -1061,12 +1163,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "were",
       "was"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Câu hỏi tiếp diễn ở thời điểm quá khứ với chủ ngữ 'you' → dùng 'were you doing'."
     },
     {
      "t": "gap",
      "q": "He fell off his bike while he ___ (ride) to school.",
-     "a": "was riding"
+     "a": "was riding",
+     "x": "Hành động đang lái xe diễn ra liên tục làm nền → dùng 'was riding'."
     },
     {
      "t": "mc",
@@ -1076,7 +1180,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "shouted",
       "shouts"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Hành động la hét đang diễn ra thì giáo viên bước vào → 'were shouting'."
     },
     {
      "t": "mc",
@@ -1086,7 +1191,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "rained",
       "is raining"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Trời đang mưa khi chúng tôi rời khỏi nhà → 'was raining'."
     },
     {
      "t": "gap",
@@ -1094,7 +1200,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "wasn't listening",
       "was not listening"
-     ]
+     ],
+     "x": "Tôi lúc đó không chú ý lắng nghe nên không nghe thấy câu hỏi → 'wasn't listening'."
     },
     {
      "t": "mc",
@@ -1104,7 +1211,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "While",
       "During"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Liên từ 'While' (trong khi) đứng trước mệnh đề chia thì tiếp diễn: 'While she was cooking'."
     },
     {
      "t": "mc",
@@ -1114,7 +1222,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "skiing",
       "was ski"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Gãy chân xảy ra khi đang trượt tuyết (hành động đang diễn ra) → 'when I was skiing'."
     }
    ]
   },
@@ -1138,7 +1247,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "is sunny",
       "was sunny"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Câu điều kiện loại 1: Mệnh đề If chia ở Hiện tại đơn ('is sunny'), mệnh đề chính dùng 'will go'."
     },
     {
      "t": "mc",
@@ -1148,12 +1258,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "would drive",
       "drive"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Câu điều kiện loại 2: Mệnh đề If chia Quá khứ đơn ('If I had a car'), mệnh đề chính dùng 'would drive'."
     },
     {
      "t": "gap",
      "q": "If I ___ (be) you, I would talk to her.",
-     "a": "were"
+     "a": "were",
+     "x": "Câu điều kiện loại 2 dùng cho lời khuyên: 'If I were you, I would talk to her'. 'were' dùng cho mọi ngôi."
     },
     {
      "t": "mc",
@@ -1163,12 +1275,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "unless",
       "when"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'unless' = if not (trừ khi): 'You'll be tired unless you go to bed early' (Bạn sẽ mệt trừ khi bạn đi ngủ sớm)."
     },
     {
      "t": "gap",
      "q": "If she ___ (miss) the bus, she will walk.",
-     "a": "misses"
+     "a": "misses",
+     "x": "Điều kiện loại 1: Sau 'she' ở mệnh đề If chia động từ thêm -es: 'If she misses the bus'."
     },
     {
      "t": "mc",
@@ -1178,7 +1292,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "met",
       "will meet"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Điều kiện loại 2 giả định: Mệnh đề If dùng Quá khứ đơn 'met', mệnh đề chính dùng 'would you do'."
     },
     {
      "t": "mc",
@@ -1188,7 +1303,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "will miss",
       "missed"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Điều kiện loại 1: Mệnh đề chính dùng 'will miss' (sẽ bị lỡ chuyến tàu nếu không nhanh lên)."
     },
     {
      "t": "gap",
@@ -1196,7 +1312,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "would tell",
       "'d tell"
-     ]
+     ],
+     "x": "Điều kiện loại 2: Mệnh đề If dùng 'knew', mệnh đề chính dùng 'would tell'."
     },
     {
      "t": "mc",
@@ -1206,7 +1323,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "If it rains, I will stay home.",
       "If it rains, I would stay home."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Không dùng 'will' trong mệnh đề If: nói 'If it rains', không nói 'If it will rain'."
     },
     {
      "t": "mc",
@@ -1216,7 +1334,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "exercised",
       "will exercise"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Điều kiện loại 2 giả định hiện tại: 'If he exercised more, he would be healthier'."
     }
    ]
   },
@@ -1240,12 +1359,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "is grown",
       "is grow"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Gạo được trồng (sự thật hiển nhiên) → bị động Hiện tại đơn: 'is grown' (is + V3)."
     },
     {
      "t": "gap",
      "q": "This house ___ (build) in 1990.",
-     "a": "was built"
+     "a": "was built",
+     "x": "Ngôi nhà được xây năm 1990 → bị động Quá khứ đơn: 'was built'."
     },
     {
      "t": "mc",
@@ -1255,7 +1376,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "deliver",
       "are deliver"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Thư được chuyển phát mỗi sáng (số nhiều) → 'are delivered'."
     },
     {
      "t": "mc",
@@ -1265,12 +1387,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "has been stolen",
       "was steal"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Ví tiền vừa mới bị lấy cắp, gây hậu quả đến hiện tại → bị động Hiện tại hoàn thành: 'has been stolen'."
     },
     {
      "t": "gap",
      "q": "The winners will ___ (announce) tomorrow.",
-     "a": "be announced"
+     "a": "be announced",
+     "x": "Bị động với tương lai 'will' → will + be + V3/ed: 'will be announced'."
     },
     {
      "t": "mc",
@@ -1280,7 +1404,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "by",
       "with"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Chỉ tác nhân gây ra hành động trong câu bị động dùng giới từ 'by': 'written by Shakespeare'."
     },
     {
      "t": "mc",
@@ -1290,12 +1415,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "The office is cleaned every day.",
       "The office was cleaned every day."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Chuyển sang bị động: 'The office' làm chủ ngữ + 'is cleaned every day'."
     },
     {
      "t": "gap",
      "q": "The museum ___ (visit) by thousands of people every year.",
-     "a": "is visited"
+     "a": "is visited",
+     "x": "Bảo tàng được tham quan hàng năm → bị động Hiện tại đơn: 'is visited by...'."
     },
     {
      "t": "mc",
@@ -1305,7 +1432,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "cancelled",
       "is cancel"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Cuộc họp đã bị huỷ trong quá khứ → bị động Quá khứ đơn: 'was cancelled'."
     },
     {
      "t": "mc",
@@ -1315,7 +1443,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "are made",
       "are making"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Điện thoại thông minh được sản xuất (số nhiều) → 'are made'."
     }
    ]
   },
@@ -1339,7 +1468,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "who",
       "where"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Đại từ quan hệ thay thế cho danh từ chỉ người 'The girl' làm chủ ngữ → dùng 'who'."
     },
     {
      "t": "mc",
@@ -1349,7 +1479,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "where",
       "who"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trạng từ quan hệ chỉ nơi chốn 'the town' nơi tôi lớn lên → dùng 'where'."
     },
     {
      "t": "gap",
@@ -1357,7 +1488,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "which",
       "that"
-     ]
+     ],
+     "x": "Đại từ quan hệ thay thế cho danh từ chỉ vật 'The laptop' → dùng 'which' hoặc 'that'."
     },
     {
      "t": "mc",
@@ -1367,7 +1499,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "whose",
       "which"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Đại từ quan hệ chỉ sở hữu ('con chó của người đàn ông đó') → dùng 'whose': 'whose dog'."
     },
     {
      "t": "mc",
@@ -1377,12 +1510,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "who",
       "which"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Mệnh đề quan hệ không xác định có dấu phẩy thay cho người → dùng 'who', không dùng 'that'."
     },
     {
      "t": "gap",
      "q": "Do you remember the restaurant ___ we had dinner last year?",
-     "a": "where"
+     "a": "where",
+     "x": "Nhà hàng nơi chúng tôi ăn tối → dùng trạng từ chỉ nơi chốn 'where'."
     },
     {
      "t": "mc",
@@ -1392,7 +1527,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "what",
       "that"
      ],
-     "a": 2
+     "a": 2,
+     "x": "Đại từ quan hệ thay thế cho bộ phim (vật) → dùng 'that' (hoặc which)."
     },
     {
      "t": "mc",
@@ -1402,7 +1538,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Hanoi, which is the capital, is busy.",
       "Hanoi, where is the capital, is busy."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Tên riêng 'Hanoi' dùng mệnh đề không xác định có dấu phẩy và dùng 'which', không dùng 'that'."
     },
     {
      "t": "gap",
@@ -1410,7 +1547,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "who",
       "that"
-     ]
+     ],
+     "x": "Người giúp học sinh học bài → dùng 'who' hoặc 'that'."
     },
     {
      "t": "mc",
@@ -1420,7 +1558,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "whose",
       "which"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Học sinh có bài luận đoạt giải (chỉ sở hữu) → dùng 'whose essay'."
     }
    ]
   },
@@ -1444,12 +1583,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "used to",
       "was used to"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Thói quen thường xuyên trong quá khứ hiện không còn nữa → dùng 'used to play'."
     },
     {
      "t": "gap",
      "q": "There ___ be a park here, but now it's a car park. (two words)",
-     "a": "used to"
+     "a": "used to",
+     "x": "Tình trạng trong quá khứ từng có một công viên ở đây → dùng 'used to'."
     },
     {
      "t": "mc",
@@ -1459,7 +1600,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "use to",
       "using to"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trong câu hỏi có trợ động từ 'Did', đưa về dạng nguyên thể không có -d: 'Did you use to...?'"
     },
     {
      "t": "mc",
@@ -1469,7 +1611,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "used to",
       "uses to"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Trong câu phủ định có 'didn't', dùng dạng nguyên thể không có -d: 'didn't use to'."
     },
     {
      "t": "mc",
@@ -1479,12 +1622,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "living",
       "lived"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Cấu trúc 'be used to + V-ing' nghĩa là đã quen với việc gì ở hiện tại: 'used to living'."
     },
     {
      "t": "gap",
      "q": "My grandparents ___ (use to) write letters instead of emails.",
-     "a": "used to"
+     "a": "used to",
+     "x": "Thói quen viết thư tay trong quá khứ của ông bà → dùng 'used to'."
     },
     {
      "t": "mc",
@@ -1494,7 +1639,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "I'm used to swimming.",
       "I use to swim."
      ],
-     "a": 0
+     "a": 0,
+     "x": "'I used to swim' nói về thói quen trong quá khứ. 'I usually swim' là thói quen ở hiện tại."
     },
     {
      "t": "mc",
@@ -1504,7 +1650,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "is used to",
       "use"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Trước đây anh ấy từng nhút nhát nhưng giờ rất tự tin → dùng 'used to be'."
     },
     {
      "t": "gap",
@@ -1512,7 +1659,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "didn't",
       "did not"
-     ]
+     ],
+     "x": "Dạng phủ định của used to: 'didn't use to have a TV'."
     },
     {
      "t": "mc",
@@ -1522,7 +1670,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Did you use to play games?",
       "Used you to play games?"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dạng câu hỏi đúng: 'Did you use to play games?' (dùng 'use', không dùng 'used')."
     }
    ]
   },
@@ -1546,7 +1695,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "listening",
       "listen"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Sau động từ 'enjoy' luôn dùng V-ing (danh động từ): 'enjoy listening'."
     },
     {
      "t": "mc",
@@ -1556,12 +1706,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "becoming",
       "become"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Sau động từ 'want' luôn dùng to-V nguyên mẫu: 'wants to become'."
     },
     {
      "t": "gap",
      "q": "Have you finished ___ (write) your essay?",
-     "a": "writing"
+     "a": "writing",
+     "x": "Sau động từ 'finish' luôn dùng V-ing: 'finish writing'."
     },
     {
      "t": "mc",
@@ -1571,7 +1723,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "to travel",
       "travel"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Sau động từ 'decide' luôn dùng to-V nguyên mẫu: 'decided to travel'."
     },
     {
      "t": "mc",
@@ -1581,12 +1734,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "to take",
       "taking"
      ],
-     "a": 2
+     "a": 2,
+     "x": "Sau giới từ (good at) luôn dùng V-ing: 'good at taking photos'."
     },
     {
      "t": "gap",
      "q": "Would you mind ___ (open) the window?",
-     "a": "opening"
+     "a": "opening",
+     "x": "Sau cấu trúc 'Would you mind' luôn dùng V-ing: 'Would you mind opening...?'"
     },
     {
      "t": "mc",
@@ -1596,7 +1751,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "to see",
       "see"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Sau động từ 'hope' dùng to-V nguyên mẫu: 'hope to see'."
     },
     {
      "t": "mc",
@@ -1606,12 +1762,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "To eating",
       "Eating"
      ],
-     "a": 2
+     "a": 2,
+     "x": "V-ing đứng đầu câu làm chủ ngữ của mệnh đề: 'Eating too much sugar is bad'."
     },
     {
      "t": "gap",
      "q": "We agreed ___ (meet) at six.",
-     "a": "to meet"
+     "a": "to meet",
+     "x": "Sau động từ 'agree' dùng to-V nguyên mẫu: 'agreed to meet'."
     },
     {
      "t": "mc",
@@ -1621,7 +1779,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "to help",
       "helping"
      ],
-     "a": 2
+     "a": 2,
+     "x": "Sau giới từ 'for' (Thanks for...) luôn dùng V-ing: 'Thanks for helping me'."
     }
    ]
   },
@@ -1645,7 +1804,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "might",
       "could to"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Đưa ra lời khuyên nên làm gì → dùng 'should': 'You should go to bed'."
     },
     {
      "t": "mc",
@@ -1655,7 +1815,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "might",
       "must"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Diễn tả khả năng có thể xảy ra trong tương lai nhưng không chắc chắn → dùng 'might rain'."
     },
     {
      "t": "gap",
@@ -1663,7 +1824,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "shouldn't",
       "should not"
-     ]
+     ],
+     "x": "Lời khuyên không nên làm gì → dùng 'shouldn't': 'You shouldn't eat so much sugar'."
     },
     {
      "t": "mc",
@@ -1673,7 +1835,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Could",
       "Might"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Lời yêu cầu lịch sự với người khác → dùng 'Could you tell me...?'"
     },
     {
      "t": "mc",
@@ -1683,12 +1846,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "should",
       "can't"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Khả năng có thể ở hiện tại ('I'm not sure') → dùng 'may': 'she may be at work'."
     },
     {
      "t": "gap",
      "q": "When I was a child, I ___ climb trees very fast. (past ability)",
-     "a": "could"
+     "a": "could",
+     "x": "Khả năng trong quá khứ khi còn nhỏ → dùng 'could': 'I could climb trees'."
     },
     {
      "t": "mc",
@@ -1698,7 +1863,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "should",
       "could"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Khả năng có thể không hoàn thành được → dùng 'might not finish'."
     },
     {
      "t": "mc",
@@ -1708,7 +1874,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "You should study.",
       "You should studying."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Sau động từ khuyết thiếu 'should' dùng động từ nguyên thể không 'to': 'You should study'."
     },
     {
      "t": "mc",
@@ -1718,7 +1885,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "You should see a dentist.",
       "You could to see a dentist."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Đưa ra lời khuyên hợp lý khi bị đau răng: 'You should see a dentist'."
     },
     {
      "t": "gap",
@@ -1727,7 +1895,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "might",
       "may",
       "could"
-     ]
+     ],
+     "x": "Diễn tả khả năng chưa chắc chắn cuối tuần này → dùng 'might', 'may' hoặc 'could'."
     }
    ]
   },
@@ -1751,7 +1920,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "is going to leave",
       "will leaving"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Lịch trình tàu xe, thời khoá biểu cố định (timetable) → dùng thì Hiện tại đơn: 'leaves at 9.45'."
     },
     {
      "t": "mc",
@@ -1761,12 +1931,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "'m seeing",
       "'ll see"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Kế hoạch đã hẹn giờ và đặt lịch cụ thể (appointment) → dùng Hiện tại tiếp diễn: 'I'm seeing'."
     },
     {
      "t": "gap",
      "q": "I'll phone you when I ___ (arrive).",
-     "a": "arrive"
+     "a": "arrive",
+     "x": "Trong mệnh đề thời gian bắt đầu bằng 'when/after/until/as soon as', dùng thì Hiện tại đơn: 'when I arrive'."
     },
     {
      "t": "mc",
@@ -1776,7 +1948,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "will",
       "do"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dự đoán chung trong tương lai với 'I think' → dùng 'will': 'robots will do'."
     },
     {
      "t": "mc",
@@ -1786,7 +1959,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "'ll",
       "get"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Quyết định tức thì khi nghe chuông điện thoại reo → dùng 'will' ('ll): 'I'll get it'."
     },
     {
      "t": "gap",
@@ -1794,7 +1968,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "are going to buy",
       "'re going to buy"
-     ]
+     ],
+     "x": "Dự định đã quyết định trước đó nhưng chưa có lịch cố định → dùng 'are going to buy'."
     },
     {
      "t": "mc",
@@ -1804,7 +1979,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "is starting to",
       "will starting"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Khoá học bắt đầu theo lịch trình định sẵn → dùng Hiện tại đơn: 'starts on 5th September'."
     },
     {
      "t": "mc",
@@ -1814,12 +1990,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "I'll wait until you finish.",
       "I wait until you will finish."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trong mệnh đề thời gian sau 'until' dùng thì hiện tại: 'until you finish'."
     },
     {
      "t": "gap",
      "q": "What ___ you doing this weekend? (arrangement)",
-     "a": "are"
+     "a": "are",
+     "x": "Hỏi về kế hoạch đã sắp xếp dịp cuối tuần → Hiện tại tiếp diễn: 'What are you doing this weekend?'."
     },
     {
      "t": "mc",
@@ -1829,7 +2007,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "'m not going",
       "don't"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Lời hứa trong tương lai ('I promise') dạng phủ định → 'won't forget'."
     }
    ]
   }
@@ -1855,7 +2034,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "have been working",
       "had worked"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Hành động làm việc bắt đầu 6 năm trước và vẫn đang tiếp diễn ở hiện tại → Hiện tại hoàn thành tiếp diễn: 'have been working'."
     },
     {
      "t": "mc",
@@ -1865,7 +2045,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "had already left",
       "has already left"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Tàu đã rời ga TRƯỚC thời điểm tôi đến ga trong quá khứ → chia Quá khứ hoàn thành: 'had already left'."
     },
     {
      "t": "gap",
@@ -1873,7 +2054,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "will have finished",
       "'ll have finished"
-     ]
+     ],
+     "x": "Hành động sẽ hoàn tất trước một thời điểm tương lai ('By next June') → Tương lai hoàn thành: 'will have finished'."
     },
     {
      "t": "mc",
@@ -1883,7 +2065,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "will be lying",
       "are lying"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Hành động đang diễn ra tại thời điểm xác định ở tương lai ('This time next week') → Tương lai tiếp diễn: 'will be lying'."
     },
     {
      "t": "mc",
@@ -1893,12 +2076,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "had been crying",
       "has cried"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Hành động khóc diễn ra liên tục trước đó để lại dấu hiệu ở mắt → Quá khứ hoàn thành tiếp diễn: 'had been crying'."
     },
     {
      "t": "gap",
      "q": "Water ___ (freeze) at 0°C.",
-     "a": "freezes"
+     "a": "freezes",
+     "x": "Quy luật tự nhiên, chân lý khoa học → Hiện tại đơn: 'freezes at 0°C'."
     },
     {
      "t": "mc",
@@ -1908,7 +2093,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "went",
       "had been"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Số lần đi đến phòng tập trong khoảng thời gian chưa kết thúc ('this week') → Hiện tại hoàn thành: 'have been'."
     },
     {
      "t": "mc",
@@ -1918,12 +2104,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "was writing",
       "had written"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Hành động đang viết báo cáo thì máy tính bị sập → Quá khứ tiếp diễn: 'was writing'."
     },
     {
      "t": "gap",
      "q": "How long ___ you been studying? (present perfect continuous)",
-     "a": "have"
+     "a": "have",
+     "x": "Hỏi khoảng thời gian kéo dài liên tục đến nay: 'How long have you been studying?'."
     },
     {
      "t": "mc",
@@ -1933,7 +2121,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "had / taken",
       "did / take"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trải nghiệm chưa từng đi máy bay tính đến một chuyến đi trong quá khứ → Quá khứ hoàn thành: 'had never taken'."
     }
    ]
   },
@@ -1957,7 +2146,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "had known",
       "have known"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Điều kiện loại 3 (giả định trái quá khứ): Mệnh đề If dùng Quá khứ hoàn thành 'had known', mệnh đề chính 'would have come'."
     },
     {
      "t": "gap",
@@ -1965,7 +2155,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "would have helped",
       "'d have helped"
-     ]
+     ],
+     "x": "Điều kiện loại 3: Mệnh đề If có 'had asked' → mệnh đề chính dùng 'would have helped'."
     },
     {
      "t": "mc",
@@ -1976,7 +2167,7 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "will have"
      ],
      "a": 0,
-     "x": "Mixed conditional: past condition, present result."
+     "x": "Điều kiện hỗn hợp (Mixed conditional): Giả định quá khứ ('had saved') ảnh hưởng đến kết quả hiện tại ('now') → 'would have a car now'."
     },
     {
      "t": "mc",
@@ -1986,7 +2177,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "would have gone",
       "had gone"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Điều kiện hỗn hợp: Bản chất hiện tại sợ bay ('weren't afraid') ảnh hưởng đến việc không đi Úc năm ngoái → 'would have gone'."
     },
     {
      "t": "mc",
@@ -1996,7 +2188,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Had",
       "Have"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Đảo ngữ câu điều kiện loại 3: 'Had I known the truth' thay thế cho 'If I had known the truth'."
     },
     {
      "t": "gap",
@@ -2004,7 +2197,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "hadn't rained",
       "had not rained"
-     ]
+     ],
+     "x": "Điều kiện loại 3 phủ định: 'If it hadn't rained, we would have played'."
     },
     {
      "t": "mc",
@@ -2014,7 +2208,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "had trained",
       "would train"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Mệnh đề chính dùng 'might have won' → Mệnh đề If chia Quá khứ hoàn thành: 'had trained'."
     },
     {
      "t": "mc",
@@ -2024,12 +2219,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "wouldn't have been",
       "won't be"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Điều kiện hỗn hợp: Quá khứ đi ngủ sớm ('had gone') thì hiện tại ('now') đã không mệt → 'wouldn't be so tired now'."
     },
     {
      "t": "gap",
      "q": "We ___ (could / catch) the train if we had run. (could + have + V3)",
-     "a": "could have caught"
+     "a": "could have caught",
+     "x": "Khả năng trong quá khứ trái thực tế: could + have + V3 → 'could have caught'."
     },
     {
      "t": "mc",
@@ -2039,7 +2236,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "If I had known, I would have told you.",
       "If I knew, I would have told you yesterday."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dạng chuẩn câu điều kiện loại 3: 'If I had known, I would have told you'."
     }
    ]
   },
@@ -2063,7 +2261,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "must be finished",
       "must finished"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Bị động với modal verb 'must': must + be + V3/ed → 'must be finished'."
     },
     {
      "t": "mc",
@@ -2073,12 +2272,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "expects",
       "is expecting"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Cấu trúc bị động khách quan không ngôi: 'It is expected that...' (Người ta kỳ vọng rằng...)."
     },
     {
      "t": "gap",
      "q": "The thief is believed ___ (escape) through the window. (perfect infinitive)",
-     "a": "to have escaped"
+     "a": "to have escaped",
+     "x": "Bị động với động từ tường thuật ở quá khứ: S + is believed + to have + V3/ed → 'to have escaped'."
     },
     {
      "t": "mc",
@@ -2088,7 +2289,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "made",
       "did"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Cấu trúc nhờ vả/thuê dịch vụ (Causative): have + something + V3/ed → 'had my eyes tested'."
     },
     {
      "t": "mc",
@@ -2098,12 +2300,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "being criticised",
       "be criticised"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Sau 'hate' dùng bị động danh động từ: being + V3/ed → 'hates being criticised'."
     },
     {
      "t": "gap",
      "q": "This problem should ___ (deal) with years ago.",
-     "a": "have been dealt"
+     "a": "have been dealt",
+     "x": "Lẽ ra nên được xử lý trong quá khứ: should + have been + V3/ed → 'should have been dealt with'."
     },
     {
      "t": "mc",
@@ -2113,7 +2317,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "to be",
       "be"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Cấu trúc bị động: S + is said + to-V nguyên mẫu → 'is said to be'."
     },
     {
      "t": "mc",
@@ -2123,12 +2328,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "redecorated",
       "redecorating"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Cấu trúc Causative với get: get + something + V3/ed → 'getting our kitchen redecorated'."
     },
     {
      "t": "gap",
      "q": "All documents need ___ (check) carefully before the meeting. (passive infinitive)",
-     "a": "to be checked"
+     "a": "to be checked",
+     "x": "Cần được kiểm tra (bị động nguyên mẫu): need + to be + V3/ed → 'need to be checked'."
     },
     {
      "t": "mc",
@@ -2138,7 +2345,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "The results are expected to be announced soon.",
       "The results expect to be announced soon."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Cấu trúc bị động chuẩn: 'The results are expected to be announced soon'."
     }
    ]
   },
@@ -2162,7 +2370,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "was",
       "has been"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Lùi thì từ Hiện tại đơn ('am') sang Quá khứ đơn → 'was busy'."
     },
     {
      "t": "mc",
@@ -2172,12 +2381,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "would",
       "can"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Lùi thì từ 'will' sang 'would' trong câu tường thuật: 'would help me'."
     },
     {
      "t": "gap",
      "q": "“Where do you work?” → She asked me where I ___.",
-     "a": "worked"
+     "a": "worked",
+     "x": "Tường thuật câu hỏi Wh-: trật tự S + V và lùi thì hiện tại sang quá khứ → 'where I worked'."
     },
     {
      "t": "mc",
@@ -2187,7 +2398,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "not to be",
       "don't be"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Tường thuật câu mệnh lệnh phủ định: tell + someone + not to-V → 'told us not to be late'."
     },
     {
      "t": "mc",
@@ -2197,7 +2409,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "the day before",
       "tomorrow"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Chuyển đổi trạng từ chỉ thời gian: 'yesterday' chuyển thành 'the day before' (hoặc the previous day)."
     },
     {
      "t": "gap",
@@ -2205,7 +2418,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "if",
       "whether"
-     ]
+     ],
+     "x": "Tường thuật câu hỏi Yes/No: dùng 'if' hoặc 'whether' + S + V: 'asked if I was ready'."
     },
     {
      "t": "mc",
@@ -2215,7 +2429,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "had lost",
       "lost"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Lùi thì từ Hiện tại hoàn thành ('have lost') sang Quá khứ hoàn thành → 'had lost'."
     },
     {
      "t": "mc",
@@ -2225,12 +2440,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "to see",
       "see"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Động từ tường thuật lời khuyên: advise + someone + to-V → 'advised me to see'."
     },
     {
      "t": "gap",
      "q": "“I didn't take the money.” → He denied ___ the money.",
-     "a": "taking"
+     "a": "taking",
+     "x": "Sau động từ 'deny' (phủ nhận) dùng V-ing: 'denied taking the money'."
     },
     {
      "t": "mc",
@@ -2240,7 +2457,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "She asked me what my name was.",
       "She asked me what is my name."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trật tự từ trong câu hỏi gián tiếp không đảo trợ động từ: 'what my name was'."
     }
    ]
   },
@@ -2264,7 +2482,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "can't",
       "must have"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Đèn tắt hết, suy đoán chắc chắn không có ở nhà → dùng 'can't be at home'."
     },
     {
      "t": "mc",
@@ -2274,7 +2493,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "can't",
       "mustn't"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Làm việc cả ngày, suy đoán chắc hẳn rất kiệt sức → dùng 'must be exhausted'."
     },
     {
      "t": "gap",
@@ -2283,7 +2503,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "might",
       "may",
       "could"
-     ]
+     ],
+     "x": "Khả năng có thể đã để quên ví trong quá khứ → dùng 'might/may/could have left'."
     },
     {
      "t": "mc",
@@ -2293,7 +2514,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "must have rained",
       "can't rain"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Mặt đất ướt, suy đoán chắc chắn trời đã mưa đêm qua → 'must have rained'."
     },
     {
      "t": "mc",
@@ -2303,7 +2525,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "must have read",
       "might read"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trả lời email ngay tức thì, chắc hẳn cô ấy đã đọc rồi → 'must have read'."
     },
     {
      "t": "gap",
@@ -2311,7 +2534,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "can't",
       "cannot"
-     ]
+     ],
+     "x": "Chuyện vô lý, không thể nào là sự thật → 'That can't be true!'."
     },
     {
      "t": "mc",
@@ -2321,7 +2545,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "might",
       "can't"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dự đoán không chắc chắn ở hiện tại ('I'm not sure') → dùng 'might be'."
     },
     {
      "t": "mc",
@@ -2331,12 +2556,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "mustn't have",
       "must"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Bị trượt bài thi, chắc chắn là đã không ôn đủ kỹ → 'can't have studied enough'."
     },
     {
      "t": "gap",
      "q": "You ___ be Anna's sister – you look exactly like her! (almost certain)",
-     "a": "must"
+     "a": "must",
+     "x": "Nhìn giống hệt nhau, suy đoán chắc chắn 99% → 'You must be Anna's sister'."
     },
     {
      "t": "mc",
@@ -2346,7 +2573,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "They must have gone home.",
       "They must gone home."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Dạng chuẩn suy đoán quá khứ: must + have + V3 → 'They must have gone home'."
     }
    ]
   },
@@ -2370,7 +2598,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "had",
       "will have"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Ước trái với hiện tại (muốn có nhiều tiền hơn bây giờ) → lùi 1 thì sang Quá khứ đơn: 'had'."
     },
     {
      "t": "mc",
@@ -2380,12 +2609,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "hadn't said",
       "wouldn't say"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Ước hối tiếc về một việc trong quá khứ → lùi sang Quá khứ hoàn thành: 'hadn't said'."
     },
     {
      "t": "gap",
      "q": "If only it ___ (stop) raining! (I want it to change)",
-     "a": "would stop"
+     "a": "would stop",
+     "x": "Ước muốn ai đó/thời tiết thay đổi hành vi hoặc ngừng lại → dùng 'would': 'would stop raining'."
     },
     {
      "t": "mc",
@@ -2395,7 +2626,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "could",
       "would"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Ước về khả năng ở hiện tại (biết bơi) → dùng 'could swim'."
     },
     {
      "t": "gap",
@@ -2403,7 +2635,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
      "a": [
       "were",
       "was"
-     ]
+     ],
+     "x": "Ước trái với hiện tại dùng 'were' (hoặc was) cho mọi ngôi: 'I wish I were taller'."
     },
     {
      "t": "mc",
@@ -2413,7 +2646,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "hadn't missed",
       "wouldn't miss"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Hối tiếc vì đã lỡ chuyến xe buýt trong quá khứ → Quá khứ hoàn thành: 'hadn't missed'."
     },
     {
      "t": "mc",
@@ -2423,12 +2657,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "would stop",
       "had stopped"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Thể hiện sự bực mình muốn người khác dừng hành động → 'wish you would stop leaving'."
     },
     {
      "t": "gap",
      "q": "He wishes he ___ (go) to the concert last night.",
-     "a": "had gone"
+     "a": "had gone",
+     "x": "Hối tiếc về buổi hoà nhạc tối qua ('last night') → Quá khứ hoàn thành: 'had gone'."
     },
     {
      "t": "mc",
@@ -2438,7 +2674,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "I wish I were rich.",
       "I wish I am rich."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Câu ước giả định trang trọng dùng 'were' cho chủ ngữ 'I': 'I wish I were rich'."
     },
     {
      "t": "mc",
@@ -2448,7 +2685,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "live",
       "will live"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Ước sống ở đất nước khác ở hiện tại → lùi thì Quá khứ đơn: 'lived'."
     }
    ]
   },
@@ -2472,7 +2710,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "watching",
       "watch"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'remember + V-ing': nhớ lại một kỷ niệm trong quá khứ → 'remember watching'."
     },
     {
      "t": "mc",
@@ -2482,12 +2721,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "to turn off",
       "turn off"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'remember + to-V': nhớ phải làm việc gì trong tương lai → 'remember to turn off'."
     },
     {
      "t": "gap",
      "q": "He stopped ___ (smoke) ten years ago and feels much healthier.",
-     "a": "smoking"
+     "a": "smoking",
+     "x": "'stop + V-ing': từ bỏ, ngừng hẳn một thói quen → 'stopped smoking'."
     },
     {
      "t": "mc",
@@ -2497,7 +2738,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "to have",
       "have"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'stop + to-V': dừng lại để làm việc khác (chỉ mục đích) → 'stopped to have a coffee'."
     },
     {
      "t": "mc",
@@ -2507,12 +2749,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "turning",
       "turn"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'try + V-ing': thử làm một phương pháp xem có hiệu quả không → 'try turning it off'."
     },
     {
      "t": "gap",
      "q": "We regret ___ (inform) you that the flight has been cancelled.",
-     "a": "to inform"
+     "a": "to inform",
+     "x": "'regret + to-V': lấy làm tiếc khi phải thông báo tin xấu → 'regret to inform you'."
     },
     {
      "t": "mc",
@@ -2522,7 +2766,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "studying",
       "study"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'regret + V-ing': hối tiếc vì đã làm/không làm gì trong quá khứ → 'regret not studying'."
     },
     {
      "t": "mc",
@@ -2532,12 +2777,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "having taken",
       "take"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Phủ nhận hành động đã làm trong quá khứ: 'denied having taken' (hoặc denied taking)."
     },
     {
      "t": "gap",
      "q": "I tried ___ (lift) the box, but it was too heavy.",
-     "a": "to lift"
+     "a": "to lift",
+     "x": "'try + to-V': cố gắng nỗ lực làm việc khó khăn → 'tried to lift the box'."
     },
     {
      "t": "mc",
@@ -2547,7 +2794,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "working",
       "work"
      ],
-     "a": 1
+     "a": 1,
+     "x": "'mean + V-ing': có nghĩa là, dẫn đến việc gì → 'mean working longer hours'."
     }
    ]
   },
@@ -2571,7 +2819,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "have I eaten",
       "I ate"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trạng từ phủ định 'Never' đứng đầu câu → đảo trợ động từ lên trước chủ ngữ: 'Never have I eaten'."
     },
     {
      "t": "mc",
@@ -2581,12 +2830,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "was he",
       "he is"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Cấu trúc 'Not only' đứng đầu câu → đảo ngữ ở mệnh đề đầu: 'Not only was he late...'."
     },
     {
      "t": "gap",
      "q": "No sooner had I left the house ___ it started to rain.",
-     "a": "than"
+     "a": "than",
+     "x": "Cấu trúc 'No sooner... than...' (Vừa mới... thì đã...): 'No sooner had I left... than it started'."
     },
     {
      "t": "mc",
@@ -2596,7 +2847,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "do we see",
       "we do see"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trạng từ phủ định 'Rarely' đứng đầu câu ở Hiện tại đơn → mượn trợ động từ đảo lên: 'Rarely do we see'."
     },
     {
      "t": "mc",
@@ -2606,12 +2858,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "should you",
       "you must"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Cụm từ phủ định 'Under no circumstances' (Dù trong bất kỳ hoàn cảnh nào cũng không) → 'should you'."
     },
     {
      "t": "gap",
      "q": "Hardly had the film started ___ the power went off.",
-     "a": "when"
+     "a": "when",
+     "x": "Cấu trúc 'Hardly... when...' (Vừa mới... thì...): 'Hardly had the film started when the power went off'."
     },
     {
      "t": "mc",
@@ -2621,7 +2875,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "did I realise",
       "I did realise"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Cấu trúc 'Only after...' đảo ngữ ở mệnh đề chính: 'Only after I got home did I realise'."
     },
     {
      "t": "mc",
@@ -2631,12 +2886,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "did she know",
       "knew she"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Trạng từ phủ định 'Little' (hầu như không hề) đứng đầu câu → 'Little did she know'."
     },
     {
      "t": "gap",
      "q": "Seldom ___ he complain about anything. (present)",
-     "a": "does"
+     "a": "does",
+     "x": "Trạng từ phủ định 'Seldom' ở thì hiện tại với chủ ngữ 'he' → mượn trợ động từ đảo lên: 'does he complain'."
     },
     {
      "t": "mc",
@@ -2646,7 +2903,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Not only does she speak French, but she also speaks Italian.",
       "Not only speaks she French, but also Italian."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Đảo ngữ chuẩn với 'Not only': 'Not only does she speak French, but she also speaks Italian'."
     }
    ]
   },
@@ -2670,7 +2928,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Despite",
       "However"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Sau 'Despite' dùng cụm danh từ (the heavy traffic), không dùng mệnh đề: 'Despite the heavy traffic'."
     },
     {
      "t": "mc",
@@ -2680,7 +2939,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "In spite of",
       "Due to"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Sau 'Even though' dùng mệnh đề (S + V): 'Even though it was late'."
     },
     {
      "t": "gap",
@@ -2689,7 +2949,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "however",
       "nevertheless",
       "nonetheless"
-     ]
+     ],
+     "x": "Từ nối thể hiện sự tương phản đứng đầu câu mới ngăn cách bằng dấu phẩy: 'However' (hoặc Nevertheless)."
     },
     {
      "t": "mc",
@@ -2699,7 +2960,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "due to",
       "so that"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Chỉ nguyên nhân đi với danh từ/cụm danh từ: 'due to bad weather'. 'because' cần có mệnh đề."
     },
     {
      "t": "mc",
@@ -2709,12 +2971,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "in order to",
       "despite"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Chỉ mục đích (để mà) đi kèm mệnh đề có can/could: 'so that she could travel abroad'."
     },
     {
      "t": "gap",
      "q": "He studied hard in ___ to pass the exam.",
-     "a": "order"
+     "a": "order",
+     "x": "Cụm từ chỉ mục đích đi với to-V: 'in order to pass the exam'."
     },
     {
      "t": "mc",
@@ -2724,7 +2988,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "moreover",
       "therefore"
      ],
-     "a": 0
+     "a": 0,
+     "x": "Liên từ so sánh tương phản giữa 2 vế câu: 'whereas I prefer reading' (trong khi tôi thích đọc sách hơn)."
     },
     {
      "t": "mc",
@@ -2734,12 +2999,14 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Moreover",
       "Although"
      ],
-     "a": 1
+     "a": 1,
+     "x": "Liên từ bổ sung thêm ý tích cực (hơn nữa, thêm vào đó): 'Moreover, it was close to the beach'."
     },
     {
      "t": "gap",
      "q": "It was ___ a good film that we watched it twice.",
-     "a": "such"
+     "a": "such",
+     "x": "Cấu trúc quá đến nỗi mà: such + (a/an) + adj + noun + that → 'such a good film that...'."
     },
     {
      "t": "mc",
@@ -2749,7 +3016,8 @@ export const grammar: ByLevel<GrammarLesson[]> = {
       "Despite the cost, they bought it.",
       "Despite it was expensive, they bought it."
      ],
-     "a": 1
+     "a": 1,
+     "x": "Cấu trúc chuẩn: 'Despite the cost' (Despite + Noun phrase). Không nói 'Despite of'."
     }
    ]
   }

@@ -1,12 +1,12 @@
 /* Tests & progress: placement test, unit tests, stage tests, chart, badges, export / import */
-import type { AppState, Level, MCQuestion, Question } from "../types";
+import type { AppState, Level, MCQuestion, Question, MockTest } from "../types";
 import { DATA, LEVELS, findItem } from "../data";
 import { $, h, put, levelChip, bar, toast, viBox } from "../core/dom";
 import { S, STORE_KEY, defaultState, deepMerge, replaceState, save } from "../core/state";
 import { DAY, countWords, pct, sample, shuffle, todayKey, alignWords } from "../core/util";
 import { SR, recognize, say, srNotice, voicePanel } from "../core/speech";
 import { BADGES, SKILL_INFO, checkBadges, recordScore } from "../core/progress";
-import { applyTheme, go, registerPage, route, setViewLevel } from "../core/router";
+import { applyTheme, go, registerPage, route, setViewLevel, addTimer } from "../core/router";
 import { backLink, renderDiff } from "../core/ui";
 import { quiz } from "../core/quiz";
 import { analyseWriting, writingFeedback } from "../core/writingCheck";
@@ -59,6 +59,7 @@ registerPage("placement", "Placement test", view => {
 registerPage("tests", "Tests & progress", (view, kind, arg) => {
   if (kind === "unit") return unitTest(view, arg);
   if (kind === "stage") return stageTest(view, arg);
+  if (kind === "mock") return mockTestView(view, arg);
   setViewLevel(S.level);
   const taken = S.placement?.score != null;
   put(view, h("div", { class: "grid g3" },
@@ -66,6 +67,32 @@ registerPage("tests", "Tests & progress", (view, kind, arg) => {
       h("button", { class: "btn primary", onclick: () => go("placement") }, taken ? "Retake" : "Start")),
     LEVELS.map(lv => { const st = S.stageTests[lv]; return h("div", { class: "card" }, h("h3", {}, levelChip(lv), " Stage test"), h("p", { class: "small muted" }, "Reading, listening, grammar & vocabulary, writing and speaking. Pass mark 70%."),
       h("p", { class: "small" }, st ? `Best: ${st.best}% · ${st.attempts} attempt(s)` : "Not taken"), h("button", { class: "btn", onclick: () => go("tests/stage/" + lv) }, "Take test")); })));
+  put(view, h("div", { class: "card" },
+    h("div", { class: "row", style: "justify-content:space-between;align-items:center;margin-bottom:8px" },
+      h("h2", { style: "margin:0" }, "🏆 Mock Exams (Đề thi thử tổng hợp)"),
+      h("span", { class: "small muted" }, "Timed exams · Auto grading · Detailed explanations")
+    ),
+    h("p", { class: "small muted" }, "Đề thi thử chuẩn cấu trúc gồm Ngữ pháp, Từ vựng, Tìm lỗi sai (Error Identification), Viết lại câu (Sentence Transformation), Điền từ & Đọc hiểu. Có đồng hồ đếm ngược và bảng câu hỏi."),
+    h("div", { class: "grid g3", style: "margin-top:12px" },
+      LEVELS.flatMap(lv => DATA.mockTests[lv].map(t => {
+        const best = S.mockTests[t.id];
+        return h("div", { class: "card", style: "display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--border);margin-bottom:0" },
+          h("div", {},
+            h("div", { class: "row", style: "justify-content:space-between;align-items:center;margin-bottom:6px" },
+              levelChip(lv),
+              h("span", { class: "chip" }, `⏱️ ${t.timeLimit}m · ${t.questions.length} qs`)
+            ),
+            h("b", { style: "display:block;margin-bottom:4px" }, t.title),
+            h("p", { class: "small muted", style: "margin:0" }, t.desc)
+          ),
+          h("div", { class: "row", style: "justify-content:space-between;align-items:center;margin-top:12px" },
+            best != null ? h("span", { class: best >= 70 ? "done-badge" : "small" }, `Best: ${best}%`) : h("span", { class: "small muted" }, "Not taken"),
+            h("button", { class: "btn primary sm", onclick: () => go("tests/mock/" + t.id) }, best != null ? "Retake" : "Start Test")
+          )
+        );
+      }))
+    )
+  ));
   put(view, h("div", { class: "card" }, h("h2", {}, "📝 Unit tests"), h("div", { class: "grid g3" }, LEVELS.flatMap(lv => DATA.units[lv].map((u, i) =>
     h("div", { class: "list-item", onclick: () => go("tests/unit/" + u.id) }, levelChip(lv), h("div", { style: "flex:1" }, h("b", {}, "Unit " + (i + 1)), h("div", { class: "small muted" }, u.title)),
       S.unitTests[u.id] != null ? h("span", { class: S.unitTests[u.id] >= 70 ? "done-badge" : "small" }, S.unitTests[u.id] + "%") : null))))));
@@ -187,4 +214,129 @@ function importData(file: File): void {
     } catch { toast("This file is not a valid progress file.", "bad"); }
   };
   r.readAsText(file);
+}
+
+/* ===================== MOCK TESTS ===================== */
+function formatTime(sec: number): string {
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  return `${m.toString().padStart(2, "0")}:${s.toString().padStart(2, "0")}`;
+}
+
+function isQAnswered(box: Element): boolean {
+  const radios = box.querySelectorAll<HTMLInputElement>('input[type="radio"]');
+  if (radios.length) return Array.from(radios).some(r => r.checked);
+  const inputs = box.querySelectorAll<HTMLInputElement>("input.gapin");
+  if (inputs.length) return Array.from(inputs).some(i => i.value.trim().length > 0);
+  const selects = box.querySelectorAll<HTMLSelectElement>("select");
+  if (selects.length) return Array.from(selects).some(s => s.value !== "");
+  return false;
+}
+
+function mockTestView(view: HTMLElement, testId?: string): void {
+  let test: MockTest | undefined;
+  for (const lv of LEVELS) {
+    const found = DATA.mockTests[lv].find(t => t.id === testId);
+    if (found) { test = found; break; }
+  }
+  if (!test) {
+    put(view, backLink("tests", "Tests & progress"), h("div", { class: "card" }, h("p", {}, "Mock test not found.")));
+    return;
+  }
+  setViewLevel(test.level);
+
+  const headerCard = h("div", { class: "card" },
+    levelChip(test.level),
+    h("h1", {}, test.title),
+    h("p", { class: "muted" }, test.desc),
+    viBox(`Bài thi thử gồm ${test.questions.length} câu hỏi thuộc các dạng: Ngữ pháp, Từ vựng, Tìm lỗi sai (Error Identification), Viết lại câu (Sentence Transformation), Điền từ và Đọc hiểu. Thời gian làm bài: ${test.timeLimit} phút. Đạt từ 70% trở lên để hoàn thành tốt.`)
+  );
+
+  let remainingSec = test.timeLimit * 60;
+  const timeDisplay = h("b", { style: "font-variant-numeric:tabular-nums;font-size:1.15rem" }, formatTime(remainingSec));
+  const timeBadge = h("div", { class: "chip", style: "display:inline-flex;align-items:center;gap:6px;padding:6px 12px;font-size:.92rem;background:var(--primary-soft);color:var(--primary)" },
+    "⏱️ Thời gian còn lại: ", timeDisplay
+  );
+
+  const paletteBox = h("div", { style: "display:flex;gap:6px;flex-wrap:wrap;margin-top:10px" });
+  const palBtns: HTMLButtonElement[] = [];
+
+  const ctrlBar = h("div", { class: "mock-bar" },
+    h("div", { class: "row", style: "justify-content:space-between;align-items:center" },
+      timeBadge,
+      h("span", { class: "small muted" }, `Tổng số: ${test.questions.length} câu hỏi · Bấm số câu để cuộn nhanh`)
+    ),
+    paletteBox
+  );
+
+  const quizCard = h("div", { class: "card" });
+  let isSubmitted = false;
+
+  function updatePaletteState() {
+    const qBoxes = quizCard.querySelectorAll(".q");
+    qBoxes.forEach((box, i) => {
+      const btn = palBtns[i];
+      if (!btn) return;
+      if (isSubmitted) {
+        const ok = box.querySelector(".fb.ok") !== null;
+        btn.className = "palette-btn " + (ok ? "palette-correct" : "palette-wrong");
+      } else {
+        const answered = isQAnswered(box);
+        btn.className = "palette-btn" + (answered ? " palette-answered" : "");
+      }
+    });
+  }
+
+  test.questions.forEach((_q, i) => {
+    const btn = h("button", { class: "palette-btn", title: `Câu ${i + 1}`, onclick: () => {
+      const qBoxes = quizCard.querySelectorAll(".q");
+      if (qBoxes[i]) qBoxes[i].scrollIntoView({ behavior: "smooth", block: "center" });
+    } }, String(i + 1)) as HTMLButtonElement;
+    palBtns.push(btn);
+    paletteBox.append(btn);
+  });
+
+  const timerInterval = window.setInterval(() => {
+    if (isSubmitted) return;
+    remainingSec--;
+    if (remainingSec <= 0) {
+      clearInterval(timerInterval);
+      timeDisplay.textContent = "00:00";
+      timeBadge.style.background = "var(--bad-soft)";
+      timeBadge.style.color = "var(--bad)";
+      toast("⏰ Hết giờ làm bài! Đang tự động nộp bài...", "bad");
+      const btn = quizCard.querySelector<HTMLButtonElement>("button.btn.primary");
+      if (btn) btn.click();
+    } else {
+      timeDisplay.textContent = formatTime(remainingSec);
+      if (remainingSec <= 180) {
+        timeBadge.style.background = "var(--bad-soft)";
+        timeBadge.style.color = "var(--bad)";
+      }
+    }
+  }, 1000);
+  addTimer(timerInterval);
+
+  const quizEl = quiz(test.questions, {
+    title: test.title,
+    skill: "tests",
+    checkLabel: "Nộp bài thi",
+    onDone: (score) => {
+      isSubmitted = true;
+      clearInterval(timerInterval);
+      timeDisplay.textContent = "Đã nộp bài";
+      S.mockTests[test.id] = Math.max(S.mockTests[test.id] || 0, score);
+      recordScore("tests", score, test.id);
+      checkBadges();
+      save();
+      updatePaletteState();
+      toast(score >= 70 ? `🎉 Xuất sắc! Bạn đạt ${score}%` : `Đã hoàn thành: ${score}%. Hãy xem lại các câu sai!`);
+    }
+  });
+
+  quizCard.append(quizEl);
+  quizCard.addEventListener("change", () => updatePaletteState());
+  quizCard.addEventListener("input", () => updatePaletteState());
+
+  put(view, backLink("tests", "Tests & progress"), headerCard, ctrlBar, quizCard);
 }

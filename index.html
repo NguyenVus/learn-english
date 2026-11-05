@@ -1,41 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>EnglishPath · A2 → B1 → B2</title>
+  <title>EnglishPath · Lộ trình tiếng Anh toàn diện A2 → B1 → B2</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="app">
+    <!-- Clean, spacious Left Sidebar (260px) -->
     <aside class="sidebar" id="sidebar">
-      <div class="brand"><div class="logo">E</div>EnglishPath</div>
+      <div class="brand">
+        <div class="logo">E</div>
+        <div>
+          <div class="brand-name">EnglishPath</div>
+          <div class="brand-sub">A2 → B1 → B2 Mastery</div>
+        </div>
+      </div>
       <nav class="nav" id="nav">
+        <div class="nav-label">TỔNG QUAN</div>
         <a href="#/dashboard" data-page="dashboard"><span class="ico">🏠</span>Dashboard</a>
-        <a href="#/roadmap" data-page="roadmap"><span class="ico">🗺️</span>Roadmap</a>
-        <a href="#/reading" data-page="reading"><span class="ico">📖</span>Reading</a>
-        <a href="#/listening" data-page="listening"><span class="ico">🎧</span>Listening</a>
-        <a href="#/speaking" data-page="speaking"><span class="ico">🎤</span>Speaking</a>
-        <a href="#/writing" data-page="writing"><span class="ico">✍️</span>Writing</a>
-        <a href="#/guides" data-page="guides"><span class="ico">📘</span>Guides</a>
-        <a href="#/grammar" data-page="grammar"><span class="ico">🧩</span>Grammar</a>
-        <a href="#/vocabulary" data-page="vocabulary"><span class="ico">🗂️</span>Vocabulary</a>
-        <a href="#/tests" data-page="tests"><span class="ico">🏆</span>Tests</a>
+        <a href="#/roadmap" data-page="roadmap"><span class="ico">🗺️</span>Lộ trình (Roadmap)</a>
+
+        <div class="nav-label">4 KỸ NĂNG</div>
+        <a href="#/reading" data-page="reading"><span class="ico">📖</span>Reading (Đọc hiểu)</a>
+        <a href="#/listening" data-page="listening"><span class="ico">🎧</span>Listening (Nghe hiểu)</a>
+        <a href="#/speaking" data-page="speaking"><span class="ico">🎤</span>Speaking (Luyện nói)</a>
+        <a href="#/writing" data-page="writing"><span class="ico">✍️</span>Writing (Luyện viết)</a>
+
+        <div class="nav-label">TỪ VỰNG & NGỮ PHÁP</div>
+        <a href="#/vocabulary" data-page="vocabulary"><span class="ico">🗂️</span>Từ vựng & 600 TOEIC</a>
+        <a href="#/grammar" data-page="grammar"><span class="ico">🧩</span>Ngữ pháp (Grammar)</a>
+        <a href="#/guides" data-page="guides"><span class="ico">📘</span>Cẩm nang chiến thuật</a>
+
+        <div class="nav-label">THI THỬ & ÔN TẬP</div>
+        <a href="#/tests" data-page="tests"><span class="ico">🏆</span>Tests & 12 Đề thi thử</a>
+        <a href="#/mistakes" data-page="mistakes"><span class="ico">📓</span>Sổ tay lỗi sai</a>
       </nav>
+      <div class="sidebar-user" id="sidebarUser">
+        <div class="user-avatar">🎓</div>
+        <div class="user-meta">
+          <div class="user-name">Học viên EnglishPath</div>
+          <div class="user-sub" id="sidebarSub">A2 · 0 từ vựng</div>
+        </div>
+      </div>
     </aside>
+
     <div class="overlay" id="overlay"></div>
+
+    <!-- Main Content Area with Clean Topbar -->
     <div class="main">
-      <header class="topbar">
-        <button class="btn sm menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-        <div class="title" id="pageTitle">Dashboard</div>
-        <label class="small">Level
-          <select id="levelSelect"><option>A2</option><option>B1</option><option>B2</option></select>
-        </label>
-        <label class="switch" title="Show Vietnamese explanations"><input type="checkbox" id="viToggle"> Tiếng Việt</label>
-        <button class="btn sm" id="themeBtn" aria-label="Toggle theme">🌙</button>
+      <header class="topbar" id="siteHeader">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle Menu">☰</button>
+        <div class="topbar-title" id="pageTitle">Dashboard</div>
+        <div class="topbar-actions">
+          <div class="topbar-streak-pill" id="topbarStreak" title="Chuỗi ngày học liên tục (Daily Streak)">
+            <span class="streak-flame">🔥</span>
+            <span class="streak-num" id="streakCount">0</span>
+            <span class="streak-lbl">ngày</span>
+          </div>
+          <label class="topbar-level-pill" title="Trình độ CEFR hiện tại">
+            <span class="muted small">Trình độ:</span>
+            <select id="levelSelect" aria-label="Select Level"><option>A2</option><option>B1</option><option>B2</option></select>
+          </label>
+          <label class="switch" title="Bật/Tắt giải thích tiếng Việt">
+            <input type="checkbox" id="viToggle" aria-label="Toggle Vietnamese explanation"> Tiếng Việt
+          </label>
+          <button class="btn sm theme-toggle-btn" id="themeBtn" aria-label="Toggle light/dark theme">🌙</button>
+        </div>
       </header>
+
       <main id="view"></main>
     </div>
   </div>
+
   <div id="popup" class="popup hidden"></div>
   <div id="toast"></div>
   <script type="module" src="/src/main.ts"></script>

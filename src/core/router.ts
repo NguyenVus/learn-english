@@ -1,7 +1,7 @@
 /* Hash router, header controls (level, Vietnamese toggle, theme) and page timers */
 import type { Level } from "../types";
 import { $, $$ } from "./dom";
-import { S } from "./state";
+import { S, currentStreak } from "./state";
 import { stopRecognition, stopSpeech } from "./speech";
 
 export type PageRenderer = (view: HTMLElement, ...args: string[]) => void;
@@ -26,11 +26,15 @@ export function currentPage(): string { return (location.hash.replace(/^#\/?/, "
 
 export function route(): void {
   stopSpeech(); stopRecognition(); clearTimers(); beforeRoute.forEach(f => f());
-  const parts = (location.hash.replace(/^#\/?/, "") || "dashboard").split("/").map(decodeURIComponent);
-  const page = ROUTES[parts[0]] ? parts[0] : "dashboard";
+  const raw = location.hash.replace(/^#\/?/, "");
+  const defaultPage = "dashboard";
+  const parts = (raw || defaultPage).split("/").map(decodeURIComponent);
+  const page = ROUTES[parts[0]] ? parts[0] : defaultPage;
   viewLevel = S.level;
   $$<HTMLAnchorElement>(".nav a").forEach(a => a.classList.toggle("active", a.dataset.page === page || (page === "placement" && a.dataset.page === "tests")));
   const title = $("#pageTitle"); if (title) title.textContent = ROUTES[page]?.title || "";
+  const streakEl = $("#streakCount"); if (streakEl) streakEl.textContent = String(currentStreak());
+  const sidebarSub = $("#sidebarSub"); if (sidebarSub) sidebarSub.textContent = `${S.level} · ${Object.keys(S.vocab).length} từ vựng`;
   const view = $("#view"); if (!view) return;
   view.innerHTML = "";
   ROUTES[page]?.render(view, ...parts.slice(1));

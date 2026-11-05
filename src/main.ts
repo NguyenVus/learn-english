@@ -18,6 +18,7 @@ import "./pages/writing";
 import "./pages/vocabulary";
 import "./pages/guides";
 import "./pages/tests";
+import "./pages/mistakes";
 
 function init(): void {
   buildDict(); TTS.init(); applyTheme();

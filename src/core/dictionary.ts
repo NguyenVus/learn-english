@@ -15,6 +15,7 @@ export function buildDict(): void {
     DATA.reading[lv].forEach(p => Object.entries(p.g || {}).forEach(([w, [vi, en]]) => { const k = w.toLowerCase(); DICT[k] ??= { w, vi, en, level: lv }; }));
   }
   DATA.phrasal.forEach(([w, vi, ex, lv]) => { DICT[w] ??= { w, vi, en: "phrasal verb", ex, level: lv }; });
+  DATA.toeic600.forEach(t => t.words.forEach(([w, pos, vi, en, ex]) => { const k = w.toLowerCase(); DICT[k] ??= { w, pos, vi, en, ex, level: "B1" }; }));
 }
 /** Look a word up, trying simple English endings (-s, -ed, -ing, -ies…) */
 export function lookup(word: string): DictEntry | null {
