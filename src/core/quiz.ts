@@ -18,6 +18,7 @@ export interface QuizOptions {
   title?: string;
   skill?: ScoreSkill | "grammar";
   isReview?: boolean;
+  startNumber?: number;
 }
 export interface QuizResult { q: Question; got: number; total: number }
 export type QuizElement = HTMLDivElement & { _check: () => number };
@@ -53,7 +54,8 @@ export function quiz(questions: Question[], opts: QuizOptions = {}): QuizElement
     if (q.ctx) box.append(h("div", { class: "ctx" }, q.ctx));
     if (q.say) { const text = q.say; box.append(h("div", { class: "row", style: "margin-bottom:6px" }, h("button", { class: "btn sm", onclick: () => void say(text) }, "▶ Play"), h("button", { class: "btn sm", onclick: () => void say(text, 0.75) }, "🐢 Slow"))); }
     const fb = h("div", { class: "fb" }); const exEl = h("div");
-    const num = qi + 1 + ". ";
+    const startNum = opts.startNumber ?? 1;
+    const num = (startNum + qi) + ". ";
     const setFb = (ok: boolean, text: string) => { fb.className = "fb " + (ok ? "ok" : "bad"); fb.textContent = text; };
     let item: Item;
 

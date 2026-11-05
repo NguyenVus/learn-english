@@ -21,7 +21,14 @@ function clearTimers(): void { timers.forEach(t => clearInterval(t)); timers = [
 let beforeRoute: (() => void)[] = [];
 export function onBeforeRoute(fn: () => void): void { beforeRoute.push(fn); }
 
-export function go(path: string): void { location.hash = "#/" + path; }
+export function go(path: string): void {
+  const target = "#/" + path.replace(/^#\/?/, "");
+  if (location.hash === target) {
+    route();
+  } else {
+    location.hash = target;
+  }
+}
 export function currentPage(): string { return (location.hash.replace(/^#\/?/, "") || "dashboard").split("/")[0]; }
 
 export function route(): void {

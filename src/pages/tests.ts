@@ -62,13 +62,37 @@ registerPage("tests", "Tests & progress", (view, kind, arg) => {
   if (kind === "mock") return mockTestView(view, arg);
   setViewLevel(S.level);
   const taken = S.placement?.score != null;
-  put(view, h("div", { class: "grid g3" },
-    h("div", { class: "card" }, h("h3", {}, "🧭 Placement test"), h("p", { class: "small muted" }, taken && S.placement ? `Result: ${S.placement.result} (${S.placement.score}%) on ${new Date(S.placement.date).toLocaleDateString()}` : "Not taken yet"),
-      h("button", { class: "btn primary", onclick: () => go("placement") }, taken ? "Retake" : "Start")),
-    LEVELS.map(lv => { const st = S.stageTests[lv]; return h("div", { class: "card" }, h("h3", {}, levelChip(lv), " Stage test"), h("p", { class: "small muted" }, "Reading, listening, grammar & vocabulary, writing and speaking. Pass mark 70%."),
-      h("p", { class: "small" }, st ? `Best: ${st.best}% · ${st.attempts} attempt(s)` : "Not taken"), h("button", { class: "btn", onclick: () => go("tests/stage/" + lv) }, "Take test")); })));
+  put(view, h("div", { class: "grid g4" },
+    h("div", { class: "card", style: "display:flex;flex-direction:column;justify-content:space-between;margin-bottom:0" },
+      h("div", {},
+        h("div", { class: "chip sm", style: "margin-bottom:8px;background:var(--primary-soft);color:var(--primary);font-weight:700" }, "🧭 Phân loại xuất phát"),
+        h("h3", { style: "margin:0 0 6px" }, "Placement test"),
+        h("p", { class: "small muted", style: "margin:0;line-height:1.4" }, taken && S.placement ? `Kết quả: ${S.placement.result} (${S.placement.score}%) ngày ${new Date(S.placement.date).toLocaleDateString()}` : "25 câu hỏi tổng hợp xác định xuất phát điểm chuẩn A2, B1 hay B2.")
+      ),
+      h("div", { style: "margin-top:14px;padding-top:10px;border-top:1px solid var(--border-subtle)" },
+        h("button", { class: "btn primary sm", style: "width:100%", onclick: () => go("placement") }, taken ? "Làm lại ↺" : "Bắt đầu thi →")
+      )
+    ),
+    LEVELS.map(lv => {
+      const st = S.stageTests[lv];
+      return h("div", { class: "card", style: "display:flex;flex-direction:column;justify-content:space-between;margin-bottom:0" },
+        h("div", {},
+          h("div", { class: "row", style: "justify-content:space-between;align-items:center;margin-bottom:8px" },
+            levelChip(lv),
+            st ? h("span", { class: "done-badge", style: "font-size:0.75rem" }, `Best: ${st.best}%`) : h("span", { class: "small muted" }, "Chưa thi")
+          ),
+          h("h3", { style: "margin:0 0 6px" }, `${lv} Stage test`),
+          h("p", { class: "small muted", style: "margin:0;line-height:1.4" }, "Đọc hiểu, Nghe, Ngữ pháp & Từ vựng, Viết và Nói (Đạt từ 70% để pass).")
+        ),
+        h("div", { style: "margin-top:14px;padding-top:10px;border-top:1px solid var(--border-subtle)" },
+          h("button", { class: "btn sm", style: "width:100%", onclick: () => go("tests/stage/" + lv) }, st ? "Thi lại ↺" : "Làm bài thi →")
+        )
+      );
+    })
+  ));
   const allTests = LEVELS.flatMap(lv => DATA.mockTests[lv]);
   let activeTab: "all" | "toeic" | "ielts" | "cefr" = "all";
+  let activeFilter: "all" | "full" | "mini" = "all";
   const gridContainer = h("div", { class: "grid g3", style: "margin-top:14px" });
 
   function renderMockGrid() {
@@ -76,37 +100,53 @@ registerPage("tests", "Tests & progress", (view, kind, arg) => {
     const filtered = allTests.filter(t => {
       const isToeic = t.category === "toeic" || t.id.includes("toeic") || t.title.toLowerCase().includes("toeic");
       const isIelts = t.category === "ielts" || t.id.includes("ielts") || t.title.toLowerCase().includes("ielts");
-      if (activeTab === "toeic") return isToeic;
-      if (activeTab === "ielts") return isIelts;
-      if (activeTab === "cefr") return !isToeic && !isIelts;
+      if (activeTab === "toeic" && !isToeic) return false;
+      if (activeTab === "ielts" && !isIelts) return false;
+      if (activeTab === "cefr" && (isToeic || isIelts)) return false;
+
+      const isFull = t.testType === "full" || t.timeLimit >= 60;
+      if (activeFilter === "full" && !isFull) return false;
+      if (activeFilter === "mini" && isFull) return false;
       return true;
+    });
+
+    filtered.sort((a, b) => {
+      const aFull = a.testType === "full" || a.timeLimit >= 60;
+      const bFull = b.testType === "full" || b.timeLimit >= 60;
+      if (aFull !== bFull) return aFull ? -1 : 1;
+      if (aFull && bFull) {
+        if (b.timeLimit !== a.timeLimit) return b.timeLimit - a.timeLimit;
+      }
+      return 0;
     });
 
     put(gridContainer, filtered.map(t => {
       const best = S.mockTests[t.id];
       const isToeic = t.category === "toeic" || t.id.includes("toeic") || t.title.toLowerCase().includes("toeic");
       const isIelts = t.category === "ielts" || t.id.includes("ielts") || t.title.toLowerCase().includes("ielts");
+      const isFull = t.testType === "full" || t.timeLimit >= 60;
       const badgeStyle = isToeic ? "background:#e0e7ff;color:#4338ca" : isIelts ? "background:#fce7f3;color:#be185d" : "background:#ecfdf5;color:#047857";
       const badgeIcon = isToeic ? "🏢 TOEIC ETS" : isIelts ? "🎓 IELTS" : "📘 CEFR";
 
-      return h("div", { class: "card", style: "display:flex;flex-direction:column;justify-content:space-between;border:1.5px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm);margin-bottom:0" },
+      return h("div", { class: "card", style: `display:flex;flex-direction:column;justify-content:space-between;border:${isFull ? "2px solid var(--primary)" : "1.5px solid var(--border)"};border-radius:14px;box-shadow:${isFull ? "0 4px 16px rgba(79,70,229,0.12)" : "var(--shadow-sm)"};margin-bottom:0` },
         h("div", {},
           h("div", { class: "row", style: "justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:4px" },
             h("div", { class: "row", style: "gap:6px;align-items:center" },
               levelChip(t.level),
-              h("span", { class: "chip", style: `font-weight:700;font-size:0.75rem;${badgeStyle}` }, badgeIcon)
+              h("span", { class: "chip", style: `font-weight:700;font-size:0.75rem;${badgeStyle}` }, badgeIcon),
+              isFull ? h("span", { class: "chip sm", style: "background:#fef3c7;color:#92400e;font-weight:800;border:1px solid #fcd34d" }, "🏆 FULL CHUẨN") : null
             ),
-            h("span", { class: "chip sm" }, `⏱️ ${t.timeLimit}m · ${t.questions.length} qs`)
+            h("span", { class: "chip sm" }, `⏱️ ${t.timeLimit}m · ${t.questions.length} câu`)
           ),
-          t.target ? h("div", { style: "display:inline-block;font-size:0.78rem;font-weight:800;color:var(--primary);margin-bottom:4px" }, `🎯 ${t.target}`) : null,
-          h("b", { style: "display:block;font-size:1.02rem;margin-bottom:6px;line-height:1.35" }, t.title),
+          t.target ? h("div", { style: "display:inline-block;font-size:0.8rem;font-weight:800;color:var(--primary);margin-bottom:4px" }, `🎯 ${t.target}`) : null,
+          h("b", { style: "display:block;font-size:1.05rem;margin-bottom:6px;line-height:1.35" }, t.title),
           h("p", { class: "small muted", style: "margin:0;line-height:1.45" }, t.desc)
         ),
         h("div", { class: "row", style: "justify-content:space-between;align-items:center;margin-top:14px;padding-top:10px;border-top:1px solid var(--border-subtle)" },
           best != null
             ? h("span", { class: best >= 70 ? "done-badge" : "small", style: "font-weight:700" }, `Best: ${best}%`)
             : h("span", { class: "small muted" }, "Chưa làm"),
-          h("button", { class: "btn primary sm", onclick: () => go("tests/mock/" + t.id) }, best != null ? "Làm lại ↺" : "Bắt đầu thi →")
+          h("button", { class: `btn sm ${isFull ? "primary" : ""}`, onclick: () => go("tests/mock/" + t.id) }, best != null ? "Làm lại ↺" : "Bắt đầu thi →")
         )
       );
     }));
@@ -118,10 +158,10 @@ registerPage("tests", "Tests & progress", (view, kind, arg) => {
 
   const tabsRow = h("div", { class: "tab-group", style: "display:flex;gap:8px;flex-wrap:wrap;margin:14px 0 8px" },
     [
-      { id: "all", label: `Tất cả đề thi (${allTests.length} đề)` },
+      { id: "all", label: `Tất cả (${allTests.length} đề)` },
       { id: "toeic", label: `🏢 TOEIC ETS (${toeicCount} đề)` },
       { id: "ielts", label: `🎓 IELTS Academic (${ieltsCount} đề)` },
-      { id: "cefr", label: `📘 CEFR Comprehensive (${cefrCount} đề)` }
+      { id: "cefr", label: `📘 CEFR (${cefrCount} đề)` }
     ].map(tb => {
       const btn = h("button", {
         class: `btn sm ${activeTab === tb.id ? "primary" : ""}`,
@@ -136,15 +176,38 @@ registerPage("tests", "Tests & progress", (view, kind, arg) => {
     })
   );
 
+  const filterRow = h("div", { class: "row", style: "gap:6px;align-items:center;margin-bottom:12px;flex-wrap:wrap" },
+    h("span", { class: "small muted", style: "font-weight:700" }, "LỌC THEO THỜI LƯỢNG:"),
+    [
+      { id: "all", label: "Tất cả đề thi" },
+      { id: "full", label: "🏆 Đề Chuẩn Full-Length (60–120 phút)" },
+      { id: "mini", label: "⚡ Luyện tập nhanh (20–30 phút)" }
+    ].map(f => {
+      const btn = h("button", {
+        class: `btn sm ${activeFilter === f.id ? "primary" : ""}`,
+        style: "font-size:0.8rem",
+        onclick: () => {
+          activeFilter = f.id as any;
+          filterRow.querySelectorAll("button").forEach(b => b.classList.remove("primary"));
+          btn.classList.add("primary");
+          renderMockGrid();
+        }
+      }, f.label);
+      return btn;
+    })
+  );
+
   renderMockGrid();
 
   put(view, h("div", { class: "card" },
-    h("div", { class: "row", style: "justify-content:space-between;align-items:center;margin-bottom:8px" },
-      h("h2", { style: "margin:0" }, "🏆 Online Mock Exam Portal (Thi thử TOEIC, IELTS & CEFR)"),
-      h("span", { class: "small muted" }, "Timed exams · Auto grading · Detailed explanations")
+    h("div", { class: "row", style: "justify-content:space-between;align-items:center;margin-bottom:8px;flex-wrap:wrap;gap:8px" },
+      h("h2", { style: "margin:0" }, "🏆 Online Mock Exam Portal (Thi thử TOEIC & IELTS chuẩn Quốc Tế)"),
+      h("span", { class: "chip", style: "background:var(--primary-soft);color:var(--primary);font-weight:700" }, "Chuẩn format ETS & Cambridge")
     ),
-    h("p", { class: "small muted" }, "Hệ thống đề thi chuẩn format quốc tế: Part 5 & 6 TOEIC ETS (Email, Memo, Hợp đồng), Đọc hiểu IELTS Academic (T/F/NG, Summary Completion) và Đề thi tổng hợp CEFR. Tự động tính điểm và quy đổi điểm chuẩn."),
+    h("p", { class: "small muted", style: "line-height:1.5" },
+      "Hệ thống phòng thi chuẩn quốc tế: Đề thi Full-Length 120 phút (2 tiếng) TOEIC Complete (Listening 100 câu + Reading 100 câu = 200 câu thang điểm 990), Đề thi 75 phút TOEIC Reading (100 câu 101–200), Đề thi 60 phút IELTS Academic Reading (40 câu qua 3 Passages chuẩn Cambridge) cùng các đề Mini-Test luyện kỹ năng. Tự động đếm ngược thời gian, chấm điểm và quy đổi điểm số chính thức."),
     tabsRow,
+    filterRow,
     gridContainer
   ));
   put(view, h("div", { class: "card" }, h("h2", {}, "📝 Unit tests"), h("div", { class: "grid g3" }, LEVELS.flatMap(lv => DATA.units[lv].map((u, i) =>
@@ -287,6 +350,59 @@ function isQAnswered(box: Element): boolean {
   return false;
 }
 
+function toToeicListeningScore(raw: number): number {
+  if (raw >= 93) return 495;
+  if (raw >= 88) return 465 + (raw - 88) * 6;
+  if (raw >= 83) return 435 + (raw - 83) * 6;
+  if (raw >= 78) return 405 + (raw - 78) * 6;
+  if (raw >= 73) return 375 + (raw - 73) * 6;
+  if (raw >= 68) return 345 + (raw - 68) * 6;
+  if (raw >= 63) return 315 + (raw - 63) * 6;
+  if (raw >= 58) return 285 + (raw - 58) * 6;
+  if (raw >= 53) return 255 + (raw - 53) * 6;
+  if (raw >= 48) return 225 + (raw - 48) * 6;
+  if (raw >= 43) return 195 + (raw - 43) * 6;
+  if (raw >= 38) return 165 + (raw - 38) * 6;
+  if (raw >= 33) return 135 + (raw - 33) * 6;
+  if (raw >= 28) return 105 + (raw - 28) * 6;
+  if (raw >= 23) return 80 + (raw - 23) * 5;
+  return Math.max(15, raw * 3);
+}
+
+function toToeicReadingScore(raw: number): number {
+  if (raw >= 96) return 495;
+  if (raw >= 91) return 465 + (raw - 91) * 6;
+  if (raw >= 86) return 435 + (raw - 86) * 6;
+  if (raw >= 81) return 405 + (raw - 81) * 6;
+  if (raw >= 76) return 375 + (raw - 76) * 6;
+  if (raw >= 71) return 345 + (raw - 71) * 6;
+  if (raw >= 66) return 315 + (raw - 66) * 6;
+  if (raw >= 61) return 285 + (raw - 61) * 6;
+  if (raw >= 56) return 255 + (raw - 56) * 6;
+  if (raw >= 51) return 225 + (raw - 51) * 6;
+  if (raw >= 46) return 195 + (raw - 46) * 6;
+  if (raw >= 41) return 165 + (raw - 41) * 6;
+  if (raw >= 36) return 135 + (raw - 36) * 6;
+  if (raw >= 31) return 105 + (raw - 31) * 6;
+  if (raw >= 26) return 80 + (raw - 26) * 5;
+  return Math.max(15, raw * 3);
+}
+
+function toIeltsReadingBand(raw: number): string {
+  if (raw >= 39) return "Band 9.0 (Thông thạo xuất sắc - Expert)";
+  if (raw >= 37) return "Band 8.5 (Rất tốt xuất sắc - Very Good +)";
+  if (raw >= 35) return "Band 8.0 (Rất tốt - Very Good)";
+  if (raw >= 33) return "Band 7.5 (Tốt vững vàng - Good +)";
+  if (raw >= 30) return "Band 7.0 (Tốt - Good)";
+  if (raw >= 27) return "Band 6.5 (Khá thành thạo - Competent +)";
+  if (raw >= 23) return "Band 6.0 (Khá - Competent)";
+  if (raw >= 19) return "Band 5.5 (Trung bình khá - Modest +)";
+  if (raw >= 15) return "Band 5.0 (Trung bình - Modest)";
+  if (raw >= 13) return "Band 4.5 (Hạn chế vừa)";
+  if (raw >= 10) return "Band 4.0 (Hạn chế)";
+  return "Band 3.5 trở xuống";
+}
+
 function mockTestView(view: HTMLElement, testId?: string): void {
   let test: MockTest | undefined;
   for (const lv of LEVELS) {
@@ -299,11 +415,22 @@ function mockTestView(view: HTMLElement, testId?: string): void {
   }
   setViewLevel(test.level);
 
-  const headerCard = h("div", { class: "card" },
-    levelChip(test.level),
-    h("h1", {}, test.title),
-    h("p", { class: "muted" }, test.desc),
-    viBox(`Bài thi thử gồm ${test.questions.length} câu hỏi thuộc các dạng: Ngữ pháp, Từ vựng, Tìm lỗi sai (Error Identification), Viết lại câu (Sentence Transformation), Điền từ và Đọc hiểu. Thời gian làm bài: ${test.timeLimit} phút. Đạt từ 70% trở lên để hoàn thành tốt.`)
+  const isToeic = test.category === "toeic" || test.id.includes("toeic") || test.title.toLowerCase().includes("toeic");
+  const isIelts = test.category === "ielts" || test.id.includes("ielts") || test.title.toLowerCase().includes("ielts");
+  const isFull = test.testType === "full" || test.timeLimit >= 60;
+  const startNum = test.startNumber ?? 1;
+
+  const headerCard = h("div", { class: "card", style: isFull ? "border-left: 5px solid var(--primary)" : "" },
+    h("div", { class: "row", style: "gap:6px;align-items:center;margin-bottom:8px;flex-wrap:wrap" },
+      levelChip(test.level),
+      isFull ? h("span", { class: "chip", style: "background:#fef3c7;color:#92400e;font-weight:800;border:1px solid #fcd34d" }, "🏆 ĐỀ THI CHUẨN QUỐC TẾ") : null,
+      test.target ? h("span", { class: "chip", style: "font-weight:800;color:var(--primary);background:var(--primary-soft)" }, `🎯 ${test.target}`) : null
+    ),
+    h("h1", { style: "margin:4px 0 8px" }, test.title),
+    h("p", { class: "muted", style: "line-height:1.45" }, test.desc),
+    viBox(isFull
+      ? `Đề thi chuẩn quốc tế thời lượng ${test.timeLimit} phút gồm ${test.questions.length} câu hỏi. Hệ thống tự động đếm ngược và nộp bài khi hết giờ. Hãy làm bài nghiêm túc để hệ thống tính điểm và quy đổi chính xác.`
+      : `Bài thi thử gồm ${test.questions.length} câu hỏi thuộc các dạng: Ngữ pháp, Từ vựng, Tìm lỗi sai, Viết lại câu và Đọc hiểu. Thời gian làm bài: ${test.timeLimit} phút. Đạt từ 70% trở lên để hoàn thành tốt.`)
   );
 
   let remainingSec = test.timeLimit * 60;
@@ -312,16 +439,48 @@ function mockTestView(view: HTMLElement, testId?: string): void {
     "⏱️ Thời gian còn lại: ", timeDisplay
   );
 
-  const paletteBox = h("div", { style: "display:flex;gap:6px;flex-wrap:wrap;margin-top:10px" });
+  const paletteBox = h("div", {
+    style: "display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;max-height:110px;overflow-y:auto;padding:4px 2px"
+  });
   const palBtns: HTMLButtonElement[] = [];
 
+  let paletteExpanded = false;
+  const togglePaletteBtn = test.questions.length > 30 ? h("button", {
+    class: "btn sm",
+    style: "font-size:0.75rem;padding:2px 8px;border-radius:6px;margin-left:8px",
+    onclick: (e: MouseEvent) => {
+      paletteExpanded = !paletteExpanded;
+      paletteBox.style.maxHeight = paletteExpanded ? "none" : "110px";
+      (e.currentTarget as HTMLElement).textContent = paletteExpanded ? "Thu gọn ▲" : "Xem tất cả ▼";
+    }
+  }, "Xem tất cả ▼") : null;
+
   const ctrlBar = h("div", { class: "mock-bar" },
-    h("div", { class: "row", style: "justify-content:space-between;align-items:center" },
+    h("div", { class: "row", style: "justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px" },
       timeBadge,
-      h("span", { class: "small muted" }, `Tổng số: ${test.questions.length} câu hỏi · Bấm số câu để cuộn nhanh`)
+      h("div", { class: "row", style: "gap:6px;align-items:center" },
+        h("span", { class: "small muted" }, `Tổng số: ${test.questions.length} câu hỏi`),
+        togglePaletteBtn
+      )
     ),
     paletteBox
   );
+
+  const sectionBar = (test.sections && test.sections.length) ? h("div", { class: "card", style: "padding:10px 14px;margin-bottom:12px;background:var(--surface2);border:1px solid var(--border);border-radius:12px" },
+    h("div", { class: "row", style: "gap:8px;align-items:center;flex-wrap:wrap" },
+      h("span", { class: "small muted", style: "font-weight:700" }, "CHUYỂN NHANH ĐẾN PHẦN THI:"),
+      test.sections.map(sec => h("button", {
+        class: "btn sm",
+        style: "font-weight:700;font-size:0.8rem;padding:4px 12px;border-radius:999px",
+        onclick: () => {
+          const qBoxes = quizCard.querySelectorAll(".q");
+          if (qBoxes[sec.startIndex]) {
+            qBoxes[sec.startIndex].scrollIntoView({ behavior: "smooth", block: "start" });
+          }
+        }
+      }, `📍 ${sec.name}`))
+    )
+  ) : null;
 
   const scoreResultCard = h("div", { class: "score-result-wrap" });
   const quizCard = h("div", { class: "card" });
@@ -343,10 +502,11 @@ function mockTestView(view: HTMLElement, testId?: string): void {
   }
 
   test.questions.forEach((_q, i) => {
-    const btn = h("button", { class: "palette-btn", title: `Câu ${i + 1}`, onclick: () => {
+    const qNum = startNum + i;
+    const btn = h("button", { class: "palette-btn", title: `Câu ${qNum}`, onclick: () => {
       const qBoxes = quizCard.querySelectorAll(".q");
       if (qBoxes[i]) qBoxes[i].scrollIntoView({ behavior: "smooth", block: "center" });
-    } }, String(i + 1)) as HTMLButtonElement;
+    } }, String(qNum)) as HTMLButtonElement;
     palBtns.push(btn);
     paletteBox.append(btn);
   });
@@ -376,7 +536,8 @@ function mockTestView(view: HTMLElement, testId?: string): void {
     title: test.title,
     skill: "tests",
     checkLabel: "Nộp bài thi",
-    onDone: (score) => {
+    startNumber: test.startNumber,
+    onDone: (score, results) => {
       isSubmitted = true;
       clearInterval(timerInterval);
       timeDisplay.textContent = "Đã nộp bài";
@@ -387,21 +548,42 @@ function mockTestView(view: HTMLElement, testId?: string): void {
       updatePaletteState();
 
       scoreResultCard.innerHTML = "";
-      const isToeic = test.category === "toeic" || test.id.includes("toeic") || test.title.toLowerCase().includes("toeic");
-      const isIelts = test.category === "ielts" || test.id.includes("ielts") || test.title.toLowerCase().includes("ielts");
+      const rawCorrect = results ? results.filter(r => r.got >= r.total).length : Math.round((score / 100) * test.questions.length);
       let estScore = "";
       let advice = "";
 
       if (isToeic) {
-        const rScore = Math.min(495, Math.max(115, Math.round((score * 4.95) / 5) * 5));
-        const estMin = Math.max(200, rScore * 2 - 30);
-        const estMax = Math.min(990, rScore * 2 + 20);
-        estScore = `🏢 Ước tính TOEIC Reading: ${rScore}/495 · Dự đoán Overall: ~${estMin}–${estMax}/990`;
-        advice = score >= 80 ? "Xuất sắc! Bạn nắm rất vững cấu trúc Part 5 & đọc hiểu Part 6." : score >= 60 ? "Khá tốt! Hãy ôn kỹ các câu sai trong Sổ tay lỗi sai để bứt phá điểm số." : "Cần củng cố thêm từ vựng 600 TOEIC và ngữ pháp cơ bản.";
+        if (test.questions.length === 200) {
+          const lCorrect = results ? results.slice(0, 100).filter(r => r.got >= r.total).length : Math.round(rawCorrect / 2);
+          const rCorrect = results ? results.slice(100, 200).filter(r => r.got >= r.total).length : Math.round(rawCorrect / 2);
+          const lScore = toToeicListeningScore(lCorrect);
+          const rScore = toToeicReadingScore(rCorrect);
+          const totalToeic = lScore + rScore;
+          estScore = `🏢 TỔNG ĐIỂM TOEIC OFFICIAL: ${totalToeic}/990\n🎧 Listening: ${lScore}/495 (${lCorrect}/100 câu đúng)\n📖 Reading:   ${rScore}/495 (${rCorrect}/100 câu đúng)\n🎯 Đánh giá năng lực: ${totalToeic >= 850 ? "Trình độ C1 / Professional working proficiency" : totalToeic >= 750 ? "Trình độ B2+ / Xuất sắc chuẩn doanh nghiệp đa quốc gia" : totalToeic >= 600 ? "Trình độ B1-B2 / Chuẩn đầu ra đại học & giao tiếp công sở tốt" : "Cần củng cố thêm từ vựng và phản xạ nghe"}`;
+          advice = totalToeic >= 750 ? "Thành tích tuyệt vời! Bạn có khả năng giao tiếp và xử lý văn bản công sở bằng tiếng Anh rất trôi chảy." : "Hãy xem kỹ các câu sai trong Sổ tay lỗi sai và luyện thêm phản xạ nghe Part 3, 4.";
+        } else if (test.questions.length === 100) {
+          const rScore = toToeicReadingScore(rawCorrect);
+          const estMin = Math.max(100, Math.min(990, rScore * 2 - 25));
+          const estMax = Math.min(990, rScore * 2 + 15);
+          estScore = `🏢 Điểm TOEIC Reading: ${rScore}/495 · Điểm thô: ${rawCorrect}/100 câu đúng\n🎯 Dự đoán điểm tổng TOEIC (Listening + Reading): ~${estMin}–${estMax}/990`;
+          advice = rScore >= 400 ? "Xuất sắc! Nắm rất vững toàn bộ cấu trúc Part 5, 6 và đọc hiểu Part 7 đơn/đôi/ba." : rScore >= 300 ? "Khá tốt! Đạt chuẩn đầu ra đại học và các tập đoàn quốc tế. Hãy ôn kỹ các câu Part 7 đọc kép/ba trong sổ lỗi sai." : "Cần tăng tốc độ đọc và củng cố ngữ pháp Part 5 để không bị thiếu giờ.";
+        } else {
+          const rScore = Math.min(495, Math.max(115, Math.round((score * 4.95) / 5) * 5));
+          const estMin = Math.max(200, rScore * 2 - 30);
+          const estMax = Math.min(990, rScore * 2 + 20);
+          estScore = `🏢 Ước tính TOEIC Reading: ${rScore}/495 · Dự đoán Overall: ~${estMin}–${estMax}/990`;
+          advice = score >= 80 ? "Xuất sắc! Bạn nắm rất vững cấu trúc Part 5 & đọc hiểu Part 6." : score >= 60 ? "Khá tốt! Hãy ôn kỹ các câu sai trong Sổ tay lỗi sai để bứt phá điểm số." : "Cần củng cố thêm từ vựng 600 TOEIC và ngữ pháp cơ bản.";
+        }
       } else if (isIelts) {
-        const band = score >= 90 ? "Band 8.5" : score >= 82 ? "Band 8.0" : score >= 75 ? "Band 7.5" : score >= 68 ? "Band 7.0" : score >= 60 ? "Band 6.5" : score >= 52 ? "Band 6.0" : score >= 45 ? "Band 5.5" : score >= 38 ? "Band 5.0" : "Band 4.0 - 4.5";
-        estScore = `🎓 Dự đoán IELTS Reading: ${band} Academic`;
-        advice = score >= 75 ? "Kỹ năng định vị từ khóa và đọc hiểu học thuật rất vững vàng!" : "Hãy chú ý bẫy True/False/Not Given và các cặp từ đồng nghĩa (paraphrasing).";
+        if (test.questions.length === 40) {
+          const band = toIeltsReadingBand(rawCorrect);
+          estScore = `🎓 Kết quả IELTS Academic Reading: ${band}\n🎯 Điểm thô: ${rawCorrect}/40 câu đúng (Tỉ lệ: ${score}%)`;
+          advice = rawCorrect >= 30 ? "Xuất sắc! Kỹ năng đọc hiểu học thuật, scanning, skimming và phân tích bẫy T/F/NG đạt chuẩn Band 7.0+ quốc tế." : rawCorrect >= 23 ? "Đạt mục tiêu Band 6.0 - 6.5! Chú ý các cặp từ đồng nghĩa paraphrasing và bẫy Not Given." : "Cần tăng cường vốn từ vựng học thuật Academic Word List và phương pháp gạch chân từ khóa.";
+        } else {
+          const band = score >= 90 ? "Band 8.5" : score >= 82 ? "Band 8.0" : score >= 75 ? "Band 7.5" : score >= 68 ? "Band 7.0" : score >= 60 ? "Band 6.5" : score >= 52 ? "Band 6.0" : score >= 45 ? "Band 5.5" : score >= 38 ? "Band 5.0" : "Band 4.0 - 4.5";
+          estScore = `🎓 Dự đoán IELTS Reading: ${band} Academic`;
+          advice = score >= 75 ? "Kỹ năng định vị từ khóa và đọc hiểu học thuật rất vững vàng!" : "Hãy chú ý bẫy True/False/Not Given và các cặp từ đồng nghĩa (paraphrasing).";
+        }
       } else {
         estScore = `📘 Đạt chuẩn: ${test.level} (${score}%)`;
         advice = score >= 70 ? "Bạn đã vượt qua bài thi tiêu chuẩn này!" : "Cần luyện tập thêm các chủ điểm ngữ pháp trọng tâm.";
@@ -411,9 +593,9 @@ function mockTestView(view: HTMLElement, testId?: string): void {
         h("div", { class: "row", style: "justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px" },
           h("div", { style: "flex:1;min-width:240px" },
             h("div", { style: "font-size:0.85rem;font-weight:700;color:var(--muted);text-transform:uppercase" }, "BẢNG TỔNG KẾT BÀI THI"),
-            h("h2", { style: "margin:4px 0 2px" }, `Điểm số: ${score}%`),
-            h("div", { style: "font-weight:800;font-size:1.1rem;color:var(--primary)" }, estScore),
-            h("div", { class: "small muted", style: "margin-top:4px" }, advice)
+            h("h2", { style: "margin:4px 0 2px" }, `Điểm số: ${score}% (${rawCorrect}/${test.questions.length} câu đúng)`),
+            h("div", { style: "font-weight:800;font-size:1.1rem;color:var(--primary);white-space:pre-line;line-height:1.4" }, estScore),
+            h("div", { class: "small muted", style: "margin-top:6px" }, advice)
           ),
           h("div", { class: "row", style: "gap:8px" },
             h("button", { class: "btn sm", onclick: () => go("tests") }, "Danh sách đề thi"),
@@ -430,5 +612,5 @@ function mockTestView(view: HTMLElement, testId?: string): void {
   quizCard.addEventListener("change", () => updatePaletteState());
   quizCard.addEventListener("input", () => updatePaletteState());
 
-  put(view, backLink("tests", "Tests & progress"), headerCard, ctrlBar, scoreResultCard, quizCard);
+  put(view, backLink("tests", "Tests & progress"), headerCard, ctrlBar, sectionBar, scoreResultCard, quizCard);
 }

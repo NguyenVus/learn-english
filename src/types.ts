@@ -116,6 +116,9 @@ export interface MockTest {
   timeLimit: number; // in minutes
   category?: "toeic" | "ielts" | "cefr";
   target?: string;
+  testType?: "full" | "mini";
+  startNumber?: number; // e.g. 101 for TOEIC Part 5-7
+  sections?: { name: string; startIndex: number; count: number }[];
   questions: Question[];
 }
 

@@ -1,6 +1,9 @@
 /* Full Mock Exams & Practice Tests for A2, B1, and B2 */
 import type { ByLevel, MockTest } from "../types";
 import { toeicIeltsTests } from "./toeicIeltsTests";
+import { toeicFullTests } from "./toeicFullTests";
+import { ieltsFullTests } from "./ieltsFullTests";
+import { toeic2HoursTest } from "./toeic2HoursTest";
 
 export const mockTests: ByLevel<MockTest[]> = {
   A2: [
@@ -1989,7 +1992,9 @@ export const mockTests: ByLevel<MockTest[]> = {
                 }
           ]
     },
-    ...toeicIeltsTests.B1
+    ...toeicIeltsTests.B1,
+    toeicFullTests[0],
+    ieltsFullTests[0]
   ],
   B2: [
     {
@@ -3051,7 +3056,10 @@ export const mockTests: ByLevel<MockTest[]> = {
                 }
           ]
     },
-    ...toeicIeltsTests.B2
+    ...toeicIeltsTests.B2,
+    toeic2HoursTest,
+    toeicFullTests[1],
+    ieltsFullTests[1]
   ]
 };
 

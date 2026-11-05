@@ -16,6 +16,17 @@ registerPage("mistakes", "Mistake Bank", (view, modeArg, filterArg) => {
     return;
   }
 
+  if (modeArg === "single" && filterArg) {
+    const targetItem = items.find(it => it.id === filterArg) || (S.errorBank && S.errorBank[filterArg]);
+    if (targetItem) {
+      practiceSingle(view, targetItem);
+      return;
+    } else {
+      go("mistakes");
+      return;
+    }
+  }
+
   // Main list view
   put(view,
     h("div", { class: "card", style: "border-left:4px solid var(--warn)" },
@@ -109,7 +120,7 @@ registerPage("mistakes", "Mistake Bank", (view, modeArg, filterArg) => {
       h("div", { style: "font-weight:600;font-size:1.05rem;margin-bottom:10px" }, qText),
       q.ctx ? h("div", { class: "ctx small", style: "margin-bottom:10px" }, q.ctx) : null,
       h("div", { class: "row" },
-        h("button", { class: "btn sm primary", onclick: () => practiceSingle(view, item) }, "✍️ Làm lại câu này"),
+        h("button", { class: "btn sm primary", onclick: () => go("mistakes/single/" + encodeURIComponent(item.id)) }, "✍️ Làm lại câu này"),
         h("button", { class: "btn sm", onclick: () => {
           resolveMistake(item.id);
           toast("Đã gỡ câu hỏi khỏi sổ tay ✓");
@@ -128,7 +139,7 @@ function practiceView(view: HTMLElement, items: ErrorItem[], countArg?: string):
 
   const qs = list.map(it => it.q);
   put(view,
-    h("div", { class: "row", style: "margin-bottom:14px" },
+    h("div", { class: "row", style: "margin-bottom:14px;align-items:center;gap:12px;flex-wrap:wrap" },
       h("button", { class: "btn sm", onclick: () => go("mistakes") }, "← Quay lại danh sách"),
       h("h2", { style: "margin:0" }, `⚡ Luyện tập ${qs.length} câu đã từng làm sai`),
       h("span", { class: "spacer" })
@@ -144,7 +155,10 @@ function practiceView(view: HTMLElement, items: ErrorItem[], countArg?: string):
             toast(`🎉 Đã sửa đúng ${resolved} câu!`);
           }
         }
-      })
+      }),
+      h("div", { class: "row", style: "margin-top:18px;padding-top:14px;border-top:1px solid var(--border-subtle)" },
+        h("button", { class: "btn primary", onclick: () => go("mistakes") }, "← Quay lại danh sách câu sai")
+      )
     )
   );
 }
@@ -152,7 +166,7 @@ function practiceView(view: HTMLElement, items: ErrorItem[], countArg?: string):
 function practiceSingle(view: HTMLElement, item: ErrorItem): void {
   view.innerHTML = "";
   put(view,
-    h("div", { class: "row", style: "margin-bottom:14px" },
+    h("div", { class: "row", style: "margin-bottom:14px;align-items:center;gap:12px;flex-wrap:wrap" },
       h("button", { class: "btn sm", onclick: () => go("mistakes") }, "← Quay lại danh sách câu sai"),
       h("h2", { style: "margin:0" }, "Làm lại câu hỏi"),
       h("span", { class: "spacer" }),
@@ -169,7 +183,10 @@ function practiceSingle(view: HTMLElement, item: ErrorItem): void {
             toast("🎉 Chính xác! Đã gỡ câu này khỏi sổ tay.");
           }
         }
-      })
+      }),
+      h("div", { class: "row", style: "margin-top:18px;padding-top:14px;border-top:1px solid var(--border-subtle)" },
+        h("button", { class: "btn primary", onclick: () => go("mistakes") }, "← Quay lại danh sách câu sai")
+      )
     )
   );
 }
