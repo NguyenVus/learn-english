@@ -1,5 +1,6 @@
 /* Full Mock Exams & Practice Tests for A2, B1, and B2 */
 import type { ByLevel, MockTest } from "../types";
+import { toeicIeltsTests } from "./toeicIeltsTests";
 
 export const mockTests: ByLevel<MockTest[]> = {
   A2: [
@@ -908,7 +909,8 @@ export const mockTests: ByLevel<MockTest[]> = {
                       "x": "Bài viết: 'Tomorrow we are taking the cable car up to the peak of Fansipan'."
                 }
           ]
-    }
+    },
+    ...toeicIeltsTests.A2
   ],
   B1: [
     {
@@ -1986,7 +1988,8 @@ export const mockTests: ByLevel<MockTest[]> = {
                       "x": "Cụm giới từ chỉ sự nhượng bộ: 'in spite of' = despite (mặc dù bị bong gân cổ chân gần đây)."
                 }
           ]
-    }
+    },
+    ...toeicIeltsTests.B1
   ],
   B2: [
     {
@@ -3047,7 +3050,8 @@ export const mockTests: ByLevel<MockTest[]> = {
                       "x": "Đảo ngữ với phó từ phủ định 'Little': 'Little did + S + V(inf)'."
                 }
           ]
-    }
+    },
+    ...toeicIeltsTests.B2
   ]
 };
 

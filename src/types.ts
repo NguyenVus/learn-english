@@ -114,6 +114,8 @@ export interface MockTest {
   title: string;
   desc: string;
   timeLimit: number; // in minutes
+  category?: "toeic" | "ielts" | "cefr";
+  target?: string;
   questions: Question[];
 }
 
